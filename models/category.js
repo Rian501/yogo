@@ -2,12 +2,13 @@
 module.exports = (sequelize, DataTypes) => {
   var Category = sequelize.define('Category', {
     name: DataTypes.STRING
-  }, {
-    classMethods: {
-      associate: function(models) {
-        // associations can be defined here
+  });
+
+  Category.associate = function(models) {
+        hasMany(models.Pose, {
+          foreignKey: 'category_id'
+        })
       }
     }
-  });
   return Category;
 };

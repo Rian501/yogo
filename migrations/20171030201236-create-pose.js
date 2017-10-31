@@ -11,8 +11,14 @@ module.exports = {
       category_id: {
         type: Sequelize.INTEGER
       },
+      cover_original: {
+        type: Sequelize.STRING
+      },
       cover_thumbnail: {
         type: Sequelize.STRING
+      },
+      likes_count: {
+        type: Sequelize.INTEGER
       },
       level_id: {
         type: Sequelize.INTEGER
@@ -33,6 +39,9 @@ module.exports = {
         type: Sequelize.STRING
       },
       slug: {
+        type: Sequelize.STRING
+      },
+      title: {
         type: Sequelize.STRING
       },
       createdAt: {
