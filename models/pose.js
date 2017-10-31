@@ -5,7 +5,6 @@ module.exports = (sequelize, DataTypes) => {
     comments_count: DataTypes.INTEGER,
     cover_thumbnail: DataTypes.STRING,
     cover_original: DataTypes.STRING,
-    id: DataTypes.INTEGER,
     level_id: DataTypes.INTEGER,
     likes_count: DataTypes.INTEGER,
     meta_title: DataTypes.STRING,
@@ -14,6 +13,7 @@ module.exports = (sequelize, DataTypes) => {
     sanskrit_name: DataTypes.STRING,
     video_url: DataTypes.STRING,
     title: DataTypes.STRING,
+    meta_description: DataTypes.STRING,
     slug: DataTypes.STRING
   })
   
@@ -22,7 +22,5 @@ module.exports = (sequelize, DataTypes) => {
           foreignKey: 'category_id'
         });
       }
-    }
-  });
   return Pose;
 };

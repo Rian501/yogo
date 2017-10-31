@@ -11,10 +11,16 @@ module.exports = {
       category_id: {
         type: Sequelize.INTEGER
       },
+      comments_count: {
+        type: Sequelize.INTEGER
+      },
       cover_original: {
         type: Sequelize.STRING
       },
       cover_thumbnail: {
+        type: Sequelize.STRING
+      },
+      meta_description: {
         type: Sequelize.STRING
       },
       likes_count: {
