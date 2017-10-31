@@ -111,18 +111,15 @@
 			"photo": "/media/poses/photo/src/wa/warrior-pose-right-leg-bent.jpg",
 			"sanskrit_name": "Virabhadrasana leg bent right",
 			"slug": "warrior-pose-right-leg-bent",
-
 			"title": "Warrior pose, right leg bent",
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d152fd94a6f6052cd90811.mp4"
 		},
 		{
 			"category_id": 1,
-
 			"comments_count": 0,
 			"cover_original": "/media/poses/photo/src/wa/warrior-pose-on-left-foot.jpg",
 			"cover_thumbnail": "/media/cache/a3/ef/a3ef79035330290bc500fc72a02431f4.jpg",
 			"level_id": 3,
-
 			"likes_count": 417,
 			"meta_title": "Warrior pose on left foot",
 			"muscle": "/media/poses/muscle/src/wa/warrior-pose-on-left-foot.jpg",
@@ -134,25 +131,21 @@
 		},
 		{
 			"category_id": 1,
-
 			"comments_count": 1,
 			"cover_original": "/media/poses/photo/src/wa/warrior-pose-on-half-bent-left-leg.jpg",
 			"cover_thumbnail": "/media/cache/1b/60/1b603a40280e645f3e02706920f3f515.jpg",
 			"level_id": 3,
-
 			"likes_count": 186,
 			"meta_title": "warrior pose on half-bent left leg",
 			"muscle": "/media/poses/muscle/src/wa/warrior-pose-on-half-bent-left-leg.jpg",
 			"photo": "/media/poses/photo/src/wa/warrior-pose-on-half-bent-left-leg.jpg",
 			"sanskrit_name": "Virabhadrasana half bent left",
 			"slug": "warrior-pose-on-half-bent-left-leg",
-
 			"title": "warrior pose on half-bent left leg",
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d1531a06361d367e84597a.mp4"
 		},
 		{
 			"category_id": 1,
-
 			"comments_count": 2,
 			"cover_original": "/media/poses/photo/src/tr/tree-pose-hands-in-namaste-extended-forward-right-support.jpg",
 			"cover_thumbnail": "/media/cache/65/ea/65ea8b54076715a033be1a04e77a0ad4.jpg",
@@ -168,7 +161,6 @@
 		},
 		{
 			"category_id": 5,
-
 			"comments_count": 0,
 			"cover_original": "/media/poses/photo/src/pl/plank-pose.jpg",
 			"cover_thumbnail": "/media/cache/47/96/4796ae759aabb45dfc785ca7faa0fb30.jpg",
