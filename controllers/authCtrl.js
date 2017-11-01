@@ -9,19 +9,21 @@ module.exports.displayRegister = (req, res) => {
 module.exports.register = (req, res, next) => {
   if (req.body.password === req.body.confirmation) {
     console.log("Trying to register new user!!!!!");
-
+    
     // first argument is name of the passport strategy we created in passport-strat.js
     passport.authenticate("local-signup", (err, user, msgObj) => {
       console.log("Where are we? session.js", user);
       if (err) {
-        console.log(err);
-      } //or return next(err)
+        console.log("the error", err);
+        return next(err)
+      } 
       if (!user) {
         return res.render("registration", msgObj);
       }
       // Go ahead and login the new user once they are signed up
       req.logIn(user, err => {
         if (err) {
+          console.log("the error", err);
           return next(err);
         }
         console.log("authenticated. Rerouting to welcome page!");
