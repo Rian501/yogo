@@ -1,0 +1,28 @@
+{
+    "categories": [
+      { "id": 1,
+        "name": "standing"
+      },
+      { "id": 2,
+        "name": "sitting and twisting"
+      },
+      { "id": 3,
+        "name": "lying on back"
+      },
+      { "id": 4,
+        "name": "balance"
+      },
+      { "id": 5,
+        "name": "inverted"
+      },
+      { "id": 6,
+        "name": "backbend"
+      },
+      { "id": 7,
+        "name": "forward bend"
+      },
+      { "id": 8,
+        "name": "lying on front"
+      }
+    ]
+}
