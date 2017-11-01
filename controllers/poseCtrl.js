@@ -11,3 +11,14 @@ module.exports.showAllPoses = (req, res, next) => {
         })
     })
 };
+
+// include: [Category, Level],
+  (module.exports.showPoseDetail = (req, res, next) => {
+    const { Pose, Category, Level } = req.app.get("models");
+    Pose.findAll({
+      include: [Category, Level], 
+      where: { id: req.params.id }
+    }).then(pose => {
+      console.log("pose deets", pose);
+    });
+  });
