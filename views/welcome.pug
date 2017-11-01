@@ -1,0 +1,10 @@
+extends index.pug
+
+block content
+  .welcome-text
+    if messages.registerMsg
+      h1= messages.registerMsg
+    else
+      h1 #{messages.welcomeBackMsg} #{session.passport.user.username}
+      //- This would be more permanent:
+      //- h1 Welcome back, #{session.passport.user.first_name}
