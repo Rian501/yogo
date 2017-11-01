@@ -1,0 +1,15 @@
+{
+    "sequenceUserPoses": [
+        {
+            "sequence_id": 1,
+            "user_pose_id": 1,
+            "position_order": 1,
+            "card_timing": 10
+        },
+        {
+            "sequence_id": 1,
+            "user_pose_id": 2,
+            "position_order": 2
+        }
+    ]
+}

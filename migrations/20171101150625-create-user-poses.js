@@ -31,9 +31,6 @@ module.exports = {
       up_special_directions: {
         type: Sequelize.STRING
       },
-      up_timing: {
-        type: Sequelize.INTEGER
-      },
       up_breath: {
         type: Sequelize.STRING
       },

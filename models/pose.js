@@ -24,10 +24,10 @@ module.exports = (sequelize, DataTypes) => {
         Pose.belongsTo(models.Level, {
           foreignKey: 'level_id'
         });
-        Pose.belongsToMany(models.Sequence, {
-          through: 'Sequence_Poses',
-          foreignKey: 'pose_id'
-        });
+        // Pose.belongsToMany(models.Sequence, {
+        //   through: 'Sequence_Poses',
+        //   foreignKey: 'pose_id'
+        // });
         Pose.belongsToMany(models.User, {
           through: 'User_Poses',
           foreignKey: 'pose_id'

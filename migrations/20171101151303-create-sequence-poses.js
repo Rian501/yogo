@@ -1,18 +1,18 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Sequence_Poses', {
+    return queryInterface.createTable('SequenceUserPoses', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      pose_id: {
+      user_pose_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: 'Poses',
+          model: 'User_Poses',
           key: 'id'
         },
 				onUpdate: 'cascade',
@@ -28,23 +28,23 @@ module.exports = {
 				onUpdate: 'cascade',
 				onDelete: 'cascade'
       },
-      postion_order: {
+      position_order: {
         type: Sequelize.INTEGER
       },
       card_timing: {
         type: Sequelize.INTEGER
       },
       createdAt: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DATE
       },
       updatedAt: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DATE
       }
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Sequence_Poses');
+    return queryInterface.dropTable('SequenceUserPoses');
   }
 };

@@ -9,10 +9,10 @@ module.exports = (sequelize, DataTypes) => {
     Sequence.belongsTo(models.User, {
         foreignKey: 'user_id'
       });
-    Sequence.belongsToMany(models.Pose, {
-        through: 'Sequence_Poses',
+    Sequence.belongsToMany(models.User_Poses, {
+        through: 'SequenceUserPoses',
         foreignKey: 'sequence_id'
       })
-      }
+    }
   return Sequence;
 };
