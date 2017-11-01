@@ -1,8 +1,7 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var User_Poses = sequelize.define('User_Poses', {
-    up_special_directions: DataTypes.STRING,
-    up_timing: DataTypes.INTEGER,
+    up_special_directions: DataTypes.TEXT,
     up_breath: DataTypes.STRING
   });
   

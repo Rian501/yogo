@@ -46,8 +46,6 @@ const RegistrationStrategy = new Strategy(
               email,
               password: userPassword,
               username: req.body.username,
-              first_name: req.body.first_name,
-              last_name:  req.body.last_name
             };
           User.create(data).then( (newUser, created) => {
             if (!newUser) {
@@ -72,13 +70,13 @@ const LoginStrategy = new Strategy(
     passwordField: 'password',
     passReqToCallback: true 
   },
-  (req, email, password, done) => {
+  (req, username, password, done) => {
     User = req.app.get('models').User;
     const isValidPassword = (userpass, password) => {
       return bCrypt.compareSync(password, userpass);
     };
 
-    User.findOne({where: {email}})
+    User.findOne({where: {username}})
     .then( (user) => {
       if (!user) {
         return done(null, false, {

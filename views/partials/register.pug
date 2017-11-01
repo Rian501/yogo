@@ -1,0 +1,10 @@
+form#register(name="register" method="post" action="/register")
+  label(for="username") Username
+  input.text(name="username" type="text")
+  label(for="email") Email Address
+  input.text(name="email" type="text")
+  label(for="password") Password
+  input(name="password" type="password")
+  label(for="confirmation") Confirmation
+  input(name="confirmation" type="password")
+  input.btn(type="submit" value="Sign In")

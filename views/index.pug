@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title Yogo
+    link(rel="stylesheet", href="/styles/styles.css")
+  body
+    include partials/nav.pug
+    h1 Yogo!
+
+  block content
+    button#showLogin login
+    button#showRegister register
+
+    script
+      include ../client/client.js
+      include ../node_modules/jquery/dist/jquery.js
+    //-   include ../public/main.js

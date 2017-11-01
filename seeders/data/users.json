@@ -3,7 +3,17 @@
     {
       "username": "josephine",
       "email": "urface@gmail.com",
-      "password": "HASHHAHS"
-    }
+      "password": "$2a$08$aiU2K3SiTu5fwWwPOVQua.95P66ZhmbPxlsf2eVCxOLftHb1WrGBu"
+    },
+    {
+      "username": "yourface",
+      "email": "your@face.com",
+      "password": "$2a$08$EyBDJ1hcB3r/XzgfsqVxEuLWIwBpIgat1tyCZ4DYeIbeHIZNL147e"
+    },
+      {
+        "username": "emlem",
+        "email": "em@lem.com",
+        "password": "$2a$08$vTNES.dJSI3nbh3BSvxjouudkS1hhR/l1bCTy0LWpd7hhEKBzzphm"
+      }
   ]
 }
