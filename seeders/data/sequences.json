@@ -1,0 +1,12 @@
+{
+    "sequences": [
+        {
+            "user_id": 1,
+            "title": "Demo Sequence"
+        },
+        {
+            "user_id": 1,
+            "title": "Demo 2"
+        }
+    ]
+}

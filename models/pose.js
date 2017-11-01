@@ -21,6 +21,9 @@ module.exports = (sequelize, DataTypes) => {
         belongsTo(models.Category, {
           foreignKey: 'category_id'
         });
+        belongsTo(models.Level, {
+          foreignKey: 'level_id'
+        });
       }
   return Pose;
 };
