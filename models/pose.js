@@ -18,12 +18,22 @@ module.exports = (sequelize, DataTypes) => {
   })
   
      Pose.associate = function(models) {
-        belongsTo(models.Category, {
+        Pose.belongsTo(models.Category, {
           foreignKey: 'category_id'
         });
-        belongsTo(models.Level, {
+        Pose.belongsTo(models.Level, {
           foreignKey: 'level_id'
         });
+        Pose.belongsToMany(models.Sequence, {
+          through: 'Sequence_Poses',
+          foreignKey: 'pose_id'
+        });
+        Pose.belongsToMany(models.User, {
+          through: 'User_Poses',
+          foreignKey: 'pose_id'
+        });
+
+
       }
   return Pose;
 };

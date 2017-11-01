@@ -7,8 +7,12 @@ module.exports = (sequelize, DataTypes) => {
   
   Sequence.associate = function(models) {
     Sequence.belongsTo(models.User, {
-          foreignKey: 'user_id'
-        })
+        foreignKey: 'user_id'
+      });
+    Sequence.belongsToMany(models.Pose, {
+        through: 'Sequence_Poses',
+        foreignKey: 'sequence_id'
+      })
       }
   return Sequence;
 };
