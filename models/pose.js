@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
     sanskrit_name: DataTypes.STRING,
     video_url: DataTypes.STRING,
     title: DataTypes.STRING,
-    meta_description: DataTypes.STRING,
+    meta_description: DataTypes.TEXT,
     slug: DataTypes.STRING
   })
   
