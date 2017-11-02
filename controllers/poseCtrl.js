@@ -15,19 +15,21 @@ module.exports.showAllPoses = (req, res, next) => {
 };
 
 module.exports.showPoseDetail = (req, res, next) => {
-    const { Pose, Category, Level } = req.app.get("models");
+    const { Pose, Category, Level, Pose_Description } = req.app.get("models");
     Pose.findAll({
-        include: [Category, Level], 
+        include: [Category, Level, Pose_Description], 
         where: { id: req.params.id }
     }).then(pose => {
         let move = pose[0].dataValues
         console.log("poses prolly need to dig in to datavalues", move);
         let level = move.Level;
         let category = move.Category;
+        let moar = move.Pose_Description;
         res.render('poseDetail', {
             level,
             category, 
-            move
+            move,
+            moar
         })
     })
     .catch( (err) => {
