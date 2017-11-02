@@ -15,6 +15,7 @@ module.exports.getDescrips = (req, res, next) => {
         let parsed = JSON.parse(body);
         console.log('parsed', parsed);
         console.log('instructions', parsed.queryresult.pods[3].subpods[0].plaintext);
+        console.log('benefits', parsed.queryresult.pods[9].subpods[0].plaintext);
         Pose_Description.create({
             pose_id: poseId,
             instructions: parsed.queryresult.pods[3].subpods[0].plaintext,

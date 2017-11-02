@@ -9,7 +9,14 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       pose_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'Poses',
+          key: 'id'
+        },
+				onUpdate: 'cascade',
+				onDelete: 'cascade'
       },
       instructions: {
         type: Sequelize.TEXT
@@ -36,11 +43,11 @@ module.exports = {
         type: Sequelize.STRING
       },
       createdAt: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DATE
       },
       updatedAt: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DATE
       }
     });
