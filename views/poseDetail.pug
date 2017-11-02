@@ -1,0 +1,13 @@
+extends index.pug
+
+block content
+    h1= move.meta_title
+    h2= move.sanskrit_name
+    h5= level.name
+    h5= category.name
+    img(src=`http://yoga.com/${move.photo}` style="max-width: 200px;")
+    img(src=`http://yoga.com/${move.muscle}` style="max-width: 200px;")
+
+    video(width="320" height="240" controls)
+        source(src=`${move.video_url}` type="video/mp4")
+        Your browser does not support the video tag.
