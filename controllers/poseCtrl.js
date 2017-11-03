@@ -21,7 +21,7 @@ module.exports.showPoseDetail = (req, res, next) => {
         where: { id: req.params.id }
     }).then(pose => {
         let move = pose[0].dataValues
-        console.log("poses prolly need to dig in to datavalues", move);
+        // console.log("poses prolly need to dig in to datavalues", move);
         let level = move.Level;
         let category = move.Category;
         let moar = move.Pose_Description;
@@ -51,7 +51,7 @@ module.exports.searchPoses = (req, res, next) => {
     })
     .then( (poses) => {     
       console.log('Pooossseee', poses);
-      res.render('search-poses', {
+      res.render('poses', {
           poses
         })
     })
