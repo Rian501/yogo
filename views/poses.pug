@@ -1,6 +1,24 @@
 extends index.pug
 
 block content
+  if messages.noSrchRes
+  h1= messages.noSrchRes
+
+  form(method="GET" action='/poses/category')
+    label(for="cat_id") Category: 
+      select(name="cat_id" id="cat_id")
+        option(value="" disabled selected) Select:
+          for cat in cats
+            option(value=`${cat.id}`) #{cat.name}
+    button(type="submit" style="cursor: pointer;") Filter
+  form(method="GET" action='/poses/level')
+    label(for="lev_id") Level: 
+      select(name="lev_id" id="lev_id")
+        option(value="" disabled selected) Select:
+          for lev in levs
+            option(value=`${lev.id}`) #{lev.name}
+    button(type="submit" style="cursor: pointer;") Filter
+
   ul
     each pose in poses
       li.displayCard 
