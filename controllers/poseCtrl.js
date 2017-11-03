@@ -2,17 +2,23 @@
 const passport = require("passport");
 
 module.exports.showAllPoses = (req, res, next) => {
-    const { Pose, Category } = req.app.get("models");
+    const { Pose, Category, Level } = req.app.get("models");
     let cats=null;
-    Category.findAll()
+    let levs=null;
+    Level.findAll()
+    .then((levels)=>{
+        levs = levels;
+    return Category.findAll()
+    })
     .then( (categories)=> {
         cats = categories;
-        return Pose.findAll()
+    return Pose.findAll()
     })
     .then( (poses) => {
         res.render('poses', {
             poses,
-            cats
+            cats,
+            levs
         })
     })
     .catch( (err) => {
@@ -20,23 +26,49 @@ module.exports.showAllPoses = (req, res, next) => {
     });
 };
 
+
+// TODO: combine filters for both level AND type to allow for two pronged filtering
 module.exports.posesByCat = (req, res, next) => {
-    console.log("posesbycat firing!");
-    console.log('reqbody', req.query.cat_id);
-    const { Pose, Category } = req.app.get("models");
-    let cats=null;
-    Category.findAll()
-    .then( (categories)=> {
+const { Pose, Category, Level } = req.app.get("models");
+let cats = null;
+let levs = null;
+Level.findAll()
+  .then(levels => {
+    levs = levels;
+    return Category.findAll();
+  })
+  .then(categories => {
+    cats = categories;
+    return Pose.findAll({ where: { category_id: req.query.cat_id } });
+  })
+  .then(poses => {
+    res.render("poses", { cats, poses, levs });
+  })
+  .catch(err => {
+    next(err);
+  });
+};
+module.exports.posesByLev = (req, res, next) => {
+    console.log("posesbylev firing!");
+    console.log('reqbody', req.query.lev_id);
+    const { Pose, Category, Level } = req.app.get("models");
+    let cats = null;
+    let levs = null;
+    Level.findAll()
+    .then(levels => {
+        levs = levels;
+    return Category.findAll();
+    })
+    .then(categories => {
         cats = categories;
-        return Pose.findAll({where: {category_id: req.query.cat_id}})
+    return Pose.findAll({ where: { level_id: req.query.lev_id } });
     })
-    .then( (poses) => {
-        // console.log("CATMATCHES", catMatches);
-        res.render('poses', {
-            cats,
-            poses
-        })
+    .then(poses => {
+        res.render("poses", { levs, poses, cats });
     })
+    .catch(err => {
+        next(err);
+    });
 };
 
 module.exports.showPoseDetail = (req, res, next) => {
