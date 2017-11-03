@@ -36,3 +36,31 @@ module.exports.showPoseDetail = (req, res, next) => {
         next(err);
     });
 };
+
+
+module.exports.searchPoses = (req, res, next) => {
+  const { Pose } = req.app.get('models');
+  if (req.user) {
+    Pose.findAll({
+     raw: true,
+      where: {
+        title: {
+          $iLike: `%${req.query.title}%`
+        }
+      }
+    })
+    .then( (poses) => {     
+      console.log('Pooossseee', poses);
+      res.render('search-poses', {
+          poses
+        })
+    })
+    .catch( (err) => {
+      next(err)
+    })
+  } else {
+    return res.redirect('/');
+  };
+};
+
+
