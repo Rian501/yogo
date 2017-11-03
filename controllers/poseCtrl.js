@@ -74,14 +74,18 @@ module.exports.searchPoses = (req, res, next) => {
         }
       }
     })
-    .then( (poses) => {     
-      console.log('Pooossseee', poses);
-      res.render('poses', {
-          poses
+    .then( (poses) => {
+    if (!poses[0]) {
+        req.flash('noSrchRes', `Nothing matches your request!`);
+        res.redirect('/poses');
+    } else {
+        res.render('poses', {
+            poses
         })
+    }
     })
     .catch( (err) => {
-      next(err)
+        next(err)
     })
   } else {
     return res.redirect('/');
