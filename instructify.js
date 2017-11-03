@@ -35,7 +35,7 @@ let inputs = slug.replace('-','%20');
 function getInstructions() {
 
     $.ajax({
-        url: `http://api.wolframalpha.com/v2/query?appid=A9HAKK-J9Y3EQXYPA&output=json&input=${inputs}`,
+        url: `http://api.wolframalpha.com/v2/query?appid=??????????????????&output=json&input=${inputs}`,
     }).done(function(data) {
         console.log("Sample of data:", data);
     });

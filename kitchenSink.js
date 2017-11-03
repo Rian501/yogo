@@ -11,7 +11,7 @@ module.exports.getDescrips = (req, res, next) => {
         let searchTerm = pose.dataValues.slug.replace(rep,'%20');
         console.log("poseID??", poseId);
         console.log("and now... search term>>>", searchTerm);
-        request.get(`http://api.wolframalpha.com/v2/query?appid=A9HAKK-J9Y3EQXYPA&output=json&input=${searchTerm}`, (err, res, body) => {
+        request.get(`http://api.wolframalpha.com/v2/query?appid=???????????????&output=json&input=${searchTerm}`, (err, res, body) => {
             let parsed = JSON.parse(body);
             console.log('parsed', parsed);
             if(parsed.queryresult.pods) {
