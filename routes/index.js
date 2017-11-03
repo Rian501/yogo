@@ -9,5 +9,6 @@ router.get("/", (req, res, next) => {
 
 router.use(require("./authRoute"));
 router.use(require("./poseRoute"));
+router.use(require("./sequenceRoute"));
 
 module.exports = router;
