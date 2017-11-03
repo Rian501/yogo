@@ -11,6 +11,7 @@ block content
           for cat in cats
             option(value=`${cat.id}`) #{cat.name}
     button(type="submit" style="cursor: pointer;") Filter
+    
   form(method="GET" action='/poses/level')
     label(for="lev_id") Level: 
       select(name="lev_id" id="lev_id")
