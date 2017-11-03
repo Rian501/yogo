@@ -2,7 +2,9 @@ if session.passport
   span #{session.passport.user.username}
   form(method="POST")
     button(type="submit" formaction="/logout") Logout
-a(href="/poses") Poses
+  a(href="/sequence") My Sequences
+  a(href="/user/poses") My Poses
+a(href="/poses") All Poses
 
 
 form(method="GET")

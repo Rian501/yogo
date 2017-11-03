@@ -1,13 +1,13 @@
 {
     "userPoses": [
         {
-            "user_id": 1,
+            "user_id": 3,
             "pose_id": 2,
             "up_breath": "inhale, exhale",
             "up_special_directions": "Knees first, then chin"
         },
         {
-            "user_id": 1,
+            "user_id": 3,
             "pose_id": 4,
             "up_breath": "inhale, exhale, inhale",
             "up_special_directions": "Use your face to balance your spine"

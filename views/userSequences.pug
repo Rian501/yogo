@@ -1,0 +1,8 @@
+extends index.pug
+
+block content
+  ul
+    each seq in seqs
+      li.displaySeqCard 
+        a(href=`/sequence/${seq.id}`)
+          h2= seq.title
