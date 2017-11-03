@@ -1,6 +1,14 @@
 extends index.pug
 
 block content
+  form(method="GET" action='/poses/category')
+    label(for="cat_id") Category: 
+      select(name="cat_id" id="cat_id")
+        option(value="" disabled selected) Select:
+          for cat in cats
+            option(value=`${cat.id}`) #{cat.name}
+    button(type="submit" style="cursor: pointer;") Filter
+
   ul
     each pose in poses
       li.displayCard 

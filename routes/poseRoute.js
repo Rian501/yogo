@@ -6,11 +6,13 @@ const router = Router();
 const {
   showAllPoses,
   showPoseDetail,
+  posesByCat,
   searchPoses
 } = require("../controllers/poseCtrl.js");
 
 
 router.get('/poses', showAllPoses);
+router.get('/poses/category', posesByCat);
 router.get('/poses/:id', showPoseDetail);
 router.get('/search', searchPoses);
 

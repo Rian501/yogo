@@ -15,7 +15,7 @@ app.set("models", require("./models"));
 
 app.set("view engine", "pug");
 
-app.use(express.static(__dirname + "/public"));
+app.use('/public', express.static(__dirname + "/public"));
 
 let routes = require("./routes/");
 

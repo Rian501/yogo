@@ -1,5 +1,7 @@
 if session.passport
   span #{session.passport.user.username}
+  a(href="/poses") Poses
+
   form(method="POST")
     button(type="submit" formaction="/logout") Logout
 

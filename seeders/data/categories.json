@@ -7,22 +7,22 @@
         "name": "sitting and twisting"
       },
       { "id": 3,
-        "name": "lying on back"
+        "name": "lying on front"
       },
       { "id": 4,
-        "name": "balance"
+        "name": "lying on back"
       },
       { "id": 5,
-        "name": "inverted"
+        "name": "balance"
       },
       { "id": 6,
-        "name": "backbend"
+        "name": "inverted"
       },
       { "id": 7,
-        "name": "forward bend"
+        "name": "backbend"
       },
       { "id": 8,
-        "name": "lying on front"
+        "name": "forward bend"
       }
     ]
 }
