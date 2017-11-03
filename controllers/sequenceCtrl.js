@@ -12,14 +12,9 @@ module.exports.viewSeq = (req, res, next) => {
       .query(`
     SELECT * FROM "SequenceUserPoses", "User_Poses", "Poses" WHERE "SequenceUserPoses"."sequence_id"=${req.params.id} AND "SequenceUserPoses".user_pose_id="User_Poses"."id" AND "User_Poses".pose_id="Poses".id ORDER BY "SequenceUserPoses".position_order`)
       .then(results => {
-        console.log("results.Result", results.Result);
-        console.log("results[0]", results[0]);
-        console.log("results[0][0]", results[0][0]);
         let moves = results[0]
-        // .map( function(each){
-        //   return each.anonymous;
-        // })
-        console.log("moves", moves);
+        console.log("moves for digging", moves);
+        //might need to add card timing as a number property for later manipulation rather than if-elsing it on the pugdom
         res.render('viewSeq', {
           moves
         })
