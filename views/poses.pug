@@ -4,5 +4,6 @@ block content
   ul
     each pose in poses
       li.displayCard 
-        h2= pose.meta_title
-        img(src=`http://yoga.com/${pose.cover_thumbnail}` style="max-width: 200px;")
+        a(href=`/poses/${pose.id}`)
+          h2= pose.meta_title
+          img(src=`http://yoga.com/${pose.cover_thumbnail}` style="max-width: 200px;")

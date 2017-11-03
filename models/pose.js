@@ -32,7 +32,9 @@ module.exports = (sequelize, DataTypes) => {
           through: 'User_Poses',
           foreignKey: 'pose_id'
         });
-
+        Pose.hasOne(models.Pose_Description, {
+          foreignKey: 'pose_id'
+        })
 
       }
   return Pose;
