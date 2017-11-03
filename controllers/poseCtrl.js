@@ -96,32 +96,40 @@ module.exports.showPoseDetail = (req, res, next) => {
 
 
 module.exports.searchPoses = (req, res, next) => {
-  const { Pose } = req.app.get('models');
-  if (req.user) {
-    Pose.findAll({
-     raw: true,
-      where: {
-        title: {
-          $iLike: `%${req.query.title}%`
-        }
-      }
+    const { Pose, Category, Level } = req.app.get("models");
+    let cats = null;
+    let levs = null;
+    Level.findAll()
+    .then(levels => {
+        levs = levels;
+    return Category.findAll();
+    })
+    .then(categories => {
+        cats = categories;
+        return Pose.findAll({
+            raw: true,
+            where: {
+                title: {
+                    $iLike: `%${req.query.title}%`
+                }
+            }
+        })
     })
     .then( (poses) => {
-    if (!poses[0]) {
-        req.flash('noSrchRes', `Nothing matches your request!`);
-        res.redirect('/poses');
-    } else {
-        res.render('poses', {
-            poses
-        })
-    }
+        if (!poses[0]) {
+            req.flash('noSrchRes', `Nothing matches your request!`);
+            res.redirect('/poses');
+        } else {
+            res.render('poses', {
+                poses,
+                cats,
+                levs
+            })
+        }
     })
     .catch( (err) => {
         next(err)
     })
-  } else {
-    return res.redirect('/');
-  };
 };
 
 
