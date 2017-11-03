@@ -12,6 +12,9 @@ const {
   logout
 } = require("../controllers/authCtrl.js");
 
+const { getMyMoves } = require('../controllers/userCtrl.js');
+
+
 // new users
 router.get("/register", displayRegister);
 router.post("/register", register);
@@ -20,7 +23,7 @@ router.post("/register", register);
 router.get("/login", displayLogin);
 router.post("/login", login);
 
-router.get("/welcome", isLoggedIn, welcome);
+router.get("/welcome", isLoggedIn, welcome, getMyMoves);
 router.post("/logout", logout);
 
 

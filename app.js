@@ -14,6 +14,8 @@ app.set("models", require("./models"));
 // reminder: in controllers, use const { Computer } = req.app.get('models');
 
 app.set("view engine", "pug");
+app.locals.myMoves = "not null now"; 
+
 
 app.use('/public', express.static(__dirname + "/public"));
 
