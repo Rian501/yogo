@@ -17,7 +17,14 @@
 			"title": "Downward facing dog pose",
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d151bb9473995033182005.mp4"
 		},
-
+	{
+		"meta_title": "Wild Thing Pose",
+		"sanskrit_name": "Camatkārāsana",
+		"category_id": 7,
+		"level_id": 2,
+		"description": "From downward dog pose, elevate one leg toward the sky and stack the corresponding hip over the other hip.  Bring the upper heel as close to the buttocks as possible.  The hips remain stacked; then bring the shoulders forward slowly over the hands.  Replace the corresponding hand to the upraised leg with the other hand and flip yourself over and extend the top hand forward.  The bottom foot is now facing toward the front of the mat and you remain on the ball of the top foot and the corresponding knee is bent.  Continue to lift hips up towards the sky and continue reaching the free hand towards the front of the room and slightly downwards.  Allow the head to curl back.",
+		"benefits": "Stretches the chest, shoulders, back, and throat.  Strengthens and opens the hips, hip flexors, and thighs."
+	},
 		{
 			"meta_title": "Gorilla Pose",
 			"sanskrit_name": "Pādahastāsana",
@@ -180,7 +187,8 @@
 		},
 		{
 			"category_id": 1,
-
+	"description": "From a standing position, the legs are separated into a wide stance.  The front knee is bent in a90-degree angle directly above the ankle.  The back leg is extended and straight with the outside edge of the back foot gripping the earth in a60-degree angle towards the front.  The inner thighs are externally rotated away from each other.  The pelvis is tucked.  The ribcage is lifted.  The arms are extended out to the sides and are aligned with the shoulders in a straight line with the fingers reaching out as the shoulder blades squeeze together.  The gaze is toward the front fingers.",
+	"benefits": "Strengthens and stretches the legs and ankles.  Stretches the groin, chest, lungs, and shoulders.  Stimulates abdominal organs.  Increases stamina.  Relieves backaches, especially through second trimester of pregnancy.  Therapeutic for carpal tunnel syndrome, flat feet, infertility, osteoporosis, and sciatica.",
 			"comments_count": 3,
 			"cover_original": "/media/poses/photo/src/wa/warrior-pose-right-leg-bent.jpg",
 			"cover_thumbnail": "/media/cache/88/1b/881b190c35af6000f9edbfc2607f2254.jpg",
@@ -200,6 +208,8 @@
 			"cover_original": "/media/poses/photo/src/wa/warrior-pose-on-left-foot.jpg",
 			"cover_thumbnail": "/media/cache/a3/ef/a3ef79035330290bc500fc72a02431f4.jpg",
 			"level_id": 3,
+				"description": "From a standing position, one leg is rooted and perpendicular to the earth while the other leg is raised, extended back and parallel to the earth.  The head of the thighbone of the standing leg presses back towards the heel and is actively rooted into the earth.  The arms and the extended leg lengthen in opposing directions with Bandhas engaged.  The hips are squared and the tailbone presses firmly into the pelvis.  The arms, torso, and extended raised leg should be positioned relatively parallel to the floor.  The gaze is forward or down.",
+				"benefits": "Strengthens the ankles and legs.  Strengthens the shoulders and muscles of the back.  Tones the abdomen.  Improves balance and posture.",
 			"likes_count": 417,
 			"meta_title": "Warrior pose on left foot",
 			"muscle": "/media/poses/muscle/src/wa/warrior-pose-on-left-foot.jpg",
@@ -230,6 +240,9 @@
 			"cover_original": "/media/poses/photo/src/tr/tree-pose-hands-in-namaste-extended-forward-right-support.jpg",
 			"cover_thumbnail": "/media/cache/65/ea/65ea8b54076715a033be1a04e77a0ad4.jpg",
 			"level_id": 1,
+			"description": "From a standing position, one foot is rooted into the earth with the opposite heel rooted into the inner thigh with the toes pointing towards the earth.  The pelvis and the chin are tucked in.  The arms are lifted above the head with the palms together in prayer position.  The gaze is forward.",
+    "benefits": "Strengthens the legs, ankles, and feet.  Improves flexibility in the hips and knees.  Improves balance."
+   ,
 			"likes_count": 534,
 			"meta_title": "Tree pose, hands in Namaste extended forward, right support",
 			"muscle": "/media/poses/muscle/src/tr/tree-pose-hands-in-namaste-extended-forward-right-support.jpg",
@@ -354,6 +367,15 @@
 					"description": "From chair twist pose, the lower arm weaves in between the legs as the upper arm wraps around the back and the fingers interlace.  The ribcage is lifted.  The gaze toward the sky, unless it hurts your neck, then the gaze towards the earth.",
 					"benefits": "Increases the flexibility of the spine and back and stretches the shoulders.  Stretches the lower back.  Challenges the balance.  Powerful detoxification of toxic food, drink, and thoughts."
 				},
+
+				{
+					"meta_title": "Bound Revolved Side Angle Pose",
+					"sanskrit_name": "Parivṛtta Baddha Pārśvakoṇāsana",
+					"category_id": 2,
+					"level_id": 3,
+					"description": "From warrior II, bend the front knee and spin to the ball of the back foot as the torso lowers down onto the thigh, opening the heart center to the sky and lowering the bottom hand to the inside of the thigh with the palm planted firmly.  At the same time, reach the top arm and hand up and overhead extending in a straight line towards the front.  To take the bind then wrap the top arm around and under the backside of the torso and grasp the bottom hand at the wrist if possible.  Minimize lateral flexion of the spine while rotating the torso open.  Press the elbow and the shoulder against the bent knee in an isometric contraction to keep the knee aligned and leverage the rotation of the torso.  The gaze is to upper fingertips and the neck is relaxed.  As all twists lengthen and soften the belly, extend the spine with each inhalation, and increase the twist as you exhale.",
+					"benefits": "Strengthens and stretches the legs, the knees, and the ankles.  Stretches the groins, the spine, the chest, the lungs, and the shoulders.  Stimulates abdominal organs.  Increases stamina.  Improves digestion and aids elimination.  Improves balance."
+				},
 		{
 			"category_id": 8,
 
@@ -367,7 +389,8 @@
 			"photo": "/media/poses/photo/src/re/revolved-side-angle-pose-with-rotation-to-right-leg.jpg",
 			"sanskrit_name": "Parivritta Parsvokonasana right",
 			"slug": "revolved-side-angle-pose-with-rotation-to-right-leg",
-
+	"description": "From a standing position, the legs are in a wide stance with the feet aligned and flat on the earth.  The inner thighs scissor towards each other with Mula Bandha engaged.  The front knee is bent in a90-degree angle and tracks the front ankle.  The back leg is straight with most of the body’s weight pressed into the outside edge of the back foot gripping the earth.  From the center of the back, between the shoulder blades, the arms move away from the torso that is rotated up towards the sky.  One arm is actively reaching up and the other actively reaching down utilizing the fingers tips or flat palm only as a un-weighted balancing tool.  The elbow of the bottom hand is either on the inside or the outside of the bent front knee, depending on the degree of flexibility available.  Beginning students should keep their head in a neutral position, looking straight forward, or turn it to look down and protect the neck.  More experienced students can turn the head and gaze up at the top thumb.",
+	"benefits": "Wrings out the lower back and the digestive and vital organs of the mid-body.  Opens the chest.  Stretches the pectoralis minor muscles.",
 			"title": "Revolved side angle pose with rotation to right leg",
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d153b294a6f605e5fbb978.mp4"
 		}, {
@@ -438,7 +461,8 @@
 			"cover_original": "/media/poses/photo/src/up/upward-bow-pose.jpg",
 			"cover_thumbnail": "/media/cache/5f/16/5f164b008c5a221485756a0286dcc212.jpg",
 			"level_id": 3,
-
+	"description": "Pressed up from a supine position, lying on your back, the palms are rooted into the earth with the fingers pointed towards the heels.  The feet are grounded.  The hips are pressed up.  The thighs are rotated inward.  The thoracic spine is arched creating a strong crescent arch along the spinal column.  The gaze is forward.",
+	"benefits": "Strengthens the arms, wrists, legs, buttocks, abs, and spine.  Stimulates the thyroid and pituitary.  Increases energy and counteracts depression.  Therapeutic for asthma, back pain, infertility, and osteoporosis.",
 			"likes_count": 603,
 			"meta_title": "Upward bow pose",
 			"muscle": "/media/poses/muscle/src/up/upward-bow-pose.jpg",
@@ -454,7 +478,8 @@
 			"cover_original": "/media/poses/photo/src/br/bridge-pose-with-right-leg-up-wrong-title.jpg",
 			"cover_thumbnail": "/media/cache/34/3b/343b910e3fbb5d1701c990757bd3ef15.jpg",
 			"level_id": 3,
-
+	"description": "From wheel pose, extend one leg straight up to the sky with active toes.  The gaze is forward.",
+	"benefits": "Strengthens the arms, wrists, legs, buttocks, abs, and spine.  Stimulates the thyroid and pituitary.  Increases energy and counteracts depression.  Therapeutic for asthma, back pain, infertility, and osteoporosis.",
 			"likes_count": 267,
 			"meta_title": "Bridge pose with right leg up",
 			"muscle": "/media/poses/muscle/src/br/bridge-pose-with-right-leg-up-wrong-title.jpg",
@@ -487,6 +512,8 @@
 			"cover_original": "/media/poses/photo/src/pl/plow-pose.jpg",
 			"cover_thumbnail": "/media/cache/12/3b/123bd46396ca2b9edbce34316e7174ba.jpg",
 			"level_id": 2,
+				"description": "From a supine position, the upper back rests on the earth with the hips and legs revolved back over the torso above and beyond the head towards the earth.  The torso is perpendicular to the earth.  The legs are fully extended with no bend at the knees as the toes reach for the earth.  The hands are either supporting the lower back or extended behind the back on the earth with extended elbows and fingers interlaced (as flexibility allows), opening the shoulders.  The neck is straight.  The chin tucked.  Do not look to the side as this may injure the neck.  The is gaze inward.",
+				"benefits": "Calms the brain.  Stimulates the abdominal organs and the thyroid glands.  Stretches the shoulders and spine.  Helps relieve the symptoms of menopause.  Reduces stress and fatigue.  Therapeutic for backache, headache, infertility, insomnia,  and sinusitis.",
 			"likes_count": 478,
 			"meta_title": "Plow pose",
 			"muscle": "/media/poses/muscle/src/pl/plow-pose.jpg",
@@ -594,12 +621,14 @@
 			"cover_thumbnail": "/media/cache/1d/1b/1d1bed0e2cc4b174d513842b5eee1487.jpg",
 			"level_id": 3,
 			"likes_count": 101,
-			"meta_title": "Intense arm left stretch pose",
+				"description": "From a standing position with one leg forward and one back lean the torso forward at the crease of the hip joint.  Stop when the torso is parallel to the floor.  Press the fingertips or flat palms to the floor on either side of the front foot, maintaining a straight elongated spine.  If it isn’t possible to touch the floor, or to maintain a straight spine, support the hands on a pair of blocks.  Press the thighs back and lengthen the torso forward, lifting up through the top of the sternum.  Then, as flexibility allows, bring the front torso closer to the top of the thigh without rounding the spine.  Eventually the long front torso will rest down on the thigh.  The gaze is down.",
+				"benefits": "Calms the brain.  Stretches the spine, the shoulders, the hips and the hamstrings.  Strengthens the legs.  Stimulates the abdominal organs.  Improves posture and sense of balance.  Improves digestion.",
+			"meta_title": "(Pyramid) Intense arm left stretch pose",
 			"muscle": "/media/poses/muscle/src/in/intense-arm-left-stretch-pose.jpg",
 			"photo": "/media/poses/photo/src/in/intense-arm-left-stretch-pose.jpg",
 			"sanskrit_name": "Parsvottanasana advanced left",
 			"slug": "intense-arm-left-stretch-pose",
-			"title": "Intense arm left stretch pose",
+			"title": "(Pyramid) Intense arm left stretch pose",
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d154d294a6f604f3e5cdf0.mp4"
 		},
 		{
@@ -623,13 +652,15 @@
 			"cover_original": "/media/poses/photo/src/in/intense-left-stretch-hands-behind-back-in-namaste.jpg",
 			"cover_thumbnail": "/media/cache/b7/f7/b7f7b8034430e9a32c539a495c7d90a3.jpg",
 			"level_id": 2,
+				"description": "From a standing position with one leg forward and one back lean the torso forward at the crease of the hip joint.  Stop when the torso is parallel to the floor.  Press the fingertips or flat palms to the floor on either side of the front foot, maintaining a straight elongated spine.  If it isn’t possible to touch the floor, or to maintain a straight spine, support the hands on a pair of blocks.  Press the thighs back and lengthen the torso forward, lifting up through the top of the sternum.  Then, as flexibility allows, bring the front torso closer to the top of the thigh without rounding the spine.  Eventually the long front torso will rest down on the thigh.  The gaze is down.",
+				"benefits": "Calms the brain.  Stretches the spine, the shoulders, the hips and the hamstrings.  Strengthens the legs.  Stimulates the abdominal organs.  Improves posture and sense of balance.  Improves digestion.",
 			"likes_count": 152,
-			"meta_title": "Intense left stretch, hands behind back in Namaste",
+			"meta_title": "(Pyramid) Intense left stretch, hands behind back in Namaste",
 			"muscle": "/media/poses/muscle/src/in/intense-left-stretch-hands-behind-back-in-namaste.jpg",
 			"photo": "/media/poses/photo/src/in/intense-left-stretch-hands-behind-back-in-namaste.jpg",
 			"sanskrit_name": "Ardha Parsvottanasana left",
 			"slug": "intense-left-stretch-hands-behind-back-in-namaste",
-			"title": "Intense left stretch, hands behind back in Namaste",
+			"title": "(Pyramid) Intense left stretch, hands behind back in Namaste",
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d154ee06361d3742291930.mp4"
 		},
 
@@ -759,7 +790,8 @@
 			"photo": "/media/poses/photo/src/sc/scale-pose-lotus-variation.jpg",
 			"sanskrit_name": "Tolasana",
 			"slug": "scale-pose-lotus-variation",
-
+	"description": "The palms press into the earth, supporting the weight of the body with the elbows straight.  The legs are wrapped around the elbows, extended forward and hooked at the ankles with the feet lifted into the full expression of the pose.  The ribcage is lifted.  The gaze is forward.",
+	"benefits": "Strengthens arms and wrists.  Improves focus and concentration.  Opens flexibility of lower body.",
 			"title": "Scale pose lotus variation",
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d1558c06361d385435cc6b.mp4"
 		}, {
@@ -781,6 +813,8 @@
 			"cover_original": "/media/poses/photo/src/un/unsupported-shoulderstand_1.jpg",
 			"cover_thumbnail": "/media/cache/25/0f/250f66b66b8ec3b77034d70fe59bceb3.jpg",
 			"level_id": 3,
+				"description": "From a supine position, the upper back is resting on the earth with the hips straight up towards the sky.  The torso is perpendicular to the earth.  The legs are fully extended and the toes are active.  The hands are either supporting the lower back or extended up by the side body in matchstick.  The neck is flat on the earth and the chin is tucked in.  The gaze is inward.",
+				"benefits": "Calms the brain and helps relieve stress and mild depression.  Stimulates the thyroid and prostate glands and abdominal organs.  Stretches the shoulders and neck.  Tones the legs and buttocks.  Improves digestion.  Helps relieve the symptoms of menopause.  Reduces fatigue and alleviates insomnia.  Therapeutic for asthma, infertility, and sinusitis.",
 			"likes_count": 110,
 			"meta_title": "Unsupported shoulderstand",
 			"muscle": "/media/poses/muscle/src/un/unsupported-shoulderstand_1.jpg",
@@ -790,6 +824,14 @@
 			"title": "Unsupported shoulderstand",
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d155c594a6f605f92f82ea.mp4"
 		},
+			{
+				"meta_title": "Arms Up Shoulder Stand Pose",
+				"sanskrit_name": "Nirālamba Sarvāṅgāsana",
+				"category_id": 6,
+				"level_id": 3,
+				"description": "From suppoted shoulderstand, the arms lift straight up along the side body towards the sky with the fingers spread wide.  The gaze is up.",
+				"benefits": "Calms the brain and helps relieve stress and mild depression.  Stimulates the thyroid and prostate glands and abdominal organs.  Stretches the shoulders and neck.  Tones the legs and buttocks.  Improves digestion.  Helps relieve the symptoms of menopause.  Reduces fatigue and alleviates insomnia.  Therapeutic for asthma."
+			},
 		{
 			"category_id": 1,
 			"comments_count": 1,
@@ -797,6 +839,8 @@
 			"cover_thumbnail": "/media/cache/a7/a0/a7a044816447ae40d08c80f29098f95f.jpg",
 			"level_id": 2,
 			"likes_count": 136,
+				"description": "From mountain pose, lift one foot, bend forward and catch the toes with the fingers.  Place the other hand on the hip to square the hip towards the front.  Slowly straighten the knee and lift the torso straight up.  Use a strap if necessary.  Gaze towards the front.",
+				"benefits": "Stretches the hamstrings and strengthens the legs.  Improves balance.",
 			"meta_title": "Extended right hand to big toe pose",
 			"muscle": "/media/poses/muscle/src/ex/extended-right-hand-to-big-toe-pose.jpg",
 			"photo": "/media/poses/photo/src/ex/extended-right-hand-to-big-toe-pose.jpg",
@@ -811,6 +855,8 @@
 			"cover_original": "/media/poses/photo/src/st/standing-bend-to-left-leg.jpg",
 			"cover_thumbnail": "/media/cache/65/80/6580837f2640be4a469b9f47b491ad1a.jpg",
 			"level_id": 3,
+				"description": "From a standing position with the feet together, the weight of the body is shifted to balance on one leg.  The opposite foot is then clasped with both hands and lifted up by pulling the knee in towards the chest.  Fingers are interlaced under the sole of the foot, specifically at the arch.  Avoid placing the thumbs on the tops of the feet.  The standing leg is straight, but the knee joint is not locked.  The standing foot is rooted firmly into the earth while the weight is shifted slightly forward, closer to the ball of the foot, not the heel.  The bent knee then extends straight until it is parallel with the earth.  Maintain balance in the pose with good pranayama (breath work) and bandhas.  Keep a leveled pelvis.  It is helpful to think about extending the foot up rather than out.  Continue to lengthen the spine from the neck down to the tailbone.  Allow the shoulders to fall into their natural position away from the ears and extend the arms, maintaining the grip on the foot and straightening the leg.  Engage the muscles of the thigh for more stability.  To achieve the full extension of the pose, round the spine and drop the elbows while lowering the head to your knee.  Avoid dropping the abdominals onto your thigh.  Pull the navel up and into the spine while folding forward.  Lower the head to the knee and tuck the chin into the chest into Jalandhara bandha.  This will extend the stretch of the spine up through the neck.  The gaze is towards the knee or out in front.",
+				"benefits": "Improves balance.  Enhances agility.  Helps digestion.  Massages the internal organs.  Improves circulation.  Enhances memory.",
 			"likes_count": 88,
 			"meta_title": "Standing bend to left leg",
 			"muscle": "/media/poses/muscle/src/st/standing-bend-to-left-leg.jpg",
@@ -1066,7 +1112,8 @@
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d152e294739950e1591cba.mp4"
 		}, {
 			"category_id": 1,
-
+	"description": "From a standing position, the legs are in a wide stance with the feet aligned and flat on the earth.  The back foot is in a60-degree angle towards the front.  The hips are squared.  The inner thighs are rotated towards each other.  The front knee is bent in a90-degree angle directly above the ankle.  The arms extend up to the sky with the biceps by the ears.  The hands can be together or separated and facing each other with the fingers spread wide.  The ribcage is lifted and the pelvis tucked.  The gaze is forward.",
+	"benefits": "Stretches the chest, lungs, shoulders, neck, belly and groin (psoas).  Strengthens the shoulders, arms and back muscles.  Strengthens and stretches the thighs, calves and ankles.",
 			"comments_count": 1,
 			"cover_original": "/media/poses/photo/src/wa/warrior-pose-left-leg-forward-right-leg-straight.jpg",
 			"cover_thumbnail": "/media/cache/eb/45/eb45b73c3e20c17014d7e05341b5da58.jpg",
@@ -1093,7 +1140,8 @@
 			"photo": "/media/poses/photo/src/wa/warrior-pose-on-right-foot.jpg",
 			"sanskrit_name": "Virabhadrasana straight right",
 			"slug": "warrior-pose-on-right-foot",
-
+	"description": "From a standing position, one leg is rooted and perpendicular to the earth while the other leg is raised, extended back and parallel to the earth.  The head of the thighbone of the standing leg presses back towards the heel and is actively rooted into the earth.  The arms and the extended leg lengthen in opposing directions with Bandhas engaged.  The hips are squared and the tailbone presses firmly into the pelvis.  The arms, torso, and extended raised leg should be positioned relatively parallel to the floor.  The gaze is forward or down.",
+	"benefits": "Strengthens the ankles and legs.  Strengthens the shoulders and muscles of the back.  Tones the abdomen.  Improves balance and posture.",
 			"title": "Warrior pose on right foot",
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d1530f94739950e1591cbb.mp4"
 		}, {
@@ -1131,8 +1179,8 @@
 		},
 		{
 			"category_id": 2,
-	"description": "From a seated position, one arm reaches up and back from above the shoulder while the opposite arm reaches down and back from under the shoulder and around the torso into a bind at the center of the upper back.  The gaze is forward.",
-	"benefits": "Stretches the ankles, hips and thighs.  Stretches the shoulders, armpits, triceps, and chest.",
+		"description": "From sitting on your heels, bring the top arm up and around the back to meet the bottom arm that will reach under and wrap around its respective knee to be met at the wrist by the top hand.  On the inhale, elongate the spine and on the exhale take the twist slightly deeper.  Keep the heart open and the gaze should be slightly over the top shoulder. ",
+		"benefits": "Strengthens arms, wrists and ankles.  Stretches the upper back.  Strengthens the abdominal muscles.",
 			"comments_count": 0,
 			"cover_original": "/media/poses/photo/src/co/cow-face-pose-left-hand-up-grab.jpg",
 			"cover_thumbnail": "/media/cache/21/05/210550dacdc8cdea7571c9de921736b0.jpg",
@@ -1210,7 +1258,8 @@
 		},
 		{
 			"category_id": 4,
-
+	"description": "From a supine position lying on your back, pull one knee into the chest with the hands clasped around the bent knee to the level of pressure desired (gas trapped in the large intestine may be released in this asana).  The other leg is extended straight and the gaze is natural and forward.",
+	"benefits": "Releases gas trapped in large intestine.  Stretches the cervical spine (neck).  Improves the digestion system.  Aides in elimination."
 			"comments_count": 1,
 			"cover_original": "/media/poses/photo/src/le/left-leg-wind-freeing-pose.jpg",
 			"cover_thumbnail": "/media/cache/39/0e/390e38405d851ccdfbe96c9debabbd51.jpg",
@@ -1227,7 +1276,8 @@
 		},
 		{
 			"category_id": 8,
-
+	"description": "From a standing position the weight of the body is distributed equally between the front and back leg.  The legs are in a wide stance, parallel and scissor towards each other.  The back foot is at a45 to60 degree angle and the front and back heels are aligned.  The forward thigh is turned outward so that the center of the kneecap is in line with the center of the ankle.  The torso opens towards the sky while the hips are squared as much as possible.  The top hand extends up while the bottom hand is either on the earth (inside or outside the foot) or, if flexibility is limited, on a block positioned against the inner sole of the foot.  From the center of the back, between the shoulder blades, the arms press away from the torso.  Beginning students should keep their head in a neutral position and look forward or turn the gaze towards the earth.  More experienced students can turn the head and gaze up at the top thumb as a Dristhi point.",
+	"benefits": "Calms the brain.  Stimulates the liver and kidneys.  Stretches the hamstrings, calves, and thighs.  Strengthens the thighs, knees, and ankles.  Stretches the back of the leg, the front thigh and groin.",
 			"comments_count": 1,
 			"cover_original": "/media/poses/photo/src/re/revolved-triangle-pose-left-arm-behind-right-foot.jpg",
 			"cover_thumbnail": "/media/cache/da/6f/da6f9252da746129c823812593df5ad3.jpg",
@@ -1247,6 +1297,8 @@
 			"cover_original": "/media/poses/photo/src/se/seated-forward-bend.jpg",
 			"cover_thumbnail": "/media/cache/62/2a/622ae19ed809a537a7ad5b99e6e01ff6.jpg",
 			"level_id": 2,
+				"description": "From a seated position with the sits bones rooted into the earth the legs extend forward to the degree that the chest and thighs can stay connected.  The fingers wrap around the toes.  The upper torso folds forward at the crease of the hips with the spine long.  The gaze is forward.",
+				"benefits": "Calms the brain and helps relieve stress and mild depression.  Stretches the spine, shoulders and hamstrings.  Stimulates the liver, kidneys, ovaries and uterus.  Improves digestion.  Helps relieve the symptoms of menopause and menstrual discomfort.  Soothes headache and anxiety.  Reduces fatigue.  Therapeutic for high blood pressure, infertility, insomnia and sinusitis.  Traditional texts say that Paschimottanasana increases appetite, reduces obesity and cures diseases.",
 			"likes_count": 209,
 			"meta_title": "Seated forward bend",
 			"muscle": "/media/poses/muscle/src/se/seated-forward-bend.jpg",
@@ -1393,9 +1445,19 @@
 			"slug": "fish-out-of-hero-pose",
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d1546694739950e1591cbe.mp4"
 		},
+
+			{
+				"meta_title": "Inverted Staff Pose",
+				"sanskrit_name": "Dvi Pāda Viparīta Daṇḍāsana",
+				"category_id": 3,
+				"level_id": 3,
+				"description": "Start with the preparatory steps of wheel pose. Then with the crown of the head on the floor draw the elbows to the floor shoulder-distance apart and interlace the fingers around the head as in supported headstand.  Press firmly into the forearms and lift the head off the floor, extend the legs straight, draw the feet together and energize down through the legs and feet.",
+				"benefits": "Stretches the entire front body and opens the chest.  Tones the internal organs.  Revitalizes the central nervous system."
+			},
 		{
 			"category_id": 5,
-
+	"description": "From a seated position both legs are extended to the front.  The torso does not lean backward.  The weight of the body is positioned towards the front of the sitting bones and the pubis and tailbone are equidistant from the earth.  Both thighs are pressed down against the floor and are rotated slightly towards each other.  The inner groins are drawn up toward the sacrum.  Feet are flexed and the toes are separated.  The heels may come up off the earth.  The ankles are pressed out through the heels.  The shoulders are stacked in line with the hips.  The arms are resting by the side body.  The front torso is lengthened perpendicular to the earth, extending up through the crown of the head towards the sky while the sits bones are rooted down.",
+	"benefits": "Strengthens the back muscles.  Stretches the shoulders and chest.  Improves posture.",
 			"comments_count": 0,
 			"cover_original": "/media/poses/photo/src/ea/easy-staff-pose.jpg",
 			"cover_thumbnail": "/media/cache/38/47/384784862bd9bf3fc22a79a1c95f8bee.jpg",
@@ -1461,15 +1523,16 @@
 			"cover_original": "/media/poses/photo/src/in/intense-arm-right-stretch-pose.jpg",
 			"cover_thumbnail": "/media/cache/63/db/63db03c8d36f0e808e2505b26cacad1d.jpg",
 			"level_id": 3,
-
+	"description": "From a standing position with one leg forward and one back lean the torso forward at the crease of the hip joint.  Stop when the torso is parallel to the floor.  Press the fingertips or flat palms to the floor on either side of the front foot, maintaining a straight elongated spine.  If it isn’t possible to touch the floor, or to maintain a straight spine, support the hands on a pair of blocks.  Press the thighs back and lengthen the torso forward, lifting up through the top of the sternum.  Then, as flexibility allows, bring the front torso closer to the top of the thigh without rounding the spine.  Eventually the long front torso will rest down on the thigh.  The gaze is down.",
+	"benefits": "Calms the brain.  Stretches the spine, the shoulders, the hips and the hamstrings.  Strengthens the legs.  Stimulates the abdominal organs.  Improves posture and sense of balance.  Improves digestion.",
 			"likes_count": 87,
-			"meta_title": "Intense arm right stretch pose",
+			"meta_title": "(Pyramid) Intense arm right stretch pose",
 			"muscle": "/media/poses/muscle/src/in/intense-arm-right-stretch-pose.jpg",
 			"photo": "/media/poses/photo/src/in/intense-arm-right-stretch-pose.jpg",
 			"sanskrit_name": "Parsvottanasana advanced right",
 			"slug": "intense-arm-right-stretch-pose",
 
-			"title": "Intense arm right stretch pose",
+			"title": "(Pyramid) Intense arm right stretch pose",
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d154cc94a6f604f3e5cdef.mp4"
 		},
 		{
@@ -1485,7 +1548,8 @@
 			"photo": "/media/poses/photo/src/up/upward-table-pose.jpg",
 			"sanskrit_name": "Sahaja Purvottanasana",
 			"slug": "upward-table-pose",
-
+	"description": "From staff pose, place the hands on the floor about one foot behind the hips with the fingertips pointed forward towards hips.  Keep knees bent and feet close to hips while pressing through the hands and feet to lift the hips creating an inverted U with the body into Table.  Relax the head back and gaze at the tip of your nose.",
+	"benefits": "Strengthens the arms, the wrists, and the legs.  Stretches the shoulders, the chest, and the front ankles.",
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d154d506361d3870255f57.mp4"
 		},
 		{
@@ -1496,15 +1560,16 @@
 			"cover_thumbnail": "/media/cache/9c/6f/9c6fe2cf738f1e3fb0c3353ec10a6184.jpg",
 			"level_id": 2,
 			"likes_count": 101,
-			"meta_title": "Intense right stretch, hands behind back in Namaste",
+			"meta_title": "(Pyramid) Intense right stretch, hands behind back in Namaste",
 			"muscle": "/media/poses/muscle/src/in/intense-right-stretch-hands-behind-back-in-namaste.jpg",
 			"photo": "/media/poses/photo/src/in/intense-right-stretch-hands-behind-back-in-namaste.jpg",
 			"sanskrit_name": "Ardha Parsvottanasana right",
 			"slug": "intense-right-stretch-hands-behind-back-in-namaste",
+	"description": "From a standing position with one leg forward and one back lean the torso forward at the crease of the hip joint.  Stop when the torso is parallel to the floor.  Press the fingertips or flat palms to the floor on either side of the front foot, maintaining a straight elongated spine.  If it isn’t possible to touch the floor, or to maintain a straight spine, support the hands on a pair of blocks.  Press the thighs back and lengthen the torso forward, lifting up through the top of the sternum.  Then, as flexibility allows, bring the front torso closer to the top of the thigh without rounding the spine.  Eventually the long front torso will rest down on the thigh.  The gaze is down.",
+	"benefits": "Calms the brain.  Stretches the spine, the shoulders, the hips and the hamstrings.  Strengthens the legs.  Stimulates the abdominal organs.  Improves posture and sense of balance.  Improves digestion.",
 
 
-
-			"title": "Intense right stretch, hands behind back in Namaste",
+			"title": "(Pyramid) Intense right stretch, hands behind back in Namaste",
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d154ea94a6f60625326d55.mp4"
 		}, {
 			"category_id": 2,
@@ -1523,6 +1588,24 @@
 			"title": "Seated pose, legs wide apart, back straight",
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d1550706361d379a298c1c.mp4"
 		},
+		{
+			"meta_title": "Side Splits Pose",
+			"sanskrit_name": "Upaviṣṭha Koṇāsana",
+			"alt_name": "Straddle Splits / Middle Splits",
+			"category_id": 2,
+			"level_id": 3,
+			"description": "From a wide stance the legs are open and extended sideways to your degree of flexibility.  The outer edges of the feet are rotated and gripping toward the earth.  The weight of the body is supported by the arms.  The palms are rooted into the earth with the fingers pointing towards the body.  There should be no excess weight on the knee or ankle joints as you lower down to your degree of flexibility.  The gaze is down and slightly forward.",
+			"benefits": "Stretches the insides and backs of the legs.  Stimulates the abdominal organs.  Strengthens the spine.  Calms the brain.  Releases groin."
+		},
+
+			{
+				"meta_title": "Standing Splits Pose",
+				"sanskrit_name": "Ūrdhva Prasārita Eka Pādāsana",
+				"category_id": 5,
+				"level_id": 2,
+				"description": "From a standing posture the weight of the body is balanced on one foot, the front torso is resting on the thigh and the other leg is extended up.  The proper balance of external and internal rotation in each leg is important, especially for the standing leg.  Specifically, pay attention to the angle of the knee.  Keep the kneecap facing straight ahead.  Feel how the downward energy of the standing leg creates an upward movement in the raised leg.  Don't focus on how high the raised leg goes; instead, work toward directing equal energy into both legs.  Hold the raised leg more or less parallel to the floor, or raise it slightly higher; ideally the torso should descend as the lifted leg ascends.  The gaze is out in front of you.",
+				"benefits": "Calms the brain.  Stimulates the liver and kidneys.  Stretches the hamstrings, calves, and thighs.  Strengthens the thighs, knees, and ankles.  Stretches the back of the leg, the front thigh and groin."
+			},
 		{
 			"category_id": 4,
 
@@ -1560,7 +1643,8 @@
 			"cover_original": "/media/poses/photo/src/mo/monkey-king-pose-with-rotation-to-left-leg-hands-up.jpg",
 			"cover_thumbnail": "/media/cache/a0/61/a06158e133053cc6268782286f60605a.jpg",
 			"level_id": 3,
-
+	"description": "The hips are parallel and squared to the earth with one leg extended forward.  The opposite leg extended back with the knee and foot squared to the earth.  The inner thighs scissor towards each other.  The hands are by the side body or at the heart center in Anjali Mudra (Salutation Seal) or stretched straight up toward the sky.  The ribcage is lifted.  The heart is open.  The gaze is forward.",
+	"benefits": "Stretches the thighs, hamstrings, and groin.  Stimulates the abdominal organs.",
 			"likes_count": 71,
 			"meta_title": "Monkey king pose with rotation to left leg, hands up",
 			"muscle": "/media/poses/muscle/src/mo/monkey-king-pose-with-rotation-to-left-leg-hands-up.jpg",
@@ -1624,7 +1708,8 @@
 			"photo": "/media/poses/photo/src/tr/tree-pose-left-foot-in-front-of-thigh.jpg",
 			"sanskrit_name": "Vriksasana, left foot in front of thigh",
 			"slug": "tree-pose-left-foot-in-front-of-thigh",
-
+"description": "From a standing position, one foot is rooted into the earth with the opposite heel rooted into the inner thigh with the toes pointing towards the earth.  The pelvis and the chin are tucked in.  The arms are lifted above the head with the palms together in prayer position.  The gaze is forward.",
+"benefits": "Strengthens the legs, ankles, and feet.  Improves flexibility in the hips and knees.  Improves balance.",
 			"title": "Tree pose, left foot in front of thigh",
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d1558906361d385435cc6a.mp4"
 		}, {
@@ -1673,7 +1758,8 @@
 			"cover_original": "/media/poses/photo/src/un/unsupported-shoulderstand-hands-behind-back.jpg",
 			"cover_thumbnail": "/media/cache/37/64/3764f65012461ba4a05841706a5d6e2f.jpg",
 			"level_id": 3,
-
+	"description": "From a supine position, the upper back is resting on the earth with the hips straight up towards the sky.  The torso is perpendicular to the earth.  The legs are fully extended and the toes are active.  The hands are either supporting the lower back or extended up by the side body in matchstick.  The neck is flat on the earth and the chin is tucked in.  The gaze is inward.",
+	"benefits": "Calms the brain and helps relieve stress and mild depression.  Stimulates the thyroid and prostate glands and abdominal organs.  Stretches the shoulders and neck.  Tones the legs and buttocks.  Improves digestion.  Helps relieve the symptoms of menopause.  Reduces fatigue and alleviates insomnia.  Therapeutic for asthma, infertility, and sinusitis.",
 			"likes_count": 286,
 			"meta_title": "Unsupported shoulderstand, hands behind back",
 			"muscle": "/media/poses/muscle/src/un/unsupported-shoulderstand-hands-behind-back.jpg",
@@ -1711,7 +1797,8 @@
 			"photo": "/media/poses/photo/src/st/standing-bend-to-right-leg.jpg",
 			"sanskrit_name": "Utthita Hasta Padangustasana with bend to right leg",
 			"slug": "standing-bend-to-right-leg",
-
+	"description": "From a standing position with the feet together, the weight of the body is shifted to balance on one leg.  The opposite foot is then clasped with both hands and lifted up by pulling the knee in towards the chest.  Fingers are interlaced under the sole of the foot, specifically at the arch.  Avoid placing the thumbs on the tops of the feet.  The standing leg is straight, but the knee joint is not locked.  The standing foot is rooted firmly into the earth while the weight is shifted slightly forward, closer to the ball of the foot, not the heel.  The bent knee then extends straight until it is parallel with the earth.  Maintain balance in the pose with good pranayama (breath work) and bandhas.  Keep a leveled pelvis.  It is helpful to think about extending the foot up rather than out.  Continue to lengthen the spine from the neck down to the tailbone.  Allow the shoulders to fall into their natural position away from the ears and extend the arms, maintaining the grip on the foot and straightening the leg.  Engage the muscles of the thigh for more stability.  To achieve the full extension of the pose, round the spine and drop the elbows while lowering the head to your knee.  Avoid dropping the abdominals onto your thigh.  Pull the navel up and into the spine while folding forward.  Lower the head to the knee and tuck the chin into the chest into Jalandhara bandha.  This will extend the stretch of the spine up through the neck.  The gaze is towards the knee or out in front.",
+	"benefits": "Improves balance.  Enhances agility.  Helps digestion.  Massages the internal organs.  Improves circulation.  Enhances memory.",
 			"title": "Standing bend to right leg",
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d155f894739951d5696849.mp4"
 		}, {
@@ -1779,6 +1866,15 @@
 					"description": "From half moon pose, slowly bring the top hand down to replace the bottom hand.  On the next inhalation, bring the opposite hand to the sky, twist the pelvis to the opposite side and stack the shoulders on top of each other.  Gaze is towards the sky and if not possible, gaze is downwards.",
 					"benefits": "Strengthens the abdomen, ankles, thighs, buttocks and spine.  Stretches the groins, hamstrings, calves, shoulders, chest and spine.  Improves coordination and sense of balance."
 				},
+
+					{
+						"meta_title": "Sphinx Pose",
+						"sanskrit_name": "Sālamba Bhujaṅgāsana",
+						"category_id": 3,
+						"level_id": 1,
+						"description": "From a prone position with the pelvic bowl is firmly contracted interiorly towards the center line of the body while the pubis is tucked under.  The legs are extended back and the tops of the feet are flat.  The palms are flat and the elbows are on the mat, stacked right below the shoulders.  On an inhalation, lift the sternum and extend the neck away from shoulders with the elbows, palms and pelvic bone firmly attached to the mat.",
+						"benefits": "Strengthens the spine.  Stretches the chest, the lungs, the shoulders and the abdomen.  Stimulates the abdominal organs.  Opens the heart and the lungs."
+					},
 				{
 					"meta_title": "Bound Half Moon Pose",
 					"sanskrit_name": "Baddha Ardha Chandrāsana",
@@ -1790,18 +1886,19 @@
 				},
 		{
 			"category_id": 8,
-
+	"description": "From a standing position with one leg forward and one back lean the torso forward at the crease of the hip joint.  Stop when the torso is parallel to the floor.  Press the fingertips or flat palms to the floor on either side of the front foot, maintaining a straight elongated spine.  If it isn’t possible to touch the floor, or to maintain a straight spine, support the hands on a pair of blocks.  Press the thighs back and lengthen the torso forward, lifting up through the top of the sternum.  Then, as flexibility allows, bring the front torso closer to the top of the thigh without rounding the spine.  Eventually the long front torso will rest down on the thigh.  The gaze is down.",
+	"benefits": "Calms the brain.  Stretches the spine, the shoulders, the hips and the hamstrings.  Strengthens the legs.  Stimulates the abdominal organs.  Improves posture and sense of balance.  Improves digestion.",
 			"comments_count": 0,
 			"cover_original": "/media/poses/photo/src/in/intense-left-stretch-pose.jpg",
 			"cover_thumbnail": "/media/cache/57/82/5782cf0b4d3ad83b034f9e83ab5b3130.jpg",
 			"level_id": 2,
 			"likes_count": 114,
-			"meta_title": "Intense left stretch pose",
+			"meta_title": "(Pyramid) Intense left stretch pose",
 			"muscle": "/media/poses/muscle/src/in/intense-left-stretch-pose.jpg",
 			"photo": "/media/poses/photo/src/in/intense-left-stretch-pose.jpg",
 			"sanskrit_name": "Parsvottanasana intense left",
 			"slug": "intense-left-stretch-pose",
-			"title": "Intense left stretch pose",
+			"title": "(Pyramid) Intense left stretch pose",
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d1564106361d383a17b7d9.mp4"
 		},
 		{
@@ -1930,6 +2027,8 @@
 			"cover_thumbnail": "/media/cache/71/33/713373ecbca85dad157d6f5dde895552.jpg",
 			"level_id": 2,
 			"likes_count": 270,
+				"description": "The front knee is bent in a90-degree angle directly above the ankle and the back knee is resting on the earth with the top of the back foot pressed firmly into the earth.  The hips are squared and pressed forward.  The inner thighs scissor towards each other.  The pelvis is tucked under to protect the low back.  The ribcage is lifted.  The arms are lifted.  The hands can be together or separated and facing each other with the fingers spread wide.  The gaze is forward.",
+				"benefits": "Stretches the chest, lungs, neck, belly and groin (psoas).  Strengthens the shoulders, arms and back muscles.  Strengthens and stretches the thighs, calves and ankles.",
 			"meta_title": "Low lunge with upward stretch, left leg forward",
 			"muscle": "/media/poses/muscle/src/lo/low-lunge-with-upward-stretch-left-leg-forward.jpg",
 			"photo": "/media/poses/photo/src/lo/low-lunge-with-upward-stretch-left-leg-forward.jpg",
@@ -2022,6 +2121,41 @@
 			"title": "Rotated warrior pose on right foot",
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d15307947399519e7ee794.mp4"
 		}, 
+	{
+		"meta_title": "Supine Hand to Toe Pose",
+		"sanskrit_name": "Supta Hasta Pādāṅguṣṭhāsana",
+		"category_id": 4,
+		"level_id": 2,
+		"description": "In supine position, raise one leg to the sky.  Using the hand from the same side, catch the toes to bring the knee closer to the chest, straightening the knee.  Make sure the gluts and the other legs are rested on the floor.  If the hand cannot reach the toes, use a strap.",
+		"benefits": "Stretches the hamstrings and strengthens the leg."
+	},
+	{
+		"meta_title": "Extended Supine Hand to Toe Pose",
+		"sanskrit_name": "Utthita Supta Hasta Pādāṅguṣṭhāsana",
+		"category_id": 4,
+		"level_id": 2,
+		"description": "From the supine hand to toe pose, drop the extended leg to one side, opening the hip.  Keep the knee straight and if necessary use a strap.  Place the opposite hand on the pelvic bone to prevent the glut from lifting off the floor.  Keep the glutes grounded.",
+		"benefits": "Opens the hips and groins.  Stretches the hamstrings, IT bands and legs"
+	},
+
+	{
+		"meta_title": "Supine Spinal Twist Pose",
+		"sanskrit_name": "Supta Jaṭhara Parivartānāsana",
+		"category_id": 4,
+		"level_id": 1,
+		"description": "From supine position, bent one knee and cross it outside of the opposite foot.  Use the hand to put slight pressure on the bent knee to push down towards the floor.  Keep both shoulders squared and rooted to the floor.  Extend the opposite hand and gaze towards the hand.  For a deeper stretch, start to straighten the bent knee.",
+		"benefits": "Stretches the back muscles and spine.  Stimulates the kidneys, abdominal organs, urinary bladders and intestines.  Releases stress.  If the knee is straightened, it stretches the hamstrings and strengthens the legs."
+	},
+	{
+		"meta_title": "Supine Pigeon Pose",
+		"sanskrit_name": "Supta Kapotāsana",
+		"alt_name": "Eye of the Needle / Dead Pigeon",
+		"category_id": 4,
+		"level_id": 2,
+		"description": "Lie on the back in supine position.  Bend the knees, heels close to SI bones and cross one ankle over the opposite knee.  Thread the hands or reach through between the thighs.  Lift the foot off the floor and hold the bent knee behind the thigh or shin to bring it closer to the chest, make sure that the acrum is rooted to the floor.",
+		"benefits": "Stretches the hamstrings and quads.  If the elbow is used to push the thigh, it opens the hips as well."
+	},
+
 			{
 				"meta_title": "Supine Hero Pose",
 				"sanskrit_name": "Supta Vīrāsana",
@@ -2061,6 +2195,8 @@
 			"cover_original": "/media/poses/photo/src/tr/tree-pose-on-right-foot.jpg",
 			"cover_thumbnail": "/media/cache/aa/b7/aab76636c30f67b2be8d391abc4765ab.jpg",
 			"level_id": 2,
+			,"description": "From a standing position, one foot is rooted into the earth with the opposite heel rooted into the inner thigh with the toes pointing towards the earth.  The pelvis and the chin are tucked in.  The arms are lifted above the head with the palms together in prayer position.  The gaze is forward.",
+			"benefits": "Strengthens the legs, ankles, and feet.  Improves flexibility in the hips and knees.  Improves balance.",
 			"likes_count": 254,
 			"meta_title": "Tree pose on right foot",
 			"muscle": "/media/poses/muscle/src/tr/tree-pose-on-right-foot.jpg",
@@ -2152,9 +2288,19 @@
 			"slug": "greeting-pose",
 
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d1538b94739951d569683d.mp4"
-		}, {
+		},
+			{
+				"meta_title": "Reverse Warrior Pose",
+				"sanskrit_name": "Pārśva Vīrabhadrāsana",
+				"category_id": 1,
+				"level_id": 2,
+				"description": "From warrior II, the lower body stays static while the upper body arches back in a gentle back bend.  The top arm is extended back with the bicep by the ear and the fingers spread wide.  The other arm slides down the back leg resting on the thigh or shin, but not the knee joint.  The gaze is up towards the sky.",
+				"benefits": "Strengthens and stretches the legs, knees, and ankles.  Stretches the groin, spine, waist, chest, lungs, and shoulders.  Stimulates abdominal organs.  Increases stamina.  Relieves backaches, especially through second trimester of pregnancy.  Therapeutic for carpal tunnel syndrome, flat feet, infertility, osteoporosis, and sciatica."
+			},
+		{
 			"category_id": 1,
-
+	"description": "From warrior II, the lower body stays static while the upper body is folded forward at the crease of the hip.  One arm is extended toward the front with the bicep by the ear and the fingers spread wide while the other reaches down to the earth on the inside of the thigh.  The upper torso and the gaze twist up towards the sky.",
+	"benefits": "Strengthens and stretches the legs, knees, and ankles.  Stretches the groin, spine, waist, chest, lungs, and shoulders.  Stimulates abdominal organs.  Increases stamina.",
 			"comments_count": 0,
 			"cover_original": "/media/poses/photo/src/ex/extended-left-side-angle-pose.jpg",
 			"cover_thumbnail": "/media/cache/c1/ab/c1abb071548ee3fe64a1e36d06b9ae8d.jpg",
@@ -2194,13 +2340,14 @@
 			"cover_thumbnail": "/media/cache/85/4f/854f597876ef0434d05c828d020155a6.jpg",
 			"level_id": 2,
 			"likes_count": 101,
-			"meta_title": "Intense side stretch to right leg",
+			"meta_title": "(Pyramid) Intense side stretch to right leg",
 			"muscle": "/media/poses/muscle/src/in/intense-side-stretch-to-right-leg.jpg",
 			"photo": "/media/poses/photo/src/in/intense-side-stretch-to-right-leg.jpg",
 			"sanskrit_name": "Parsvottanasana right",
 			"slug": "intense-side-stretch-to-right-leg",
-
-			"title": "Intense side stretch to right leg",
+	"description": "From a standing position with one leg forward and one back lean the torso forward at the crease of the hip joint.  Stop when the torso is parallel to the floor.  Press the fingertips or flat palms to the floor on either side of the front foot, maintaining a straight elongated spine.  If it isn’t possible to touch the floor, or to maintain a straight spine, support the hands on a pair of blocks.  Press the thighs back and lengthen the torso forward, lifting up through the top of the sternum.  Then, as flexibility allows, bring the front torso closer to the top of the thigh without rounding the spine.  Eventually the long front torso will rest down on the thigh.  The gaze is down.",
+	"benefits": "Calms the brain.  Stretches the spine, the shoulders, the hips and the hamstrings.  Strengthens the legs.  Stimulates the abdominal organs.  Improves posture and sense of balance.  Improves digestion.",
+			"title": "(Pyramid) Intense side stretch to right leg",
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d153b994a6f605e5fbb979.mp4"
 		}, {
 			"category_id": 6,
@@ -2253,6 +2400,8 @@
 			"cover_original": "/media/poses/photo/src/ri/right-triangle-pose.jpg",
 			"cover_thumbnail": "/media/cache/9a/c0/9ac04c617f4a56025d36b945d0bdb025.jpg",
 			"level_id": 1,
+			    "description": "From a standing position, the legs are straight and separated into a wide stance.  The feet are aligned and flat on the earth with the back foot in a60-degree angle towards the front.  The inner thighs are rotated externally away from each other.  The pelvis is tucked and the ribcage is lifted.  One arm extends up towards the sky as the other reaches down to the earth.  Both arms are aligned with the shoulders in a straight line.  The fingers reach out as the shoulder blades squeeze together.  The gaze is toward the front.",
+    "benefits": "Stretches and strengthens the thighs, knees, and ankles.  Stretches the hips, groin, hamstrings, calves, shoulders, chest, and spine.  Stimulates the abdominal organs.  Helps relieve stress.  Improves digestion.  Helps relieve the symptoms of menopause.  Relieves backache, especially through second trimester of pregnancy.  Therapeutic for anxiety, flat feet, infertility, neck pain, osteoporosis, and sciatica.",
 			"likes_count": 1313,
 			"meta_title": "Right triangle pose",
 			"muscle": "/media/poses/muscle/src/ri/right-triangle-pose.jpg",
@@ -2272,7 +2421,8 @@
 			"photo": "/media/poses/photo/src/up/upward-facing-dog.jpg",
 			"sanskrit_name": "Urdhva Mukha Svanasana",
 			"slug": "upward-facing-dog",
-
+	"description": "The body is in a prone position parallel to the earth.  The weight of the body is supported equally by the straight arms and the tops of the feet which press firmly into the earth.  The shoulders are rotated back and down.  The ribcage is lifted and pulled thru to the front in a slight upper thoracic backbend.  The joints are stacked with the wrists, elbows and shoulders in a straight-line.  The neck is a natural extension of the spine and the chin is slightly tucked.  The abdomen is pulled up towards the spine.  The palms are flat and the elbows are close to the side body.  The gaze is forward.",
+	"benefits": "Improves posture.  Strengthens the spine, arms, and wrists.  Stretches the chest, lungs, shoulders, and abdomen.  Firms the buttocks.  Stimulates abdominal organs.  Helps relieve mild depression, fatigue, and sciatica.  Therapeutic for asthma.",
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d1541894a6f605cdc77c5d.mp4"
 		}, {
 			"category_id": 8,
@@ -2471,6 +2621,15 @@
 
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d154f7947399510df9f9f3.mp4"
 		},
+
+			{
+				"meta_title": "Scorpion Pose",
+				"sanskrit_name": "Vṛśchikāsana I",
+				"category_id": 5,
+				"level_id": 3,
+				"description": "From feathered peacock pose, the knees are bent and the feet are lowered towards the head as the crown of the head lifts and the upper thoracic reaches through to the front.  To maintain balance the ribs move back and shoulders lower back and away from the ears as the forearms and palms push into the earth.  The knees may separate, but keep the toes together.  The gaze is forward or up depending on your flexibility.",
+				"benefits": "Strengthens the shoulders, arms, abdominals and back.  Stretches the spine, hips and neck.  Improves balance and focus."
+			},
 			{
 				"meta_title": "Scorpion Handstand Pose",
 				"sanskrit_name": "Vṛśchikāsana II",
@@ -2526,7 +2685,8 @@
 			"cover_original": "/media/poses/photo/src/to/tortoise-pose.jpg",
 			"cover_thumbnail": "/media/cache/74/27/74273462c0adc868a43b92b1d0e8a485.jpg",
 			"level_id": 3,
-
+	"description": "From standing forward bend, the hands and the elbows press thru the legs, then wrap back  around  to the opposite side of the torso into a bind at the small of the back.  The gaze is down.",
+	"benefits": "Stretches the insides and backs of the legs.  Stimulates the abdominal organs.  Strengthens the spine.  Calms the brain.  Releases groin.  Releases the elbows.",
 			"likes_count": 219,
 			"meta_title": "Tortoise pose",
 			"muscle": "/media/poses/muscle/src/to/tortoise-pose.jpg",
@@ -2663,7 +2823,8 @@
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d155db94739951dd9a45a0.mp4"
 		}, {
 			"category_id": 1,
-
+	"description": "From mountain pose, lift one foot.  Bend forward and catch the toes with the fingers.  Place the other hand on the hip to square the hip towards the front.  Slowly straighten the knee and the torso and open the leg to one side.  Use a strap if necessary.  Gaze towards the front or opposite of the extended leg for balance.",
+	"benefits": "Opens the hips and groins.  Stretches the hamstrings, IT bands and legs.  Improves balance.",
 			"comments_count": 0,
 			"cover_original": "/media/poses/photo/src/ad/advanced-extended-right-hand-to-big-toe-pose.jpg",
 			"cover_thumbnail": "/media/cache/fd/9f/fd9f48375138f1984f1ed1a2edd54593.jpg",
@@ -2713,7 +2874,8 @@
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d15622947399519e7ee797.mp4"
 		}, {
 			"category_id": 1,
-
+				"description": "From warrior II, the lower body stays static while the upper body folds forward at the crease of the hip.  One arm is extended toward the sky while the other reaches down to the earth.  The fingers reach out as the shoulder blades squeeze together.  The gaze is towards the sky.",
+				"benefits": "Strengthens and stretches the legs, knees and ankles.  Stretches the groin, spine, waist, chest, lungs and shoulders.  Stimulates abdominal organs.  Increases stamina.",
 			"comments_count": 1,
 			"cover_original": "/media/poses/photo/src/bi/bikram-triangle-left.jpg",
 			"cover_thumbnail": "/media/cache/50/81/5081fe6984ae5227d2386fe2e1096b99.jpg",
@@ -2725,7 +2887,17 @@
 			"sanskrit_name": "Trikonasana Bikram variation left",
 			"slug": "bikram-triangle-left",
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d1562a947399529d880072.mp4"
-		}, {
+		}, 
+			{
+				"meta_title": "Extended Puppy Pose",
+				"sanskrit_name": "Uttāna Shishosana",
+				"alt_name": "Melting Heart",
+				"category_id": 7,
+				"level_id": 2,
+				"description": "The body is prone to the earth and the forehead, chest and/or chin rest on the earth with the arms extended out in front pressing downward for a deeper stretch.  The hips are at a90 degree angle to the knees and pulling back towards the heels.  The shins and the top of the feet are extended and firm on the earth.  (A blanket can be used under the chin to relax the neck if needed).  There is a slight curve in the lower back and the gaze is forward.",
+				"benefits": "Stretches the spine and shoulders."
+			},
+		{
 			"category_id": 1,
 
 			"comments_count": 0,
@@ -2757,7 +2929,8 @@
 			"photo": "/media/poses/photo/src/re/reclining-bound-angle-pose.jpg",
 			"sanskrit_name": "Supta Baddha Konasana",
 			"slug": "reclining-bound-angle-pose",
-
+	"description": "In supine position, bend both knees and drop the knees to each side, opening the hips.  Bring the soles of the feet together and bring the heels as close to the groin as possible, keeping the knees close to the ground.  Bring the hands overhead and interlace the fingers.  Keep the back flat on the floor.",
+	"benefits": "Opens the hips and groins.  Stretches the shoulders, rib cage and back.  Stimulates the abdominal organs, lungs and heart.",
 			"title": "Reclining bound angle pose",
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d1565594a6f606aa4dc753.mp4"
 		},
@@ -2819,7 +2992,8 @@
 			"cover_original": "/media/poses/photo/src/br/bridge-pose-with-left-leg-up-wrong-title.jpg",
 			"cover_thumbnail": "/media/cache/c0/17/c017772c12226bef13c81c51a29030d2.jpg",
 			"level_id": 3,
-
+	"description": "From wheel pose, extend one leg straight up to the sky with active toes.  The gaze is forward.",
+	"benefits": "Strengthens the arms, wrists, legs, buttocks, abs, and spine.  Stimulates the thyroid and pituitary.  Increases energy and counteracts depression.  Therapeutic for asthma, back pain, infertility, and osteoporosis.",
 			"likes_count": 124,
 			"meta_title": "Bridge pose with left leg up",
 			"muscle": "/media/poses/muscle/src/br/bridge-pose-with-left-leg-up-wrong-title.jpg",
@@ -3085,7 +3259,8 @@
 			"cover_original": "/media/poses/photo/src/up/upward-bow-pose-with-straight-legs.jpg",
 			"cover_thumbnail": "/media/cache/0d/98/0d98777ee60c646fa3f86c14340fc98e.jpg",
 			"level_id": 3,
-
+	"description": "Pressed up from a supine position, lying on your back, the palms are rooted into the earth with the fingers pointed towards the heels.  The feet are grounded.  The hips are pressed up.  The thighs are rotated inward.  The thoracic spine is arched creating a strong crescent arch along the spinal column.  The gaze is forward.",
+	"benefits": "Strengthens the arms, wrists, legs, buttocks, abs, and spine.  Stimulates the thyroid and pituitary.  Increases energy and counteracts depression.  Therapeutic for asthma, back pain, infertility, and osteoporosis.",
 			"likes_count": 141,
 			"meta_title": "Upward bow pose with straight legs",
 			"muscle": "/media/poses/muscle/src/up/upward-bow-pose-with-straight-legs.jpg",
@@ -3175,7 +3350,8 @@
 			"photo": "/media/poses/photo/src/wa/warrior-pose-left-leg-bent.jpg",
 			"sanskrit_name": "Virabhadrasana leg bent left",
 			"slug": "warrior-pose-left-leg-bent",
-
+	"description": "From a standing position, the legs are separated into a wide stance.  The front knee is bent in a90-degree angle directly above the ankle.  The back leg is extended and straight with the outside edge of the back foot gripping the earth in a60-degree angle towards the front.  The inner thighs are externally rotated away from each other.  The pelvis is tucked.  The ribcage is lifted.  The arms are extended out to the sides and are aligned with the shoulders in a straight line with the fingers reaching out as the shoulder blades squeeze together.  The gaze is toward the front fingers.",
+	"benefits": "Strengthens and stretches the legs and ankles.  Stretches the groin, chest, lungs, and shoulders.  Stimulates abdominal organs.  Increases stamina.  Relieves backaches, especially through second trimester of pregnancy.  Therapeutic for carpal tunnel syndrome, flat feet, infertility, osteoporosis, and sciatica.",
 			"title": "Warrior pose, left leg bent",
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d15301947399510df9f9ee.mp4"
 		},
@@ -3197,7 +3373,8 @@
 		},
 		{
 			"category_id": 1,
-
+"description": "From a standing position, one foot is rooted into the earth with the opposite heel rooted into the inner thigh with the toes pointing towards the earth.  The pelvis and the chin are tucked in.  The arms are lifted above the head with the palms together in prayer position.  The gaze is forward.",
+"benefits": "Strengthens the legs, ankles, and feet.  Improves flexibility in the hips and knees.  Improves balance.",
 			"comments_count": 0,
 			"cover_original": "/media/poses/photo/src/tr/tree-pose-hands-in-namaste-extended-forward-left-support.jpg",
 			"cover_thumbnail": "/media/cache/8e/ed/8eedcdcea72b2462196178ee17207576.jpg",
@@ -3306,7 +3483,8 @@
 			"photo": "/media/poses/photo/src/ex/extended-right-side-angle-pose.jpg",
 			"sanskrit_name": "Utthita Parsvokonasana right",
 			"slug": "extended-right-side-angle-pose",
-
+	"description": "From warrior II, the lower body stays static while the upper body is folded forward at the crease of the hip.  One arm is extended toward the front with the bicep by the ear and the fingers spread wide while the other reaches down to the earth on the inside of the thigh.  The upper torso and the gaze twist up towards the sky.",
+	"benefits": "Strengthens and stretches the legs, knees, and ankles.  Stretches the groin, spine, waist, chest, lungs, and shoulders.  Stimulates abdominal organs.  Increases stamina.",
 			"title": "Extended right side angle pose",
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d1539a94739951af195c9a.mp4"
 		},
@@ -3336,7 +3514,8 @@
 			},
 		{
 			"category_id": 8,
-
+	"description": "From a standing position, the legs are in a wide stance with the feet aligned and flat on the earth.  The inner thighs scissor towards each other with Mula Bandha engaged.  The front knee is bent in a90-degree angle and tracks the front ankle.  The back leg is straight with most of the body’s weight pressed into the outside edge of the back foot gripping the earth.  From the center of the back, between the shoulder blades, the arms move away from the torso that is rotated up towards the sky.  One arm is actively reaching up and the other actively reaching down utilizing the fingers tips or flat palm only as a un-weighted balancing tool.  The elbow of the bottom hand is either on the inside or the outside of the bent front knee, depending on the degree of flexibility available.  Beginning students should keep their head in a neutral position, looking straight forward, or turn it to look down and protect the neck.  More experienced students can turn the head and gaze up at the top thumb.",
+	"benefits": "Wrings out the lower back and the digestive and vital organs of the mid-body.  Opens the chest.  Stretches the pectoralis minor muscles.",
 			"comments_count": 0,
 			"cover_original": "/media/poses/photo/src/re/revolved-side-angle-pose-with-rotation-to-left-leg.jpg",
 			"cover_thumbnail": "/media/cache/a9/bb/a9bb70cb15462dac4a5b655a58f34bdf.jpg",
@@ -3356,6 +3535,8 @@
 			"cover_original": "/media/poses/photo/src/su/supported-shoulderstand.jpg",
 			"cover_thumbnail": "/media/cache/69/68/696810bd86ec4f228646f611b4f56bb8.jpg",
 			"level_id": 2,
+				"description": "From a supine position, the upper back is resting on the earth with the hips straight up towards the sky.  The torso is perpendicular to the earth.  The legs are fully extended and the toes are active.  The hands are either supporting the lower back or extended up by the side body in matchstick.  The neck is flat on the earth and the chin is tucked in.  The gaze is inward.",
+				"benefits": "Calms the brain and helps relieve stress and mild depression.  Stimulates the thyroid and prostate glands and abdominal organs.  Stretches the shoulders and neck.  Tones the legs and buttocks.  Improves digestion.  Helps relieve the symptoms of menopause.  Reduces fatigue and alleviates insomnia.  Therapeutic for asthma, infertility, and sinusitis.",
 			"likes_count": 396,
 			"meta_title": "Supported shoulderstand",
 			"muscle": "/media/poses/muscle/src/su/supported-shoulderstand.jpg",
@@ -3465,7 +3646,8 @@
 		},
 		{
 			"category_id": 1,
-
+	"description": "From mountain pose, lift one foot, bend forward and catch the toes with the fingers.  Place the other hand on the hip to square the hip towards the front.  Slowly straighten the knee and lift the torso straight up.  Use a strap if necessary.  Gaze towards the front.",
+	"benefits": "Stretches the hamstrings and strengthens the legs.  Improves balance.",
 			"comments_count": 0,
 			"cover_original": "/media/poses/photo/src/ex/extended-left-hand-to-big-toe-pose.jpg",
 			"cover_thumbnail": "/media/cache/1b/c1/1bc1fd7804bf8d39fbfd7e9ff841d43a.jpg",
@@ -3705,7 +3887,8 @@
 			"photo": "/media/poses/photo/src/lo/low-lunge-with-upward-stretch-right-leg-forward.jpg",
 			"sanskrit_name": "Urdhva Ashva Sanchalasana right",
 			"slug": "low-lunge-with-upward-stretch-right-leg-forward",
-
+	"description": "The front knee is bent in a90-degree angle directly above the ankle and the back knee is resting on the earth with the top of the back foot pressed firmly into the earth.  The hips are squared and pressed forward.  The inner thighs scissor towards each other.  The pelvis is tucked under to protect the low back.  The ribcage is lifted.  The arms are lifted.  The hands can be together or separated and facing each other with the fingers spread wide.  The gaze is forward.",
+	"benefits": "Stretches the chest, lungs, neck, belly and groin (psoas).  Strengthens the shoulders, arms and back muscles.  Strengthens and stretches the thighs, calves and ankles.",
 			"title": "Low lunge with upward stretch right leg forward",
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d152bb94a6f604b85aeb7d.mp4"
 		},
@@ -3776,7 +3959,8 @@
 		},
 		{
 			"category_id": 1,
-
+	"description": "From a standing position, the legs are in a wide stance with the feet aligned and flat on the earth.  The back foot is in a60-degree angle towards the front.  The hips are squared.  The inner thighs are rotated towards each other.  The front knee is bent in a90-degree angle directly above the ankle.  The arms extend up to the sky with the biceps by the ears.  The hands can be together or separated and facing each other with the fingers spread wide.  The ribcage is lifted and the pelvis tucked.  The gaze is forward.",
+	"benefits": "Stretches the chest, lungs, shoulders, neck, belly and groin (psoas).  Strengthens the shoulders, arms and back muscles.  Strengthens and stretches the thighs, calves and ankles.",
 			"comments_count": 0,
 			"cover_original": "/media/poses/photo/src/wa/warrior-pose-right-leg-forward-left-leg-straight.jpg",
 			"cover_thumbnail": "/media/cache/9a/93/9a93fbad126fbdef882adeacd0764b36.jpg",
@@ -3826,7 +4010,8 @@
 		},
 		{
 			"category_id": 1,
-
+"description": "From a standing position, one foot is rooted into the earth with the opposite heel rooted into the inner thigh with the toes pointing towards the earth.  The pelvis and the chin are tucked in.  The arms are lifted above the head with the palms together in prayer position.  The gaze is forward.",
+"benefits": "Strengthens the legs, ankles, and feet.  Improves flexibility in the hips and knees.  Improves balance.",
 			"comments_count": 0,
 			"cover_original": "/media/poses/photo/src/tr/tree-pose-on-left-foot.jpg",
 			"cover_thumbnail": "/media/cache/b7/0b/b70b5724d4b6dd648e99103e08e21f51.jpg",
@@ -3842,8 +4027,8 @@
 		},
 		{
 			"category_id": 2,
-	"description": "From a seated position, one arm reaches up and back from above the shoulder while the opposite arm reaches down and back from under the shoulder and around the torso into a bind at the center of the upper back.  The gaze is forward.",
-	"benefits": "Stretches the ankles, hips and thighs.  Stretches the shoulders, armpits, triceps, and chest.",
+		"description": "From sitting on your heels, bring the top arm up and around the back to meet the bottom arm that will reach under and wrap around its respective knee to be met at the wrist by the top hand.  On the inhale, elongate the spine and on the exhale take the twist slightly deeper.  Keep the heart open and the gaze should be slightly over the top shoulder. ",
+		"benefits": "Strengthens arms, wrists and ankles.  Stretches the upper back.  Strengthens the abdominal muscles.",
 			"comments_count": 0,
 			"cover_original": "/media/poses/photo/src/co/cow-face-pose-right-hand-up-grab.jpg",
 			"cover_thumbnail": "/media/cache/ae/61/ae617ec63b870943251c4ae6fe13c121.jpg",
@@ -3923,7 +4108,8 @@
 		},
 		{
 			"category_id": 4,
-
+	"description": "From a supine position lying on your back, pull one knee into the chest with the hands clasped around the bent knee to the level of pressure desired (gas trapped in the large intestine may be released in this asana).  The other leg is extended straight and the gaze is natural and forward.",
+	"benefits": "Releases gas trapped in large intestine.  Stretches the cervical spine (neck).  Improves the digestion system.  Aides in elimination."
 			"comments_count": 0,
 			"cover_original": "/media/poses/photo/src/ri/right-leg-wind-freeing-pose.jpg",
 			"cover_thumbnail": "/media/cache/89/c9/89c9944f2ad3068054323af9ee88189e.jpg",
@@ -3940,7 +4126,8 @@
 		},
 		{
 			"category_id": 8,
-
+	"description": "From a standing position the weight of the body is distributed equally between the front and back leg.  The legs are in a wide stance, parallel and scissor towards each other.  The back foot is at a45 to60 degree angle and the front and back heels are aligned.  The forward thigh is turned outward so that the center of the kneecap is in line with the center of the ankle.  The torso opens towards the sky while the hips are squared as much as possible.  The top hand extends up while the bottom hand is either on the earth (inside or outside the foot) or, if flexibility is limited, on a block positioned against the inner sole of the foot.  From the center of the back, between the shoulder blades, the arms press away from the torso.  Beginning students should keep their head in a neutral position and look forward or turn the gaze towards the earth.  More experienced students can turn the head and gaze up at the top thumb as a Dristhi point.",
+	"benefits": "Calms the brain.  Stimulates the liver and kidneys.  Stretches the hamstrings, calves, and thighs.  Strengthens the thighs, knees, and ankles.  Stretches the back of the leg, the front thigh and groin.",
 			"comments_count": 0,
 			"cover_original": "/media/poses/photo/src/re/revolved-triangle-pose-right-arm-behind-left-foot.jpg",
 			"cover_thumbnail": "/media/cache/b7/47/b7474764d8c345286f3b5b380b8a8631.jpg",
@@ -3963,12 +4150,14 @@
 			"cover_thumbnail": "/media/cache/cf/62/cf62b2c853eeabe3e10d6c8015cf17e1.jpg",
 			"level_id": 2,
 			"likes_count": 85,
-			"meta_title": "Intense side stretch to left leg",
+				"description": "From a standing position with one leg forward and one back lean the torso forward at the crease of the hip joint.  Stop when the torso is parallel to the floor.  Press the fingertips or flat palms to the floor on either side of the front foot, maintaining a straight elongated spine.  If it isn’t possible to touch the floor, or to maintain a straight spine, support the hands on a pair of blocks.  Press the thighs back and lengthen the torso forward, lifting up through the top of the sternum.  Then, as flexibility allows, bring the front torso closer to the top of the thigh without rounding the spine.  Eventually the long front torso will rest down on the thigh.  The gaze is down.",
+				"benefits": "Calms the brain.  Stretches the spine, the shoulders, the hips and the hamstrings.  Strengthens the legs.  Stimulates the abdominal organs.  Improves posture and sense of balance.  Improves digestion.",
+			"meta_title": "(Pyramid) Intense side stretch to left leg",
 			"muscle": "/media/poses/muscle/src/in/intense-side-stretch-to-left-leg.jpg",
 			"photo": "/media/poses/photo/src/in/intense-side-stretch-to-left-leg.jpg",
 			"sanskrit_name": "Parsvottanasana left",
 			"slug": "intense-side-stretch-to-left-leg",
-			"title": "Intense side stretch to left leg",
+			"title": "(Pyramid) Intense side stretch to left leg",
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d153bd94739951d569683f.mp4"
 		},
 		{
@@ -4033,7 +4222,8 @@
 			"photo": "/media/poses/photo/src/le/left-triangle-pose.jpg",
 			"sanskrit_name": "Trikonasana left",
 			"slug": "left-triangle-pose",
-
+	"description": "From a standing position, the legs are straight and separated into a wide stance.  The feet are aligned and flat on the earth with the back foot in a60-degree angle towards the front.  The inner thighs are rotated externally away from each other.  The pelvis is tucked and the ribcage is lifted.  One arm extends up towards the sky as the other reaches down to the earth.  Both arms are aligned with the shoulders in a straight line.  The fingers reach out as the shoulder blades squeeze together.  The gaze is toward the front.",
+	"benefits": "Stretches and strengthens the thighs, knees, and ankles.  Stretches the hips, groin, hamstrings, calves, shoulders, chest, and spine.  Stimulates the abdominal organs.  Helps relieve stress.  Improves digestion.  Helps relieve the symptoms of menopause.  Relieves backache, especially through second trimester of pregnancy.  Therapeutic for anxiety, flat feet, infertility, neck pain, osteoporosis, and sciatica.",
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d1540106361d372f297982.mp4"
 		},
 
@@ -4196,7 +4386,8 @@
 			},
 		{
 			"category_id": 4,
-
+	"description": "From a supine position, lying on your back, the knees are bent and pulled into the chest.  The arms are wrapped around the knees with the chin tucked in towards the sternum like a turtle going into its shell.  The gaze is inward.",
+	"benefits": "Releases the back and the spine.  A nice release from backbends.",
 			"comments_count": 6,
 			"cover_original": "/media/poses/photo/src/kn/knee-press-both-legs.jpg",
 			"cover_thumbnail": "/media/cache/bc/58/bc58bd5c2c7c8f4210f111ce232629ed.jpg",
@@ -4307,7 +4498,8 @@
 			"photo": "/media/poses/photo/src/mo/monkey-king-pose-with-rotation-to-right-leg-hands-up.jpg",
 			"sanskrit_name": "Hanumanasana right",
 			"slug": "monkey-king-pose-with-rotation-to-right-leg-hands-up",
-
+	"description": "The hips are parallel and squared to the earth with one leg extended forward.  The opposite leg extended back with the knee and foot squared to the earth.  The inner thighs scissor towards each other.  The hands are by the side body or at the heart center in Anjali Mudra (Salutation Seal) or stretched straight up toward the sky.  The ribcage is lifted.  The heart is open.  The gaze is forward.",
+	"benefits": "Stretches the thighs, hamstrings, and groin.  Stimulates the abdominal organs.",
 			"title": "Monkey king pose with rotation to right leg, hands up",
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d1554794a6f604f3e5cdf2.mp4"
 		},
@@ -4348,7 +4540,8 @@
 		},
 		{
 			"category_id": 5,
-
+"description": "From a standing position, one foot is rooted into the earth with the opposite heel rooted into the inner thigh with the toes pointing towards the earth.  The pelvis and the chin are tucked in.  The arms are lifted above the head with the palms together in prayer position.  The gaze is forward.",
+"benefits": "Strengthens the legs, ankles, and feet.  Improves flexibility in the hips and knees.  Improves balance.",
 			"comments_count": 0,
 			"cover_original": "/media/poses/photo/src/tr/tree-pose-right-foot-in-front-of-thigh.jpg",
 			"cover_thumbnail": "/media/cache/b0/74/b074619efc2b2b098361f51ff8ace612.jpg",
@@ -4428,7 +4621,8 @@
 		},
 		{
 			"category_id": 1,
-
+	"description": "From mountain pose, lift one foot.  Bend forward and catch the toes with the fingers.  Place the other hand on the hip to square the hip towards the front.  Slowly straighten the knee and the torso and open the leg to one side.  Use a strap if necessary.  Gaze towards the front or opposite of the extended leg for balance.",
+	"benefits": "Opens the hips and groins.  Stretches the hamstrings, IT bands and legs.  Improves balance.",
 			"comments_count": 0,
 			"cover_original": "/media/poses/photo/src/ad/advanced-extended-left-hand-to-big-toe-pose.jpg",
 			"cover_thumbnail": "/media/cache/d7/48/d748142da701141c68ef43930522384a.jpg",
@@ -4462,8 +4656,9 @@
 		},
 		{
 			"category_id": 1,
-
-			"comments_count": 3,
+				"description": "From warrior II, the lower body stays static while the upper body folds forward at the crease of the hip.  One arm is extended toward the sky while the other reaches down to the earth.  The fingers reach out as the shoulder blades squeeze together.  The gaze is towards the sky.",
+				"benefits": "Strengthens and stretches the legs, knees and ankles.  Stretches the groin, spine, waist, chest, lungs and shoulders.  Stimulates abdominal organs.  Increases stamina.",
+				"comments_count": 3,
 			"cover_original": "/media/poses/photo/src/bi/bikram-triangle-right.jpg",
 			"cover_thumbnail": "/media/cache/1d/7b/1d7b429fe3375f28e49720835d37c788.jpg",
 			"level_id": 1,
@@ -4500,13 +4695,14 @@
 			"cover_thumbnail": "/media/cache/9e/aa/9eaa8cb222649c34352f20e6de27a054.jpg",
 			"level_id": 2,
 			"likes_count": 86,
-			"meta_title": "Intense right stretch pose",
+			"meta_title": "(Pyramid) Intense right stretch pose",
 			"muscle": "/media/poses/muscle/src/in/intense-right-stretch-pose.jpg",
 			"photo": "/media/poses/photo/src/in/intense-right-stretch-pose.jpg",
 			"sanskrit_name": "Parsvottanasana intense right",
 			"slug": "intense-right-stretch-pose",
-
-			"title": "Intense right stretch pose",
+	"description": "From a standing position with one leg forward and one back lean the torso forward at the crease of the hip joint.  Stop when the torso is parallel to the floor.  Press the fingertips or flat palms to the floor on either side of the front foot, maintaining a straight elongated spine.  If it isn’t possible to touch the floor, or to maintain a straight spine, support the hands on a pair of blocks.  Press the thighs back and lengthen the torso forward, lifting up through the top of the sternum.  Then, as flexibility allows, bring the front torso closer to the top of the thigh without rounding the spine.  Eventually the long front torso will rest down on the thigh.  The gaze is down.",
+	"benefits": "Calms the brain.  Stretches the spine, the shoulders, the hips and the hamstrings.  Strengthens the legs.  Stimulates the abdominal organs.  Improves posture and sense of balance.  Improves digestion.",
+			"title": "(Pyramid) Intense right stretch pose",
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d1563c94739951d569684b.mp4"
 		},
 		{
@@ -4615,7 +4811,15 @@
 			"level_id": 2,
 			"description": "From a seated position the feet are lifted up so that the thighs are angled about45-50 degrees relative to the earth.  The tailbone is lengthened into the earth and the pubis pulls toward the navel.  The shoulder blades are spread across the back and the hands reach around the back of the calves, with legs pulled towards the body.  The chin is tipped slightly toward the sternum so that the base of the skull lifts lightly away from the back of the neck.  Gaze is forward.",
 			"benefits": "Strengthens the abdomen, hip flexors, and spine.  Stimulates the kidneys, thyroid and prostate glands, and intestines.  Helps relieve stress.  Improves digestion."
-		}
+		},
+			{
+				"meta_title": "Rabbit Pose",
+				"sanskrit_name": "Sasangāsana",
+				"category_id": "Arm and Leg Support / Forward Bend",
+				"level_id": 1,
+				"description": "From child's pose, rest the torso onto the thighs and the forehead onto the earth.  Walk the knees up to meet the forehead, shifting some weight to the crown of the head.  Find the maximum comfortable neck stretch and then reach back and grip the base of the feet (use a strap if necessary).  To increase the stretch and come into the full expression of the pose, gradually lift or elevate your hips.  Be sure to keep your forehead as close as possible to your knees and the topmost part of your skull (crown of the head) on the earth.  Contract your abdominal muscles and gaze at your ankles.",
+				"benefits": "Maintains the mobility and elasticity of spine.  Nurtures the nervous system and helps with depression.  Improves digestion.  Helps cure sinus problems, colds and chronic tonsillitis.  Strengthens and firms the abdomen.  Stretches the back muscles.  Removes the tension from the upper back and the neck.  Improves posture.  Stimulates the thymus gland, improving the function of the immune system."
+			}
 
 	]
 }
