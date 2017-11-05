@@ -32,6 +32,15 @@ module.exports = {
       meta_title: {
         type: Sequelize.STRING
       },
+      alt_name: {
+        type: Sequelize.STRING
+      },
+      description: {
+        type: Sequelize.TEXT
+      },
+      benefits: {
+        type: Sequelize.TEXT
+      },
       muscle: {
         type: Sequelize.STRING
       },
