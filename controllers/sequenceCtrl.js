@@ -1,6 +1,21 @@
 "use strict";
 const passport = require("passport");
 
+module.exports.deleteCardFromSeq = (req, res, next) => {
+  const { User, Pose } = req.app.get('models');
+  User.findById(req.user.id)
+  .then( (foundUser) => {
+  return foundUser.removePose(req.params.pose_id)
+  })
+  .then( (result) => {
+    res.redirect(`/sequence/${req.params.seq_id}`);
+  })
+  .catch( (err) => {
+    next(err);
+  })
+}
+
+
 module.exports.editSeq = (req, res, next) => {
 
 };

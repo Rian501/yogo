@@ -17,3 +17,10 @@ block content
                     h4 #{move.card_timing} seconds
                 else 
                     h4 10 seconds
+            button(class="xbuttons", name=`${move.pose_id}`, value=`${move.sequence_id}`, style="cursor: pointer;") X
+
+
+
+    script
+        include ../node_modules/jquery/dist/jquery.js
+        include ../public/main.js
