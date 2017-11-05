@@ -30,36 +30,35 @@ module.exports.showAllPoses = (req, res, next) => {
 
 //use block content, append, prepend, something to make "mymoves" available to my poses, as well as my sequencepages  https://pugjs.org/language/inheritance.html
 const getMyMoves = (req, next) => {
-  if (req.user) {
     const { sequelize } = req.app.get("models");
-    sequelize
-      .query(
+    return sequelize
+    .query(
         `SELECT * FROM "User_Poses", "Poses" WHERE "User_Poses".pose_id="Poses".id`
-      )
-      .then(results => {
-        console.log("MY MOVES COMPLEtE", results[0]);
-        myMoves = results[0];
-        // return myMoves;
-    })
-    .catch(err => {
-        next(err);
-    });
-}
+    )
+    // .then((results) => {
+    //     console.log("results from getMyMoves[0]", results[0]);
+    //     req.session.myMoves = results[0];
+    //     //now myMoves is an array attached to the reqSession!! HOLY SHIT!!
+    //     console.log("req session, hopefully with my moves!!", req.session);
+    // })
 };
 
 
 module.exports.myMovesMain = (req, res, next) =>{
-    getMyMoves(req, next)
-    .then((results) =>{
-        console.log("MY MOVES ??", myMoves);
-        console.log("resultS ??", results);
-        res.render('editMyMoves', {
-            myMoves,
-        })
-    })
-    .catch( (err) => {
-            next(err);
-    });
+    if (req.user) {
+       getMyMoves(req, next).then(results => {
+         console.log("results from getMyMoves[0]", results[0]);
+         req.session.myMoves = results[0];
+         //now myMoves is an array attached to the reqSession!! HOLY SHIT!!
+         console.log("req session, hopefully with my moves!!", req.session);
+         console.log("MY MOVES ??", req.session.myMoves);
+         let myMoves = req.session.myMoves;
+         console.log("MY MOVES STILL??", myMoves);
+         res.render('editMyMoves', {
+             myMoves,
+            })
+        });
+    }
 };
     
 
