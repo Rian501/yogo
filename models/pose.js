@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     meta_title: DataTypes.STRING,
     alt_name: DataTypes.STRING,
     description: DataTypes.TEXT,
-    benefits: DataType.TEXT,
+    benefits: DataTypes.TEXT,
     muscle: DataTypes.STRING,
     photo: DataTypes.STRING,
     sanskrit_name: DataTypes.STRING,
