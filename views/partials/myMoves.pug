@@ -1,4 +1,10 @@
 if myMoves
-    p YES MOVES
-    
+    ul
+    each pose in myMoves
+        li.displayCard 
+            a(href=`/poses/${pose.id}`)
+            h2= pose.meta_title
+            if pose.cover_thumbnail
+                img(src=`http://yoga.com/${pose.cover_thumbnail}` alt=`${pose.meta_title} image here` style="max-width: 200px;")
+else    
 p NO MOVES

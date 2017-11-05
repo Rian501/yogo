@@ -1,5 +1,6 @@
 "use strict";
 const passport = require("passport");
+let myMoves = null;
 
 module.exports.showAllPoses = (req, res, next) => {
     const { Pose, Category, Level } = req.app.get("models");
@@ -26,6 +27,41 @@ module.exports.showAllPoses = (req, res, next) => {
     });
 };
 
+
+//use block content, append, prepend, something to make "mymoves" available to my poses, as well as my sequencepages  https://pugjs.org/language/inheritance.html
+const getMyMoves = (req, next) => {
+  if (req.user) {
+    const { sequelize } = req.app.get("models");
+    sequelize
+      .query(
+        `SELECT * FROM "User_Poses", "Poses" WHERE "User_Poses".pose_id="Poses".id`
+      )
+      .then(results => {
+        console.log("MY MOVES COMPLEtE", results[0]);
+        myMoves = results[0];
+        // return myMoves;
+    })
+    .catch(err => {
+        next(err);
+    });
+}
+};
+
+
+module.exports.myMovesMain = (req, res, next) =>{
+    getMyMoves(req, next)
+    .then((results) =>{
+        console.log("MY MOVES ??", myMoves);
+        console.log("resultS ??", results);
+        res.render('editMyMoves', {
+            myMoves,
+        })
+    })
+    .catch( (err) => {
+            next(err);
+    });
+};
+    
 
 // TODO: combine filters for both level AND type to allow for two pronged filtering
 module.exports.posesByCat = (req, res, next) => {
