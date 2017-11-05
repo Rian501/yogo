@@ -2,10 +2,10 @@
 
 
 $(".xbuttons").click(function(event) {
-  let pose_id = this.name;
+  let seqUsPose_id = this.name;
   let seq_id = this.value;
   $.ajax({
     type: "DELETE",
-    url: `/seqCard/${seq_id}/${pose_id}`
+    url: `/seqCard/${seq_id}/${seqUsPose_id}`
   }).then(data => {});
 });

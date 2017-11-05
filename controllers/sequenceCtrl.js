@@ -2,13 +2,14 @@
 const passport = require("passport");
 
 module.exports.deleteCardFromSeq = (req, res, next) => {
-  const { User, Pose } = req.app.get('models');
-  User.findById(req.user.id)
-  .then( (foundUser) => {
-  return foundUser.removePose(req.params.pose_id)
-  })
+  const { Sequence, SequenceUserPoses, User_Pose } = req.app.get('models');
+  console.log("SUPid", req.params.SUP_id);
+  console.log("seq id", req.params.seq_id);
+  let backtoSeq = parseInt(req.params.seq_id);
+  SequenceUserPoses.destroy({where: {seqUsPos_id:req.params.SUP_id}})
   .then( (result) => {
-    res.redirect(`/sequence/${req.params.seq_id}`);
+    console.log('backtoSeq logging', backtoSeq);
+    return res.status(303).redirect(`/sequence/${backtoSeq}`);
   })
   .catch( (err) => {
     next(err);

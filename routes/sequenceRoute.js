@@ -13,7 +13,7 @@ const {
 router.get("/sequence/edit/:id", editSeq);
 router.get("/sequence/:id", viewSeq);
 router.get("/sequence", userSeqs);
-router.delete("/seqCard/:seq_id/:pose_id", deleteCardFromSeq);
+router.delete("/seqCard/:seq_id/:SUP_id", deleteCardFromSeq);
 
 
 module.exports = router;
