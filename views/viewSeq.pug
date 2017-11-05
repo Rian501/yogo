@@ -1,6 +1,8 @@
 extends index.pug
 
 block content
+  include partials/myMoves.pug
+
     ul
     each move in moves
         li.displayMoveinSeqCard 

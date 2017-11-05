@@ -5,10 +5,17 @@ block content
     h2= move.sanskrit_name
     h5= level.name
     h5= category.name
-    //- p= moar.instructions
-    img(src=`http://yoga.com/${move.photo}` style="max-width: 200px;")
-    img(src=`http://yoga.com/${move.muscle}` style="max-width: 200px;")
-
-    video(width="320" height="240" controls)
-        source(src=`${move.video_url}` type="video/mp4")
-        Your browser does not support the video tag.
+    if move.photo
+        img(src=`http://yoga.com/${move.photo}` style="max-width: 200px;")
+    if move.description
+        p= move.description
+    if move.benefits
+        p= move.benefits
+    if move.meta_description
+        p= move.meta_description
+    if move.muscle
+        img(src=`http://yoga.com/${move.muscle}` style="max-width: 200px;")
+    if move.video_url
+        video(width="320" height="240" controls)
+            source(src=`${move.video_url}` type="video/mp4")
+            Your browser does not support the video tag.
