@@ -1,14 +1,23 @@
 if myMoves
-    ul
-    each pose in myMoves
-        li.displayCard 
-            form(name="addPose" method="post" action=`/sequence/${seq_id}/add/${pose.up_pk_id}`)
-                a(href=`/poses/${pose.id}`)
-                h2= pose.meta_title
-                if pose.cover_thumbnail
-                    img(src=`http://yoga.com/${pose.cover_thumbnail}` alt=`${pose.meta_title} image here` style="max-width: 200px;")
-                if seq_id
-                    button(class="btn" type="submit") Add to Sequence
+    div.container-fluid
+        div.row
+            each pose in myMoves
+                div(class="col-lg-2 col-md-3 col-sm-4 col-12")
+                    div.card 
+                        form(name="addPose" method="post" action=`/sequence/${seq_id}/add/${pose.up_pk_id}`)
+                            a(href=`/poses/${pose.id}`)
+                            if pose.cover_thumbnail
+                                img(src=`http://yoga.com/${pose.cover_thumbnail}` alt=`${pose.meta_title} image here` class="card-img-top img-fluid")
+                            div(class="card-block")
+                                h4(class="card-title") #{pose.meta_title}
+                                if pose.up_special_directions
+                                    p(class="card-text") #{pose.up_special_directions}
+                                if pose.up_breath
+                                    p(class="card-text") #{pose.up_breath}
+                                if pose.card_timing
+                                    p(class="card-text") #{pose.card_timing}   
+                        if seq_id
+                            button(class="btn" type="submit") Add to Sequence
 else    
     p NO SAVED MOVES
 
