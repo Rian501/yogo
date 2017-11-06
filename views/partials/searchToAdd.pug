@@ -1,8 +1,11 @@
 sidebar
-  input(type="checkbox" id="slide" name="" value="")
+  if poses
+    input(type="checkbox" id="slide" name="" value="" checked)
+  if !poses  
+    input(type="checkbox" id="slide" name="" value="" )
   div.container
     label(for="slide" class="toggle") Search More Moves ☰
-      div.sidebar
+      div(class="sidebar")
         h1 SEQUENCE ID #{seq_id}
         form(class="form-inline" method="GET")
           input(class="form-control" type="text" id="searchPoses" name="title" required placeholder="Search poses")
@@ -11,9 +14,9 @@ sidebar
           div.container-fluid
             div.row
               each pose in poses
-                div.col-lg-2
+                div.col-6
                   div.card
-                    a(href=`/poses/${pose.id}`)
+                    a(href=`/poses/${pose.id}` target="_blank")
                       if pose.cover_thumbnail
                         img(class="card-img-top img-fluid" src=`http://yoga.com/${pose.cover_thumbnail}` alt="Card image cap")
                       else
@@ -21,3 +24,5 @@ sidebar
                       div(class="card-block")
                         h4(class="card-title") #{pose.meta_title}
                         p(class="card-text")
+                        form(class="form-inline" method="POST")
+                          button(type='submit' formaction=`/sequence/${seq_id}/addnew/${pose.id}` class='info-btn') +

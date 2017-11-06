@@ -30,8 +30,8 @@ cursor: pointer;
 
 .sidebar {
 position: fixed;
-top: 0px;
-bottom: 0px;
+top: 0;
+bottom: 0;
 right: -2000px;
 -webkit-transition: all 01.5s ease-out 10;
 -moz-transition: all 01.5s ease-out 10;
@@ -39,6 +39,7 @@ transition: all 01.5s ease-out 10;
 width: 40%;
 padding: 1.5em;
 background: #19C4BC; 
+overflow-y: scroll;
 }
 
 .sidebar ul {

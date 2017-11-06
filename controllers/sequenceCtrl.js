@@ -30,47 +30,86 @@ module.exports.viewSeq = (req, res, next) => {
     .then(results => {
       req.session.myMoves = results[0];
       myMoves = req.session.myMoves;
-    return sequelize
+      return sequelize
       .query(`
-    SELECT * FROM "SequenceUserPoses", "User_Poses", "Poses" WHERE "SequenceUserPoses"."sequence_id"=${req.params.seq_id} AND "SequenceUserPoses".user_pose_id="User_Poses"."up_pk_id" AND "User_Poses".pose_id="Poses".id ORDER BY "SequenceUserPoses".position_order`)
+      SELECT * FROM "SequenceUserPoses", "User_Poses", "Poses" WHERE "SequenceUserPoses"."sequence_id"=${req.params.seq_id} AND "SequenceUserPoses".user_pose_id="User_Poses"."up_pk_id" AND "User_Poses".pose_id="Poses".id ORDER BY "SequenceUserPoses".position_order`)
     })
     .then(results => {
-        let moves = results[0]
-        // console.log("moves for digging", moves);
-        //might need to add card timing as a number property for later manipulation rather than if-elsing it on the pugdom
-        res.render('viewSeq', {
-          moves,
-          myMoves,
-          seq_id: req.params.seq_id
-        })
+      let moves = results[0]
+      // console.log("moves for digging", moves);
+      //might need to add card timing as a number property for later manipulation rather than if-elsing it on the pugdom
+      res.render('viewSeq', {
+        moves,
+        myMoves,
+        seq_id: req.params.seq_id
       })
-      .catch(err => {
-        next(err);
-      });
+    })
+    .catch(err => {
+      next(err);
+    });
   } else { res.redirect('/')}
 }
 
 module.exports.userSeqs = (req, res, next) => {
-    if (req.user) {
-      const { sequelize, Sequence } = req.app.get('models');
-      getMyMoves(req, next)
-      .then(results => {
-         req.session.myMoves = results[0];
-        //  console.log("myMoves inside userSeqs", myMoves);
-         return Sequence.findAll({
-           where: {user_id: req.user.id}
-          })
-        })
-        .then( (seqs) => {
-        myMoves = req.session.myMoves;
-        res.render('userSequences', {
-            seqs,
-            myMoves
-        })
+  if (req.user) {
+    const { sequelize, Sequence } = req.app.get('models');
+    getMyMoves(req, next)
+    .then(results => {
+      req.session.myMoves = results[0];
+      //  console.log("myMoves inside userSeqs", myMoves);
+      return Sequence.findAll({
+        where: {user_id: req.user.id}
       })
-    } else {
-       return res.redirect('/');
-    }
+    })
+    .then( (seqs) => {
+      myMoves = req.session.myMoves;
+      res.render('userSequences', {
+        seqs,
+        myMoves
+      })
+    })
+  } else {
+    return res.redirect('/');
+  }
+};
+
+module.exports.addNewMoveToSeqEnd = (req, res, next)=>{
+  let currentSeqId=parseInt(req.params.seq_id);
+  console.log("POOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOse id", req.params.pose_id);
+  console.log("sssssssssssssssssssssssssssssssssssssssssssssssequence id", req.params.seq_id);
+  if (req.user) {
+    const { sequelize, SequenceUserPoses, User_Poses } = req.app.get('models');
+    let currentSeqId=parseInt(req.params.seq_id);
+    let addPosOrder = null;
+    let newUserMove = null;
+    User_Poses.create({
+      user_id: req.user.id,
+      pose_id: req.params.pose_id
+    })
+    .then((results)=>{
+      console.log("reeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeesults", results);
+      newUserMove = results.dataValues.up_pk_id;
+      console.log("reeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeesults uppkid", newUserMove);
+      return sequelize.query(`SELECT * FROM "SequenceUserPoses", "User_Poses", "Poses" WHERE "SequenceUserPoses"."sequence_id"=${req.params.seq_id} AND "SequenceUserPoses".user_pose_id="User_Poses"."up_pk_id" AND "User_Poses".pose_id="Poses".id ORDER BY "SequenceUserPoses".position_order`)
+    })
+    .then( (results) => {
+      addPosOrder = parseInt(results[0].length + 1);
+        return SequenceUserPoses.create({
+          user_pose_id: newUserMove,
+          position_order: addPosOrder,
+          sequence_id: currentSeqId,
+        })
+    })
+    .then((results)=>{
+        console.log('results of adding user pose to sequence', results);
+        res.redirect(`/sequence/${currentSeqId}`);
+      })
+    .catch((err)=>{
+      next(err);
+    })
+  } else {
+    res.redirect("/");
+  }
 };
 
 module.exports.addMoveToSeqEndFrUserPoses = (req, res, next) => {
