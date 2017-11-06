@@ -9,7 +9,9 @@ module.exports.deleteCardFromSeq = (req, res, next) => {
   SequenceUserPoses.destroy({where: {seqUsPos_id:req.params.SUP_id}})
   .then( (result) => {
     console.log('backtoSeq logging', backtoSeq);
-    return res.status(303).redirect(`/sequence/${backtoSeq}`);
+    // return res.status(303).redirect(`/sequence/${backtoSeq}`);
+    // return res.redirect('back');
+    next();
   })
   .catch( (err) => {
     next(err);
@@ -26,7 +28,7 @@ module.exports.viewSeq = (req, res, next) => {
     const { sequelize } = req.app.get('models');
     sequelize
       .query(`
-    SELECT * FROM "SequenceUserPoses", "User_Poses", "Poses" WHERE "SequenceUserPoses"."sequence_id"=${req.params.id} AND "SequenceUserPoses".user_pose_id="User_Poses"."id" AND "User_Poses".pose_id="Poses".id ORDER BY "SequenceUserPoses".position_order`)
+    SELECT * FROM "SequenceUserPoses", "User_Poses", "Poses" WHERE "SequenceUserPoses"."sequence_id"=${req.params.seq_id} AND "SequenceUserPoses".user_pose_id="User_Poses"."id" AND "User_Poses".pose_id="Poses".id ORDER BY "SequenceUserPoses".position_order`)
       .then(results => {
         let moves = results[0]
         console.log("moves for digging", moves);
