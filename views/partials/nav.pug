@@ -1,12 +1,21 @@
-if session.passport
-  span #{session.passport.user.username}
-  form(method="POST")
-    button(type="submit" formaction="/logout") Logout
-  a(href="/sequence") My Sequences
-  a(href="/user/poses") My Poses
-a(href="/poses") All Poses
-
-
-form(method="GET")
-  input(type="text" placeholder="search poses" id="searchPoses" name="title" required)
-  button(type="submit" formaction=`/search/?${title}` value="search") Search Poses
+nav(class="navbar navbar-toggleable-md navbar-light bg-faded")
+  button(class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation")
+    span(class="navbar-toggler-icon")
+  a(class="navbar-brand" href="#") Navbar
+  div(class="collapse navbar-collapse" id="navbarTogglerDemo02")
+    ul(class="navbar-nav mr-auto mt-2 mt-md-0")
+      li(class="nav-item")
+        a(class="nav-link" href="/poses") All Poses
+      li(class="nav-item")
+        a(class="nav-link" href="/user/poses") My Poses
+      if session.passport
+        li(class="nav-item")
+          a(class="nav-link" href="/sequence") My Sequences
+        form(method="POST")
+          button(type="submit" formaction="/logout") Logout
+      if !session.passport
+        li(class="nav-item")
+          a(class="nav-link" href="/login") Log in
+    form(class="form-inline my-2 my-lg-0" method="GET")
+      input(class="form-control mr-sm-2" type="text" id="searchPoses" name="title" required placeholder="Search poses")
+      button(class="btn btn-outline-success my-2 my-sm-0" formaction=`/search/?${title}` type="submit") Search

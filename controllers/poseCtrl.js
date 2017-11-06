@@ -47,13 +47,9 @@ const getMyMoves = (req, next) => {
 module.exports.myMovesMain = (req, res, next) =>{
     if (req.user) {
        getMyMoves(req, next).then(results => {
-         console.log("results from getMyMoves[0]", results[0]);
          req.session.myMoves = results[0];
          //now myMoves is an array attached to the reqSession!! HOLY SHIT!!
-         console.log("req session, hopefully with my moves!!", req.session);
-         console.log("MY MOVES ??", req.session.myMoves);
          let myMoves = req.session.myMoves;
-         console.log("MY MOVES STILL??", myMoves);
          res.render('editMyMoves', {
              myMoves,
             })
