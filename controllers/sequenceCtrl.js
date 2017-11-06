@@ -1,5 +1,6 @@
 "use strict";
 const passport = require("passport");
+let myMoves=null;
 
 module.exports.deleteCardFromSeq = (req, res, next) => {
   const { Sequence, SequenceUserPoses, User_Pose } = req.app.get('models');
@@ -15,42 +16,58 @@ module.exports.deleteCardFromSeq = (req, res, next) => {
   })
 }
 
-
-module.exports.editSeq = (req, res, next) => {
-
+const getMyMoves = (req, next) => {
+  const { sequelize } = req.app.get("models");
+  return sequelize.query(
+    `SELECT * FROM "User_Poses", "Poses" WHERE "User_Poses".pose_id="Poses".id`
+  );
 };
 
 module.exports.viewSeq = (req, res, next) => {
   if (req.user) {
     const { sequelize } = req.app.get('models');
-    sequelize
+    getMyMoves(req, next)
+    .then(results => {
+      req.session.myMoves = results[0];
+      myMoves = req.session.myMoves;
+      console.log("myMoves inside viewSeq", myMoves);
+    return sequelize
       .query(`
     SELECT * FROM "SequenceUserPoses", "User_Poses", "Poses" WHERE "SequenceUserPoses"."sequence_id"=${req.params.seq_id} AND "SequenceUserPoses".user_pose_id="User_Poses"."id" AND "User_Poses".pose_id="Poses".id ORDER BY "SequenceUserPoses".position_order`)
-      .then(results => {
+    })
+    .then(results => {
         let moves = results[0]
-        console.log("moves for digging", moves);
+        // console.log("moves for digging", moves);
         //might need to add card timing as a number property for later manipulation rather than if-elsing it on the pugdom
         res.render('viewSeq', {
-          moves
+          moves,
+          myMoves
         })
       })
       .catch(err => {
         next(err);
       });
-  }
-};
+  } else { res.redirect('/')}
+}
 
 module.exports.userSeqs = (req, res, next) => {
     if (req.user) {
-        const { Sequence } = req.app.get("models");
-        Sequence.findAll({
-            where: {user_id: req.user.id}
+      const { sequelize, Sequence } = req.app.get('models');
+      getMyMoves(req, next)
+      .then(results => {
+         req.session.myMoves = results[0];
+        //  console.log("myMoves inside userSeqs", myMoves);
+         return Sequence.findAll({
+           where: {user_id: req.user.id}
+          })
         })
         .then( (seqs) => {
-            res.render('userSequences', {
-                seqs
-            })
+        myMoves = req.session.myMoves;
+        res.render('userSequences', {
+            seqs,
+            myMoves
         })
+      })
     } else {
        return res.redirect('/');
     }
