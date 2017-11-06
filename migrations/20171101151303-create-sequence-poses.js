@@ -13,7 +13,7 @@ module.exports = {
         allowNull: false,
         references: {
           model: 'User_Poses',
-          key: 'id'
+          key: 'up_pk_id'
         },
 				onUpdate: 'cascade',
 				onDelete: 'cascade'

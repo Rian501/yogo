@@ -2,9 +2,15 @@ if myMoves
     ul
     each pose in myMoves
         li.displayCard 
-            a(href=`/poses/${pose.id}`)
-            h2= pose.meta_title
-            if pose.cover_thumbnail
-                img(src=`http://yoga.com/${pose.cover_thumbnail}` alt=`${pose.meta_title} image here` style="max-width: 200px;")
+            form(name="addPose" method="post" action=`/sequence/${seq_id}/add/${pose.up_pk_id}`)
+                a(href=`/poses/${pose.id}`)
+                h2= pose.meta_title
+                if pose.cover_thumbnail
+                    img(src=`http://yoga.com/${pose.cover_thumbnail}` alt=`${pose.meta_title} image here` style="max-width: 200px;")
+                if seq_id
+                    button(class="btn" type="submit") Add to Sequence
 else    
-p NO MOVES
+    p NO SAVED MOVES
+
+if seq_id
+    h2 current sequence id: #{seq_id}
