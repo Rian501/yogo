@@ -8,9 +8,6 @@ module.exports.deleteCardFromSeq = (req, res, next) => {
   let backtoSeq = parseInt(req.params.seq_id);
   SequenceUserPoses.destroy({where: {seqUsPos_id:req.params.SUP_id}})
   .then( (result) => {
-    console.log('backtoSeq logging', backtoSeq);
-    // return res.status(303).redirect(`/sequence/${backtoSeq}`);
-    // return res.redirect('back');
     next();
   })
   .catch( (err) => {
