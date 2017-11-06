@@ -1,3 +1,77 @@
 body {
     background-color: orange;
 }
+
+
+
+
+/* styles for the sliding side bar modified from https://codepen.io/anon/pen/OOXYpd */
+
+@import url(https://fonts.googleapis.com/css?family=Poiret+One|Varela+Round);
+
+html, body {
+margin: 0;
+padding: 0; }
+
+
+.toggle {
+text-decoration: none;
+font-size: 2em;
+color: rgba(0, 0, 0, 0.61);
+-webkit-transition: all 01.5s ease-out 0;
+-moz-transition: all 01.5s ease-out 0;
+transition: all 04.5s ease-out 0;
+position: fixed;
+top: 20px;
+right: 20px;
+z-index: 1;
+cursor: pointer;
+}
+
+.sidebar {
+position: fixed;
+top: 0px;
+bottom: 0px;
+right: -2000px;
+-webkit-transition: all 01.5s ease-out 10;
+-moz-transition: all 01.5s ease-out 10;
+transition: all 01.5s ease-out 10;
+width: 40%;
+padding: 1.5em;
+background: #19C4BC; 
+}
+
+.sidebar ul {
+list-style: none;
+margin: 0;
+padding: 0; 
+}
+
+.sidebar li a {
+color: #fff;
+font-family: 'Poiret One', cursive;
+font-size: 1.2em;
+margin: 0;
+margin-bottom: 16px;
+cursor: pointer;
+text-decoration: none;
+line-height: 200%;
+}
+
+.sidebar a:hover {
+  color: rgba(0, 0, 0, 0.61); 
+}
+
+#slide:checked + .container .sidebar {
+right: 0px;
+ }
+
+#slide:checked + .container .toggle {
+right: 42%;
+ }
+
+
+#slide {
+display: none; 
+}
+

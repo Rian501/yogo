@@ -6,9 +6,9 @@ nav(class="navbar navbar-toggleable-md navbar-light bg-faded")
     ul(class="navbar-nav mr-auto mt-2 mt-md-0")
       li(class="nav-item")
         a(class="nav-link" href="/poses") All Poses
-      li(class="nav-item")
-        a(class="nav-link" href="/user/poses") My Poses
       if session.passport
+        li(class="nav-item")
+          a(class="nav-link" href="/user/poses") My Poses
         li(class="nav-item")
           a(class="nav-link" href="/sequence") My Sequences
         form(method="POST")
@@ -16,6 +16,7 @@ nav(class="navbar navbar-toggleable-md navbar-light bg-faded")
       if !session.passport
         li(class="nav-item")
           a(class="nav-link" href="/login") Log in
-    form(class="form-inline my-2 my-lg-0" method="GET")
-      input(class="form-control mr-sm-2" type="text" id="searchPoses" name="title" required placeholder="Search poses")
-      button(class="btn btn-outline-success my-2 my-sm-0" formaction=`/search/?${title}` type="submit") Search
+    if !seq_id
+      form(class="form-inline my-2 my-lg-0" method="GET")
+        input(class="form-control mr-sm-2" type="text" id="searchPoses" name="title" required placeholder="Search poses")
+        button(class="btn btn-outline-success my-2 my-sm-0" formaction=`/sidesearch/?${title}` type="submit") Search

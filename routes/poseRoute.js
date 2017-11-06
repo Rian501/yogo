@@ -9,7 +9,8 @@ const {
   posesByCat,
   searchPoses,
   posesByLev,
-  myMovesMain
+  myMovesMain,
+  sidesearchPoses
 } = require("../controllers/poseCtrl.js");
 
 router.get('/poses', showAllPoses);
