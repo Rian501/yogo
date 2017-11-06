@@ -20,16 +20,16 @@ block content
             option(value=`${lev.id}`) #{lev.name}
     button(type="submit" style="cursor: pointer;") Filter
 
-  div.container
-    ul.row
+  div.container-fluid
+    div.row
       each pose in poses
-        li.col-lg-2
-          div(class="card")
-            if pose.cover_thumbnail
-              img(class="card-img-top img-fluid" src=`http://yoga.com/${pose.cover_thumbnail}` alt="Card image cap")
-            else
-              img(class="card-img-top img-fluid" src="https://static.boredpanda.com/blog/wp-content/uploads/2014/05/funny-animals-doing-yoga-32.jpg" alt="card image cap")
-            div(class="card-block")
-              h4(class="card-title") #{pose.meta_title}
-              p(class="card-text") Some quick example text to bu
-              a(href=`/poses/${pose.id}` class="btn btn-primary") More info 
+        div.col-lg-2
+          div.card
+            a(href=`/poses/${pose.id}`)
+              if pose.cover_thumbnail
+                img(class="card-img-top img-fluid" src=`http://yoga.com/${pose.cover_thumbnail}` alt="Card image cap")
+              else
+                img(class="card-img-top img-fluid" src="https://static.boredpanda.com/blog/wp-content/uploads/2014/05/funny-animals-doing-yoga-32.jpg" alt="card image cap")
+              div(class="card-block")
+                h4(class="card-title") #{pose.meta_title}
+                p(class="card-text")
