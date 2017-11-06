@@ -141,10 +141,10 @@ module.exports.searchPoses = (req, res, next) => {
     })
     .then(categories => {
         cats = categories;
-        return Pose.findAll({
+    return Pose.findAll({
             raw: true,
             where: {
-                title: {
+                meta_title: {
                     $iLike: `%${req.query.title}%`
                 }
             }
