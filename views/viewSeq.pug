@@ -7,13 +7,20 @@ block content
     each move in moves
         li.displayMoveinSeqCard 
             a(href=`/poses/${move.pose_id}` target="_blank")
-            h2= move.meta_title
-            img(src=`http://yoga.com/${move.cover_thumbnail}` alt="move.meta_title" style="max-width: 200px;")
-            if move.up_special_directions
-                p= move.up_special_directions
-            if move.up_breath
-                p= move.up_breath
-            if move.card_timing
-                h4 #{move.card_timing} seconds
-            else 
-                h4 10 seconds
+                h2= move.meta_title
+                img(src=`http://yoga.com/${move.cover_thumbnail}` alt=`picture of ${move.meta_title}` style="max-width: 200px;")
+                if move.up_special_directions
+                    p= move.up_special_directions
+                if move.up_breath
+                    p= move.up_breath
+                if move.card_timing
+                    h4 #{move.card_timing} seconds
+                else 
+                    h4 10 seconds
+            button(class="xbuttons", name=`${move.seqUsPos_id}`, value=`${move.sequence_id}`, style="cursor: pointer;") X
+
+
+
+    script
+        include ../node_modules/jquery/dist/jquery.js
+        include ../public/main.js

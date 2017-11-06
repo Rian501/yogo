@@ -10,6 +10,51 @@
             "sequence_id": 1,
             "user_pose_id": 2,
             "position_order": 2
+        },
+        {
+            "sequence_id": 1,
+            "user_pose_id": 3,
+            "position_order": 3
+        },
+        {
+            "sequence_id": 1,
+            "user_pose_id": 4,
+            "position_order": 4
+        },
+        {
+            "sequence_id": 1,
+            "user_pose_id": 5,
+            "position_order": 5
+        },
+        {
+            "sequence_id": 1,
+            "user_pose_id": 2,
+            "position_order": 6
+        },
+        {
+            "sequence_id": 1,
+            "user_pose_id": 2,
+            "position_order": 7
+        },
+        {
+            "sequence_id": 1,
+            "user_pose_id": 3,
+            "position_order": 8
+        },
+        {
+            "sequence_id": 1,
+            "user_pose_id": 4,
+            "position_order": 9
+        },
+        {
+            "sequence_id": 1,
+            "user_pose_id": 5,
+            "position_order": 10
+        },
+        {
+            "sequence_id": 1,
+            "user_pose_id": 2,
+            "position_order": 11
         }
     ]
 }

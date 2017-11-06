@@ -14,7 +14,7 @@ app.set("models", require("./models"));
 // reminder: in controllers, use const { Computer } = req.app.get('models');
 
 app.set("view engine", "pug");
-app.locals.myMoves = "not null now"; 
+// app.locals.myMoves = getMyMoves; 
 
 
 app.use('/public', express.static(__dirname + "/public"));
@@ -38,7 +38,7 @@ app.use(passport.session()); // persistent login sessions
 
 app.use((req, res, next) => {
   res.locals.session = req.session;
-  // console.log('res.locals.session', res.locals.session);
+  console.log('res.locals.session', res.locals.session);
   next();
 });
 app.use(bodyParser.urlencoded({ extended: false }));

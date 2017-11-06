@@ -8,17 +8,15 @@ const {
   showPoseDetail,
   posesByCat,
   searchPoses,
-  posesByLev
+  posesByLev,
+  myMovesMain
 } = require("../controllers/poseCtrl.js");
-
 
 router.get('/poses', showAllPoses);
 router.get('/poses/category', posesByCat);
 router.get('/poses/level', posesByLev);
 router.get('/poses/:id', showPoseDetail);
 router.get('/search', searchPoses);
-
-// const {getDescrips} = require("../kitchenSink");
-// router.get('/stockup', getDescrips);
+router.get('/user/poses', myMovesMain);
 
 module.exports = router;
