@@ -35,12 +35,6 @@ const getMyMoves = (req, next) => {
     .query(
         `SELECT * FROM "User_Poses", "Poses" WHERE "User_Poses".pose_id="Poses".id`
     )
-    // .then((results) => {
-    //     console.log("results from getMyMoves[0]", results[0]);
-    //     req.session.myMoves = results[0];
-    //     //now myMoves is an array attached to the reqSession!! HOLY SHIT!!
-    //     console.log("req session, hopefully with my moves!!", req.session);
-    // })
 };
 
 
@@ -57,6 +51,17 @@ module.exports.myMovesMain = (req, res, next) =>{
     }
 };
     
+module.exports.deleteUserPose = (req, res, next) => {
+  const { User_Poses } = req.app.get("models");
+  User_Poses.destroy({where: {up_pk_id: req.params.id}})
+  .then( (results) => {
+      console.log("results of delete", results);
+      next();
+  })
+  .catch( (err) => {
+      next(err);
+  })
+};
 
 // TODO: combine filters for both level AND type to allow for two pronged filtering
 module.exports.posesByCat = (req, res, next) => {

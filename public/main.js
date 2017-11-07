@@ -3,6 +3,24 @@
 // let successCallback = () => {
 //     location.reload();
 // }
+$(".mmxbuttons").click(function(event) {
+  if(confirm("Are you sure you want to delete this? It will also be removed from all of your sequences!")) {
+    let userPoseId = this.value;
+    console.log(userPoseId);
+    $.ajax({
+      type:"DELETE",
+      url: `pose/${userPoseId}`,
+      success:function(data) {
+        window.location.reload(true);
+      }
+    })
+    .done( (data) => {
+      console.log(data);
+      window.location.reload(true);
+    });
+  }
+});
+
 
 $(".xbuttons").click(function(event) {
   let seqUsPose_id = this.name;

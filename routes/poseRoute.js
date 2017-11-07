@@ -10,7 +10,7 @@ const {
   searchPoses,
   posesByLev,
   myMovesMain,
-  sidesearchPoses
+  deleteUserPose
 } = require("../controllers/poseCtrl.js");
 
 router.get('/poses', showAllPoses);
@@ -19,5 +19,5 @@ router.get('/poses/level', posesByLev);
 router.get('/poses/:id', showPoseDetail);
 router.get('/search', searchPoses);
 router.get('/user/poses', myMovesMain);
-
+router.delete("/user/pose/:id", deleteUserPose, myMovesMain);
 module.exports = router;

@@ -19,7 +19,15 @@ block content
                                         p(class="card-text") #{pose.up_breath}
                                     if pose.card_timing
                                         p(class="card-text") #{pose.card_timing} 
+                            button(class="mmxbuttons btn btn-danger", name=`${pose.up_pk_id}`, value=`${pose.up_pk_id}`, style="cursor: pointer;") X
+
+
     else    
         p NO MOVES
 
+    script(src="/public/jquery/dist/jquery.min.js")
+    script(src="/public/tether/dist/js/tether.min.js")
+    script(src="/public/styles/bootstrap/dist/js/bootstrap.min.js")
+    script(src="/public/jquery-ui/jquery-ui-1.12.1.custom/jquery-ui.min.js")
+    script(src="/public/main.js")
         //- need to add the options here for deleting from my moves, changing the details, etc
