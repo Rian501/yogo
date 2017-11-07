@@ -18,32 +18,6 @@
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d151bb9473995033182005.mp4"
 		},
 		{
-			"meta_title": "Wild Thing Pose",
-			"sanskrit_name": "Camatkārāsana",
-			"category_id": 7,
-			"level_id": 2,
-			"description": "From downward dog pose, elevate one leg toward the sky and stack the corresponding hip over the other hip.  Bring the upper heel as close to the buttocks as possible.  The hips remain stacked; then bring the shoulders forward slowly over the hands.  Replace the corresponding hand to the upraised leg with the other hand and flip yourself over and extend the top hand forward.  The bottom foot is now facing toward the front of the mat and you remain on the ball of the top foot and the corresponding knee is bent.  Continue to lift hips up towards the sky and continue reaching the free hand towards the front of the room and slightly downwards.  Allow the head to curl back.",
-			"benefits": "Stretches the chest, shoulders, back, and throat.  Strengthens and opens the hips, hip flexors, and thighs."
-		},
-		{
-			"meta_title": "Gorilla Pose",
-			"sanskrit_name": "Pādahastāsana",
-			"alt_name": "Hand to Foot / Hand Under Foot",
-			"category_id": 8,
-			"level_id": 2,
-			"description": "Begin from an upright standing position with the feet parallel (about six inches apart) and the front of the thighs contracted to lift the kneecaps.  The body is bent forward from the crease of the hip joints with the legs completely straight and the torso parallel to the earth.  The index and middle fingers of each hand are wrapped between the big toes and the second toes.  Fingers and thumbs are curled around and under the big toes to firmly secure the wrap.  The toes press down against the fingers.  To fold deeper into the pose the sitting bones are lifted up towards the sky, the torso is pressed towards the thighs and the crown of the head is lowered towards the earth.  Depending on flexibility, the lower back hollows to a greater or lesser degree.  At the same time, without compressing the back of the neck, the sternum is lifted.  The forehead stays relaxed.  For the full extension of the pose the elbows bend out to the sides as the toes are pulled up.  This lengthens the front and sides of the torso.  For very long hamstrings, draw the forehead toward the shins.  For hamstrings that are short, it is better to focus on keeping the front torso long.  The gaze is down or towards the body.",
-			"benefits": "Calms the brain and helps relieve stress and anxiety.  Stimulates the liver and the kidneys.  Stretches the hamstrings and the calves.  Strengthens the thighs.  Improves digestion.  Helps relieve the symptoms of menopause.  Helps relieve headaches and insomnia."
-		},
-		{
-			"meta_title": "Box Pose",
-			"sanskrit_name": "Cakravākāsana",
-			"alt_name": "Table Top",
-			"category_id": 9,
-			"level_id": 1,
-			"description": "From a kneeling position, the knees and arms form a box with the spine and neck in a neutral position.  The hips and shoulders are squared to the earth and the palms are rooted with the weight of the body equally distributed between the heel of the hands and the top of the knees.  The joints are stacked with the wrists, elbows and shoulders in a straight line.  The gaze is down.",
-			"benefits": "Increases abdominal strength.  Warms up the joints, muscles of arms and the legs."
-		},
-		{
 			"category_id": 1,
 			"comments_count": 1,
 			"cover_original": "/media/poses/photo/src/lo/low-lunge-left-leg-forward.jpg",
@@ -89,63 +63,6 @@
 			"slug": "crane-pose-with-right-leg-up",
 			"title": "Crane (crow) pose with right leg up",
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d152c106361d36e4f5146f.mp4"
-		},
-		{
-			"meta_title": "Twisting Low Lunge on the Knee Pose",
-			"sanskrit_name": "Parivṛtta Aṅjaneyāsana",
-			"category_id": 2,
-			"level_id": 2,
-			"description": "From low lunge with hands together at your chest, slowly twist the spine to one side, hooking the elbow outside of the knee.  Stack the shoulders on top of each other, keep the heart open and gaze up towards the sky.",
-			"benefits": "Lengthens and stretches the spine.  Creates flexibility in the rib cage.  Stimulates the internal abdominal organs and kidneys."
-		},
-		{
-			"meta_title": "Revolved Crescent Lunge on the Knee with Extended Arms Pose",
-			"sanskrit_name": "Utthita Parivṛtta Aṅjaneyāsana",
-			"category_id": 2,
-			"level_id": 2,
-			"description": "From twisting low lunge, slowly release the hands.  Bottom hand can touch the floor or float, if needed, use a block to support.  Top hand reaches up towards the sky.  Keep both hands straight and heart remains open.  Gaze is upwards towards the top hand.",
-			"benefits": "Lengthens and stretches the spine.  Creates flexibility in the rib cage.  Stimulates the internal abdominal organs and kidneys."
-		},
-		{
-			"meta_title": "Bound Revolved Crescent Lunge on the Knee Pose",
-			"sanskrit_name": "Parivṛtta Baddha Aṅjaneyāsana",
-			"category_id": 2,
-			"level_id": 2,
-			"description": "From extended low lunge twist, lower the top hand around the back with palm facing out.  Bottom hand wraps underneath the thigh.  Bend the elbow and extend the hand to reach the other hand.  Bind the hands together.  If the hands cannot reach, use a strap.  Heart is open.  The gaze is over the top shoulder.",
-			"benefits": "Deeply stretches the spine, chest, lungs, shoulders and groin.  Stimulates the internal abdominal organs and kidneys."
-		},
-		{
-			"meta_title": "Revolved Crescent Lunge Pose",
-			"sanskrit_name": "Parivṛtta Aṅjaneyāsana",
-			"category_id": 2,
-			"level_id": 2,
-			"description": "From low lunge, slowly twist the spine to one side, hooking the elbow outside of the knee.  Stack the shoulders on top of each other, keep the heart open and gaze up towards the sky.  On the inhale, elongate the spine and on the exhale take the twist slightly deeper.",
-			"benefits": "Lengthens and stretches the spine.  Creates flexibility in the rib cage.  Stimulates the internal abdominal organs and kidneys."
-		},
-		{
-			"meta_title": "Revolved Crescent Lunge with Extended Arms Pose",
-			"sanskrit_name": "Utthita Parivṛtta Aṅjaneyāsana",
-			"category_id": 2,
-			"level_id": 2,
-			"description": "From twisting low lunge, slowly release the hands and extend both arms.  Bottom hand can touch the floor or float.  A block may be used for support when needed.  Top hand reaches up towards the sky.  Keep both hands straight and the heart remains open.  Gaze is upward towards the top hand.",
-			"benefits": "Lengthens and stretches the spine.  Creates flexibility in the rib cage.  Stimulates the internal abdominal organs and kidneys.  Opens the shoulders and strengthens the back muscles."
-		},
-		{
-			"meta_title": "Bound Revolved Crescent Lunge Pose",
-			"sanskrit_name": "Parivṛtta Baddha Aṅjaneyāsana",
-			"category_id": 2,
-			"level_id": 2,
-			"description": "From extended twisting lunge, lower the top hand around the back with palm facing out.  Bottom hand wraps underneath the thigh.  Bend the elbow and extend the hand to reach the other hand.  Bind the hands together.  If the hands cannot reach, use a strap.  Heart is open.  The gaze is over the top shoulder.",
-			"benefits": "Deeply stretches the spine, chest, lungs, shoulders and groin.  Stimulates the internal abdominal organs and kidneys."
-		},
-		{
-			"meta_title": "Side Crow (Crane) Pose",
-			"sanskrit_name": "Pārśva Bakāsana",
-			"alt_name": "Side Crane",
-			"category_id": 2,
-			"level_id": 3,
-			"description": "Start from side-crow preparation pose and lean forward.  Bend the elbows, placing the hips and knees on top of the arms.  Lift the chin up and look forward.  Shift more weight onto the arms and tip over, take one foot and then the other off the floor.",
-			"benefits": "Strengthens arms and wrists.  Improves balance.  Tones the abdominal muscles."
 		},
 		{
 			"category_id": 5,
@@ -340,30 +257,6 @@
 			"sanskrit_name": "Padmasana",
 			"slug": "lotus-pose",
 			"video_url": "https://s3.amazonaws.com/media.yoga.com/poses/vid/web-hq/52d1539794a6f604de0b4168.mp4"
-		},
-		{
-			"meta_title": "Chair Twist Pose",
-			"sanskrit_name": "Parivṛtta Utkaṭāsana",
-			"category_id": 1,
-			"level_id": 1,
-			"description": "From Chair Pose with palms together at your chest, the upper body twists to one side with the heart opening towards the sky.  The bottom elbow is on the outside of the opposite knee and the upper elbow reaches towards the sky.  Gaze is towards the sky or to the earth if the neck is sensitive.",
-			"benefits": "Stretches the lower back.  Increases the flexibility of the spine and back.  Stretches the shoulders.  Challenges the balance.  Powerful detoxification of toxic food, drink, thoughts, etc."
-		},
-		{
-			"meta_title": "Bound Chair Twist Pose",
-			"sanskrit_name": "Parivṛtta Baddha Utkaṭāsana",
-			"category_id": 1,
-			"level_id": 2,
-			"description": "From chair twist pose, the lower arm weaves in between the legs as the upper arm wraps around the back and the fingers interlace.  The ribcage is lifted.  The gaze toward the sky, unless it hurts your neck, then the gaze towards the earth.",
-			"benefits": "Increases the flexibility of the spine and back and stretches the shoulders.  Stretches the lower back.  Challenges the balance.  Powerful detoxification of toxic food, drink, and thoughts."
-		},
-		{
-			"meta_title": "Bound Revolved Side Angle Pose",
-			"sanskrit_name": "Parivṛtta Baddha Pārśvakoṇāsana",
-			"category_id": 2,
-			"level_id": 3,
-			"description": "From warrior II, bend the front knee and spin to the ball of the back foot as the torso lowers down onto the thigh, opening the heart center to the sky and lowering the bottom hand to the inside of the thigh with the palm planted firmly.  At the same time, reach the top arm and hand up and overhead extending in a straight line towards the front.  To take the bind then wrap the top arm around and under the backside of the torso and grasp the bottom hand at the wrist if possible.  Minimize lateral flexion of the spine while rotating the torso open.  Press the elbow and the shoulder against the bent knee in an isometric contraction to keep the knee aligned and leverage the rotation of the torso.  The gaze is to upper fingertips and the neck is relaxed.  As all twists lengthen and soften the belly, extend the spine with each inhalation, and increase the twist as you exhale.",
-			"benefits": "Strengthens and stretches the legs, the knees, and the ankles.  Stretches the groins, the spine, the chest, the lungs, and the shoulders.  Stimulates abdominal organs.  Increases stamina.  Improves digestion and aids elimination.  Improves balance."
 		},
 		{
 			"category_id": 8,
@@ -4637,6 +4530,113 @@
 			"level_id": 1,
 			"description": "From child's pose, rest the torso onto the thighs and the forehead onto the earth.  Walk the knees up to meet the forehead, shifting some weight to the crown of the head.  Find the maximum comfortable neck stretch and then reach back and grip the base of the feet (use a strap if necessary).  To increase the stretch and come into the full expression of the pose, gradually lift or elevate your hips.  Be sure to keep your forehead as close as possible to your knees and the topmost part of your skull (crown of the head) on the earth.  Contract your abdominal muscles and gaze at your ankles.",
 			"benefits": "Maintains the mobility and elasticity of spine.  Nurtures the nervous system and helps with depression.  Improves digestion.  Helps cure sinus problems, colds and chronic tonsillitis.  Strengthens and firms the abdomen.  Stretches the back muscles.  Removes the tension from the upper back and the neck.  Improves posture.  Stimulates the thymus gland, improving the function of the immune system."
+		},
+		{
+			"meta_title": "Twisting Low Lunge on the Knee Pose",
+			"sanskrit_name": "Parivṛtta Aṅjaneyāsana",
+			"category_id": 2,
+			"level_id": 2,
+			"description": "From low lunge with hands together at your chest, slowly twist the spine to one side, hooking the elbow outside of the knee.  Stack the shoulders on top of each other, keep the heart open and gaze up towards the sky.",
+			"benefits": "Lengthens and stretches the spine.  Creates flexibility in the rib cage.  Stimulates the internal abdominal organs and kidneys."
+		},
+		{
+			"meta_title": "Revolved Crescent Lunge on the Knee with Extended Arms Pose",
+			"sanskrit_name": "Utthita Parivṛtta Aṅjaneyāsana",
+			"category_id": 2,
+			"level_id": 2,
+			"description": "From twisting low lunge, slowly release the hands.  Bottom hand can touch the floor or float, if needed, use a block to support.  Top hand reaches up towards the sky.  Keep both hands straight and heart remains open.  Gaze is upwards towards the top hand.",
+			"benefits": "Lengthens and stretches the spine.  Creates flexibility in the rib cage.  Stimulates the internal abdominal organs and kidneys."
+		},
+		{
+			"meta_title": "Bound Revolved Crescent Lunge on the Knee Pose",
+			"sanskrit_name": "Parivṛtta Baddha Aṅjaneyāsana",
+			"category_id": 2,
+			"level_id": 2,
+			"description": "From extended low lunge twist, lower the top hand around the back with palm facing out.  Bottom hand wraps underneath the thigh.  Bend the elbow and extend the hand to reach the other hand.  Bind the hands together.  If the hands cannot reach, use a strap.  Heart is open.  The gaze is over the top shoulder.",
+			"benefits": "Deeply stretches the spine, chest, lungs, shoulders and groin.  Stimulates the internal abdominal organs and kidneys."
+		},
+		{
+			"meta_title": "Revolved Crescent Lunge Pose",
+			"sanskrit_name": "Parivṛtta Aṅjaneyāsana",
+			"category_id": 2,
+			"level_id": 2,
+			"description": "From low lunge, slowly twist the spine to one side, hooking the elbow outside of the knee.  Stack the shoulders on top of each other, keep the heart open and gaze up towards the sky.  On the inhale, elongate the spine and on the exhale take the twist slightly deeper.",
+			"benefits": "Lengthens and stretches the spine.  Creates flexibility in the rib cage.  Stimulates the internal abdominal organs and kidneys."
+		},
+		{
+			"meta_title": "Wild Thing Pose",
+			"sanskrit_name": "Camatkārāsana",
+			"category_id": 7,
+			"level_id": 2,
+			"description": "From downward dog pose, elevate one leg toward the sky and stack the corresponding hip over the other hip.  Bring the upper heel as close to the buttocks as possible.  The hips remain stacked; then bring the shoulders forward slowly over the hands.  Replace the corresponding hand to the upraised leg with the other hand and flip yourself over and extend the top hand forward.  The bottom foot is now facing toward the front of the mat and you remain on the ball of the top foot and the corresponding knee is bent.  Continue to lift hips up towards the sky and continue reaching the free hand towards the front of the room and slightly downwards.  Allow the head to curl back.",
+			"benefits": "Stretches the chest, shoulders, back, and throat.  Strengthens and opens the hips, hip flexors, and thighs."
+		},
+		{
+			"meta_title": "Gorilla Pose",
+			"sanskrit_name": "Pādahastāsana",
+			"alt_name": "Hand to Foot / Hand Under Foot",
+			"category_id": 8,
+			"level_id": 2,
+			"description": "Begin from an upright standing position with the feet parallel (about six inches apart) and the front of the thighs contracted to lift the kneecaps.  The body is bent forward from the crease of the hip joints with the legs completely straight and the torso parallel to the earth.  The index and middle fingers of each hand are wrapped between the big toes and the second toes.  Fingers and thumbs are curled around and under the big toes to firmly secure the wrap.  The toes press down against the fingers.  To fold deeper into the pose the sitting bones are lifted up towards the sky, the torso is pressed towards the thighs and the crown of the head is lowered towards the earth.  Depending on flexibility, the lower back hollows to a greater or lesser degree.  At the same time, without compressing the back of the neck, the sternum is lifted.  The forehead stays relaxed.  For the full extension of the pose the elbows bend out to the sides as the toes are pulled up.  This lengthens the front and sides of the torso.  For very long hamstrings, draw the forehead toward the shins.  For hamstrings that are short, it is better to focus on keeping the front torso long.  The gaze is down or towards the body.",
+			"benefits": "Calms the brain and helps relieve stress and anxiety.  Stimulates the liver and the kidneys.  Stretches the hamstrings and the calves.  Strengthens the thighs.  Improves digestion.  Helps relieve the symptoms of menopause.  Helps relieve headaches and insomnia."
+		},
+		{
+			"meta_title": "Box Pose",
+			"sanskrit_name": "Cakravākāsana",
+			"alt_name": "Table Top",
+			"category_id": 9,
+			"level_id": 1,
+			"description": "From a kneeling position, the knees and arms form a box with the spine and neck in a neutral position.  The hips and shoulders are squared to the earth and the palms are rooted with the weight of the body equally distributed between the heel of the hands and the top of the knees.  The joints are stacked with the wrists, elbows and shoulders in a straight line.  The gaze is down.",
+			"benefits": "Increases abdominal strength.  Warms up the joints, muscles of arms and the legs."
+		},
+		{
+			"meta_title": "Revolved Crescent Lunge with Extended Arms Pose",
+			"sanskrit_name": "Utthita Parivṛtta Aṅjaneyāsana",
+			"category_id": 2,
+			"level_id": 2,
+			"description": "From twisting low lunge, slowly release the hands and extend both arms.  Bottom hand can touch the floor or float.  A block may be used for support when needed.  Top hand reaches up towards the sky.  Keep both hands straight and the heart remains open.  Gaze is upward towards the top hand.",
+			"benefits": "Lengthens and stretches the spine.  Creates flexibility in the rib cage.  Stimulates the internal abdominal organs and kidneys.  Opens the shoulders and strengthens the back muscles."
+		},
+		{
+			"meta_title": "Bound Revolved Crescent Lunge Pose",
+			"sanskrit_name": "Parivṛtta Baddha Aṅjaneyāsana",
+			"category_id": 2,
+			"level_id": 2,
+			"description": "From extended twisting lunge, lower the top hand around the back with palm facing out.  Bottom hand wraps underneath the thigh.  Bend the elbow and extend the hand to reach the other hand.  Bind the hands together.  If the hands cannot reach, use a strap.  Heart is open.  The gaze is over the top shoulder.",
+			"benefits": "Deeply stretches the spine, chest, lungs, shoulders and groin.  Stimulates the internal abdominal organs and kidneys."
+		},
+		{
+			"meta_title": "Side Crow (Crane) Pose",
+			"sanskrit_name": "Pārśva Bakāsana",
+			"alt_name": "Side Crane",
+			"category_id": 2,
+			"level_id": 3,
+			"description": "Start from side-crow preparation pose and lean forward.  Bend the elbows, placing the hips and knees on top of the arms.  Lift the chin up and look forward.  Shift more weight onto the arms and tip over, take one foot and then the other off the floor.",
+			"benefits": "Strengthens arms and wrists.  Improves balance.  Tones the abdominal muscles."
+		},
+		{
+			"meta_title": "Chair Twist Pose",
+			"sanskrit_name": "Parivṛtta Utkaṭāsana",
+			"category_id": 1,
+			"level_id": 1,
+			"description": "From Chair Pose with palms together at your chest, the upper body twists to one side with the heart opening towards the sky.  The bottom elbow is on the outside of the opposite knee and the upper elbow reaches towards the sky.  Gaze is towards the sky or to the earth if the neck is sensitive.",
+			"benefits": "Stretches the lower back.  Increases the flexibility of the spine and back.  Stretches the shoulders.  Challenges the balance.  Powerful detoxification of toxic food, drink, thoughts, etc."
+		},
+		{
+			"meta_title": "Bound Chair Twist Pose",
+			"sanskrit_name": "Parivṛtta Baddha Utkaṭāsana",
+			"category_id": 1,
+			"level_id": 2,
+			"description": "From chair twist pose, the lower arm weaves in between the legs as the upper arm wraps around the back and the fingers interlace.  The ribcage is lifted.  The gaze toward the sky, unless it hurts your neck, then the gaze towards the earth.",
+			"benefits": "Increases the flexibility of the spine and back and stretches the shoulders.  Stretches the lower back.  Challenges the balance.  Powerful detoxification of toxic food, drink, and thoughts."
+		},
+		{
+			"meta_title": "Bound Revolved Side Angle Pose",
+			"sanskrit_name": "Parivṛtta Baddha Pārśvakoṇāsana",
+			"category_id": 2,
+			"level_id": 3,
+			"description": "From warrior II, bend the front knee and spin to the ball of the back foot as the torso lowers down onto the thigh, opening the heart center to the sky and lowering the bottom hand to the inside of the thigh with the palm planted firmly.  At the same time, reach the top arm and hand up and overhead extending in a straight line towards the front.  To take the bind then wrap the top arm around and under the backside of the torso and grasp the bottom hand at the wrist if possible.  Minimize lateral flexion of the spine while rotating the torso open.  Press the elbow and the shoulder against the bent knee in an isometric contraction to keep the knee aligned and leverage the rotation of the torso.  The gaze is to upper fingertips and the neck is relaxed.  As all twists lengthen and soften the belly, extend the spine with each inhalation, and increase the twist as you exhale.",
+			"benefits": "Strengthens and stretches the legs, the knees, and the ankles.  Stretches the groins, the spine, the chest, the lungs, and the shoulders.  Stimulates abdominal organs.  Increases stamina.  Improves digestion and aids elimination.  Improves balance."
 		}
 	]
 }
