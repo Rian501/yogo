@@ -23,6 +23,22 @@ const getMyMoves = (req, next) => {
   );
 };
 
+module.exports.updateSeqOrder = (req, res, next) => {
+  const { sequelize } = req.app.get('models');
+  let seq_id = req.params.seq_id
+  let SeqUsArr =  req.body['SeqUsPosesInOrder[]']
+  for (let i=0; i<SeqUsArr.length; i++) {
+    let newSpot = i+1;
+    sequelize.query(`UPDATE "SequenceUserPoses" 
+    SET position_order = ${newSpot}
+    WHERE "seqUsPos_id" = ${SeqUsArr[i]}
+    AND sequence_id = ${seq_id}`)
+    .then((results) =>{
+      console.log("what comes back?", results);
+    })
+  }
+};
+
 module.exports.viewSeq = (req, res, next) => {
   if (req.user) {
     const { sequelize } = req.app.get('models');
@@ -36,7 +52,7 @@ module.exports.viewSeq = (req, res, next) => {
     })
     .then(results => {
       let moves = results[0]
-      // console.log("moves for digging", moves);
+      console.log("moves for digging", moves);
       //might need to add card timing as a number property for later manipulation rather than if-elsing it on the pugdom
       res.render('viewSeq', {
         moves,
@@ -89,7 +105,13 @@ module.exports.addNewMoveToSeqEnd = (req, res, next)=>{
       return sequelize.query(`SELECT * FROM "SequenceUserPoses", "User_Poses", "Poses" WHERE "SequenceUserPoses"."sequence_id"=${req.params.seq_id} AND "SequenceUserPoses".user_pose_id="User_Poses"."up_pk_id" AND "User_Poses".pose_id="Poses".id ORDER BY "SequenceUserPoses".position_order`)
     })
     .then( (results) => {
-      addPosOrder = parseInt(results[0].length + 1);
+      let orderP = results[0].map(function(each) {
+        return each.position_order;
+      });
+      let max = orderP.reduce(function(a, b) {
+        return Math.max(a, b);
+      });
+      addPosOrder = max + 1;
         return SequenceUserPoses.create({
           user_pose_id: newUserMove,
           position_order: addPosOrder,
@@ -110,12 +132,22 @@ module.exports.addNewMoveToSeqEnd = (req, res, next)=>{
 
 module.exports.addMoveToSeqEndFrUserPoses = (req, res, next) => {
   if (req.user) {
+    console.log("adding to sequence");
     const { sequelize, SequenceUserPoses } = req.app.get('models');
     let addPosOrder = null;
+    //length is not enough -- need to find the highest number and add it after that.
+    //might be ok once sortable and reassigning numbers anyway, but for now...
+    //position order of new item must be higher than the highest one
     let currentSeqId=parseInt(req.params.seq_id);
     sequelize.query(`SELECT * FROM "SequenceUserPoses", "User_Poses", "Poses" WHERE "SequenceUserPoses"."sequence_id"=${req.params.seq_id} AND "SequenceUserPoses".user_pose_id="User_Poses"."up_pk_id" AND "User_Poses".pose_id="Poses".id ORDER BY "SequenceUserPoses".position_order`)
     .then(results => {
-      addPosOrder = parseInt(results[0].length + 1);
+      let orderP = results[0].map(function(each){
+        return each.position_order
+      })
+      let max = orderP.reduce(function(a, b) {
+        return Math.max(a, b);
+      });
+      addPosOrder = max + 1;
       return SequenceUserPoses.create({
         user_pose_id: parseInt(req.params.UP_id),
         position_order: addPosOrder,
@@ -172,7 +204,6 @@ module.exports.sidesearchPoses = (req, res, next) => {
       if (poses[0]) {
         poses = poses;
       }
-      console.log("POSES???!!?!!!!!!!!!!!!!!!!!!!!!!", poses);
         res.render("viewSeq", {
           moves, 
           poses, 

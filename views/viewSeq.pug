@@ -3,15 +3,14 @@ extends index.pug
 block content
   include partials/myMoves.pug
     div.container-fluid
-        div.row
-            each move in moves
-                div(class="col-lg-2 col-md-3 col-sm-4 col-12")
-                    div.card
+        div(class="row toBeSorted")
+            ul(class="sortable" id=`${moves[0].sequence_id}`)
+                each move in moves
+                    li(class="ui-state-default sortable-item" id=`${move.seqUsPos_id}` data-seq-id=`${move.sequence_id}` data-position=`${move.position_order}`)
                         a(href=`/poses/${move.pose_id}` target="_blank")
                             if move.cover_thumbnail
-                                img(class="card-img-top img-fluid" src=`http://yoga.com/${move.cover_thumbnail}` alt="Card image cap")
-                            div(class="card-block")
-                                h4(class="card-title") #{move.meta_title}
+                                img(class="img-fluid" src=`http://yoga.com/${move.cover_thumbnail}` alt="Card image cap")
+                                p #{move.meta_title}
                                 if move.up_special_directions
                                     p(class="card-text") #{move.up_special_directions}
                                 if move.up_breath
@@ -22,6 +21,8 @@ block content
 
     include partials/searchToAdd.pug
 
-    script
-        include ../node_modules/jquery/dist/jquery.js
-        include ../public/main.js
+    script(src="/public/jquery/dist/jquery.min.js")
+    script(src="/public/jquery-ui/jquery-ui-1.12.1.custom/jquery-ui.min.js")
+    script(src="/public/tether/dist/js/tether.min.js")
+    script(src="/public/styles/bootstrap/dist/js/bootstrap.min.js")
+    script(src="/public/main.js")

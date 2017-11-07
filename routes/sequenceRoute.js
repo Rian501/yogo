@@ -10,7 +10,8 @@ const {
   addMoveToSeqEndFrUserPoses,
   sidesearchPoses,
   addNewMoveToSeqEnd,
-  playSeq
+  playSeq,
+  updateSeqOrder
 } = require("../controllers/sequenceCtrl.js");
 
 router.get("/sequence/:seq_id", viewSeq);
@@ -20,5 +21,7 @@ router.get("/sequence", userSeqs);
 router.delete("/seqCard/:seq_id/:SUP_id", deleteCardFromSeq, viewSeq);
 router.get("/:seq_id/sidesearch", sidesearchPoses);
 router.get("/sequence/play/:seq_id", playSeq);
+router.put('/sequence/:seq_id', updateSeqOrder)
+
 
 module.exports = router;

@@ -3,3 +3,4 @@ node_modules
 public/styles/bootstrap
 public/tether
 public/jquery
+public/jquery-ui
