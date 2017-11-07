@@ -63,6 +63,25 @@ module.exports.deleteUserPose = (req, res, next) => {
   })
 };
 
+module.exports.displayEditUserPose = (req, res, next) => {
+    console.log('req.parasms.id', req.params.id);
+  const { User_Poses, Pose } = req.app.get('models');
+    User_Poses.findAll({
+        where: {up_pk_id: req.params.id}
+    })
+    .then((onePose)=> {
+        console.log("onepose", onePose[0].dataValues);
+        let poseDeets = onePose[0].dataValues;
+        return Pose.findByIt(poseDeets.pose_id)
+    })
+    .then( (poseBasics)=>{
+        console.log("poseBasics", poseBasics);
+        res.render('editOnePose', {
+            poseDeets
+        })
+    })
+};
+
 // TODO: combine filters for both level AND type to allow for two pronged filtering
 module.exports.posesByCat = (req, res, next) => {
 const { Pose, Category, Level } = req.app.get("models");

@@ -19,7 +19,9 @@ block content
                                         p(class="card-text") #{pose.up_breath}
                                     if pose.card_timing
                                         p(class="card-text") #{pose.card_timing} 
-                            button(class="mmxbuttons btn btn-danger", name=`${pose.up_pk_id}`, value=`${pose.up_pk_id}`, style="cursor: pointer;") X
+                            a(href=`/user/pose/${pose.up_pk_id}`)
+                                button(class="editMyMove btn btn-info", name="edit", value=`${pose.up_pk_id}`, style="cursor: pointer;") edit
+                            button(class="mmxbuttons btn btn-danger", name="derete", value=`${pose.up_pk_id}`, style="cursor: pointer;") X
 
 
     else    

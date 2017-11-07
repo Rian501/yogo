@@ -1,8 +1,5 @@
 "use strict";
 
-// let successCallback = () => {
-//     location.reload();
-// }
 $(".mmxbuttons").click(function(event) {
   if(confirm("Are you sure you want to delete this? It will also be removed from all of your sequences!")) {
     let userPoseId = this.value;
