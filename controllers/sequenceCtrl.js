@@ -110,12 +110,24 @@ module.exports.addNewMoveToSeqEnd = (req, res, next)=>{
 
 module.exports.addMoveToSeqEndFrUserPoses = (req, res, next) => {
   if (req.user) {
+    console.log("adding to sequence");
     const { sequelize, SequenceUserPoses } = req.app.get('models');
     let addPosOrder = null;
+    //length is not enough -- need to find the highest number and add it after that.
+    //might be ok once sortable and reassigning numbers anyway, but for now...
+    //position order of new item must be higher than the highest one
     let currentSeqId=parseInt(req.params.seq_id);
     sequelize.query(`SELECT * FROM "SequenceUserPoses", "User_Poses", "Poses" WHERE "SequenceUserPoses"."sequence_id"=${req.params.seq_id} AND "SequenceUserPoses".user_pose_id="User_Poses"."up_pk_id" AND "User_Poses".pose_id="Poses".id ORDER BY "SequenceUserPoses".position_order`)
     .then(results => {
-      addPosOrder = parseInt(results[0].length + 1);
+      console.log("results[0]", results[0]);
+      console.log("results[0]", results[0]);
+      let orderP = results[0].map(function(each){
+        return each.position_order
+      })
+      let max = orderP.reduce(function(a, b) {
+        return Math.max(a, b);
+      });
+      addPosOrder = max + 1;
       return SequenceUserPoses.create({
         user_pose_id: parseInt(req.params.UP_id),
         position_order: addPosOrder,

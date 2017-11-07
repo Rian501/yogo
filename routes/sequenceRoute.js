@@ -10,7 +10,7 @@ const {
   addMoveToSeqEndFrUserPoses,
   sidesearchPoses,
   addNewMoveToSeqEnd,
-  playSeq
+  playSeq 
 } = require("../controllers/sequenceCtrl.js");
 
 router.get("/sequence/:seq_id", viewSeq);

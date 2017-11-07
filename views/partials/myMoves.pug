@@ -1,8 +1,8 @@
 if myMoves
-    div.container-fluid
+    div.container-fluid 
         div.row
             each pose in myMoves
-                div(class="col-lg-2 col-md-3 col-sm-4 col-12")
+                div(class="col-lg-2 col-md-3 col-sm-4 col-12" id=`${pose.up_pk_id}`)
                     div.card 
                         form(name="addPose" method="post" action=`/sequence/${seq_id}/add/${pose.up_pk_id}`)
                             a(href=`/poses/${pose.id}`)
@@ -16,8 +16,8 @@ if myMoves
                                     p(class="card-text") #{pose.up_breath}
                                 if pose.card_timing
                                     p(class="card-text") #{pose.card_timing}   
-                        if seq_id
-                            button(class="btn" type="submit") Add to Sequence
+                            if seq_id
+                                button(class="btn" type="submit") Add to Sequence
 else    
     p NO SAVED MOVES
 

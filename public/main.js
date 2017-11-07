@@ -1,8 +1,8 @@
 "use strict";
 
-let successCallback = () => {
-    location.reload();
-}
+// let successCallback = () => {
+//     location.reload();
+// }
 
 $(".xbuttons").click(function(event) {
   let seqUsPose_id = this.name;
@@ -18,3 +18,5 @@ $(".xbuttons").click(function(event) {
         window.location.reload(true);
     });
 });
+
+
