@@ -89,7 +89,13 @@ module.exports.addNewMoveToSeqEnd = (req, res, next)=>{
       return sequelize.query(`SELECT * FROM "SequenceUserPoses", "User_Poses", "Poses" WHERE "SequenceUserPoses"."sequence_id"=${req.params.seq_id} AND "SequenceUserPoses".user_pose_id="User_Poses"."up_pk_id" AND "User_Poses".pose_id="Poses".id ORDER BY "SequenceUserPoses".position_order`)
     })
     .then( (results) => {
-      addPosOrder = parseInt(results[0].length + 1);
+      let orderP = results[0].map(function(each) {
+        return each.position_order;
+      });
+      let max = orderP.reduce(function(a, b) {
+        return Math.max(a, b);
+      });
+      addPosOrder = max + 1;
         return SequenceUserPoses.create({
           user_pose_id: newUserMove,
           position_order: addPosOrder,
@@ -119,8 +125,6 @@ module.exports.addMoveToSeqEndFrUserPoses = (req, res, next) => {
     let currentSeqId=parseInt(req.params.seq_id);
     sequelize.query(`SELECT * FROM "SequenceUserPoses", "User_Poses", "Poses" WHERE "SequenceUserPoses"."sequence_id"=${req.params.seq_id} AND "SequenceUserPoses".user_pose_id="User_Poses"."up_pk_id" AND "User_Poses".pose_id="Poses".id ORDER BY "SequenceUserPoses".position_order`)
     .then(results => {
-      console.log("results[0]", results[0]);
-      console.log("results[0]", results[0]);
       let orderP = results[0].map(function(each){
         return each.position_order
       })
@@ -184,7 +188,6 @@ module.exports.sidesearchPoses = (req, res, next) => {
       if (poses[0]) {
         poses = poses;
       }
-      console.log("POSES???!!?!!!!!!!!!!!!!!!!!!!!!!", poses);
         res.render("viewSeq", {
           moves, 
           poses, 
