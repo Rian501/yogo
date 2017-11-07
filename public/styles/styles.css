@@ -3,7 +3,9 @@ body {
 }
 
 
-
+.sequence-play-img {
+  max-height: 90vh;
+}
 
 /* styles for the sliding side bar modified from https://codepen.io/anon/pen/OOXYpd */
 

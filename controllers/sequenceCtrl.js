@@ -75,8 +75,6 @@ module.exports.userSeqs = (req, res, next) => {
 
 module.exports.addNewMoveToSeqEnd = (req, res, next)=>{
   let currentSeqId=parseInt(req.params.seq_id);
-  console.log("POOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOse id", req.params.pose_id);
-  console.log("sssssssssssssssssssssssssssssssssssssssssssssssequence id", req.params.seq_id);
   if (req.user) {
     const { sequelize, SequenceUserPoses, User_Poses } = req.app.get('models');
     let currentSeqId=parseInt(req.params.seq_id);
@@ -87,9 +85,7 @@ module.exports.addNewMoveToSeqEnd = (req, res, next)=>{
       pose_id: req.params.pose_id
     })
     .then((results)=>{
-      console.log("reeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeesults", results);
       newUserMove = results.dataValues.up_pk_id;
-      console.log("reeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeesults uppkid", newUserMove);
       return sequelize.query(`SELECT * FROM "SequenceUserPoses", "User_Poses", "Poses" WHERE "SequenceUserPoses"."sequence_id"=${req.params.seq_id} AND "SequenceUserPoses".user_pose_id="User_Poses"."up_pk_id" AND "User_Poses".pose_id="Poses".id ORDER BY "SequenceUserPoses".position_order`)
     })
     .then( (results) => {
@@ -189,4 +185,23 @@ module.exports.sidesearchPoses = (req, res, next) => {
   } else {
     res.redirect("/");
   }
+};
+
+
+module.exports.playSeq = (req, res, next) => {
+  const { sequelize } = req.app.get('models');
+  let moves = null;
+  let seq_id = req.params.seq_id;
+  sequelize.query(`SELECT * FROM "SequenceUserPoses", "User_Poses", "Poses" WHERE "SequenceUserPoses"."sequence_id"=${req.params.seq_id} AND "SequenceUserPoses".user_pose_id="User_Poses"."up_pk_id" AND "User_Poses".pose_id="Poses".id ORDER BY "SequenceUserPoses".position_order`)
+  .then((results) => {
+    moves = results[0];
+    console.log("the moobs like jabba i mean moves like frogger", moves);
+    res.render("playSeq", {
+      moves,
+      seq_id
+    })
+  })
+  .catch((err) => {
+    next(err);
+  })
 };
