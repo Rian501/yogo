@@ -20,3 +20,8 @@ $(".xbuttons").click(function(event) {
 });
 
 
+  $(function() {
+    $("#sortable").sortable();
+    $("#sortable").disableSelection();
+  });
+
