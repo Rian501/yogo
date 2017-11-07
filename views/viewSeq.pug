@@ -4,9 +4,9 @@ block content
   include partials/myMoves.pug
     div.container-fluid
         div(class="row toBeSorted")
-            ul#sortable
+            ul(class="sortable" id=`${moves[0].sequence_id}`)
                 each move in moves
-                    li(class="ui-state-default")
+                    li(class="ui-state-default sortable-item" id=`${move.seqUsPos_id}` data-seq-id=`${move.sequence_id}` data-position=`${move.position_order}`)
                         a(href=`/poses/${move.pose_id}` target="_blank")
                             if move.cover_thumbnail
                                 img(class="img-fluid" src=`http://yoga.com/${move.cover_thumbnail}` alt="Card image cap")

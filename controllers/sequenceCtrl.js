@@ -23,6 +23,22 @@ const getMyMoves = (req, next) => {
   );
 };
 
+module.exports.updateSeqOrder = (req, res, next) => {
+  const { sequelize } = req.app.get('models');
+  let seq_id = req.params.seq_id
+  let SeqUsArr =  req.body['SeqUsPosesInOrder[]']
+  for (let i=0; i<SeqUsArr.length; i++) {
+    let newSpot = i+1;
+    sequelize.query(`UPDATE "SequenceUserPoses" 
+    SET position_order = ${newSpot}
+    WHERE "seqUsPos_id" = ${SeqUsArr[i]}
+    AND sequence_id = ${seq_id}`)
+    .then((results) =>{
+      console.log("what comes back?", results);
+    })
+  }
+};
+
 module.exports.viewSeq = (req, res, next) => {
   if (req.user) {
     const { sequelize } = req.app.get('models');
@@ -36,7 +52,7 @@ module.exports.viewSeq = (req, res, next) => {
     })
     .then(results => {
       let moves = results[0]
-      // console.log("moves for digging", moves);
+      console.log("moves for digging", moves);
       //might need to add card timing as a number property for later manipulation rather than if-elsing it on the pugdom
       res.render('viewSeq', {
         moves,
