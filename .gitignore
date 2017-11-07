@@ -1,3 +1,5 @@
 node_modules
 .env
 public/styles/bootstrap
+public/tether
+public/jquery
