@@ -35,12 +35,6 @@ const getMyMoves = (req, next) => {
     .query(
         `SELECT * FROM "User_Poses", "Poses" WHERE "User_Poses".pose_id="Poses".id`
     )
-    // .then((results) => {
-    //     console.log("results from getMyMoves[0]", results[0]);
-    //     req.session.myMoves = results[0];
-    //     //now myMoves is an array attached to the reqSession!! HOLY SHIT!!
-    //     console.log("req session, hopefully with my moves!!", req.session);
-    // })
 };
 
 
@@ -57,6 +51,43 @@ module.exports.myMovesMain = (req, res, next) =>{
     }
 };
     
+module.exports.deleteUserPose = (req, res, next) => {
+  const { User_Poses } = req.app.get("models");
+  User_Poses.destroy({where: {up_pk_id: req.params.id}})
+  .then( (results) => {
+      console.log("results of delete", results);
+      next();
+  })
+  .catch( (err) => {
+      next(err);
+  })
+};
+
+module.exports.displayEditUserPose = (req, res, next) => {
+  console.log('req.parasms.id', req.params.id);
+  const { User_Poses, Pose } = req.app.get('models');
+  let poseDeets=null;
+  let poseBasics=null;
+  let UP_id=req.params.id;
+    User_Poses.findAll({
+        where: {up_pk_id: UP_id}
+    })
+    .then((onePose)=> {
+        console.log("onepose", onePose[0].dataValues);
+        poseDeets = onePose[0].dataValues;
+        return Pose.findById(poseDeets.pose_id)
+    })
+    .then( (posesBasics)=>{
+        console.log("poseBasics", posesBasics.dataValues);
+        poseBasics = posesBasics.dataValues;
+        poseBasics = posesBasics.dataValues;
+        res.render('editOnePose', {
+            poseBasics,
+            poseDeets,
+            UP_id
+        })
+    })
+};
 
 // TODO: combine filters for both level AND type to allow for two pronged filtering
 module.exports.posesByCat = (req, res, next) => {
@@ -164,3 +195,17 @@ module.exports.searchPoses = (req, res, next) => {
 };
 
 
+module.exports.updateUserPose = (req,res,next) => {
+  const { sequelize } = req.app.get('models');
+  let direx = req.body.up_special_directions;
+  let breath = req.body.up_breath;
+  let UP_id = parseInt(req.params.id);
+  sequelize.query(`UPDATE "User_Poses" SET "up_special_directions" = '${direx}', "up_breath" = '${breath}' WHERE "up_pk_id" = ${UP_id}`)
+  .then( (results) => {
+    console.log(results);
+    next();
+  })
+  .catch( (err)=>{
+    next(err);
+  })
+};

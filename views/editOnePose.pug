@@ -1,0 +1,30 @@
+extends index.pug
+block content
+
+    h1 Edit details for #{poseBasics.meta_title}
+    h2= poseBasics.sanskrit_name
+    if poseBasics.photo
+        img(src=`http://yoga.com/${poseBasics.photo}` style="max-width: 200px;")
+    label(for="special_direx") Add personal directions or modifications for this pose:
+    input(type="text" id="special_direx" name="special_direx" value=`${poseDeets.up_special_directions}`)
+    label(for="breath_direx") Add breathing directions for this pose:
+    input(type="text" id="breath_direx" name="breath_direx" placeholder="inhale for a count of four" value=`${poseDeets.up_breath}`)
+    button(type="button" value=`${UP_id}` class="btn" id="updateUserPose") Save personal directions
+    if poseBasics.video_url
+        video(width="320" height="240" controls)
+            source(src=`${poseBasics.video_url}` type="video/mp4")
+            Your browser does not support the video tag.
+    if poseBasics.description
+        p= poseBasics.description
+    if poseBasics.benefits
+        p= poseBasics.benefits
+    if poseBasics.meta_description
+        p= poseBasics.meta_description
+    if poseBasics.muscle
+        img(src=`http://yoga.com/${poseBasics.muscle}` style="max-width: 200px;")
+
+    script(src="/public/jquery/dist/jquery.min.js")
+    script(src="/public/tether/dist/js/tether.min.js")
+    script(src="/public/styles/bootstrap/dist/js/bootstrap.min.js")
+    script(src="/public/jquery-ui/jquery-ui-1.12.1.custom/jquery-ui.min.js")
+    script(src="/public/main.js")

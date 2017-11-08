@@ -1,7 +1,7 @@
 nav(class="navbar navbar-toggleable-md navbar-light bg-faded")
   button(class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation")
     span(class="navbar-toggler-icon")
-  a(class="navbar-brand" href="#") Navbar
+  a(class="navbar-brand" href="#") Yogo!
   div(class="collapse navbar-collapse" id="navbarTogglerDemo02")
     ul(class="navbar-nav mr-auto mt-2 mt-md-0")
       li(class="nav-item")
@@ -11,8 +11,8 @@ nav(class="navbar navbar-toggleable-md navbar-light bg-faded")
           a(class="nav-link" href="/user/poses") My Poses
         li(class="nav-item")
           a(class="nav-link" href="/sequence") My Sequences
-        form(method="POST")
-          button(type="submit" formaction="/logout") Logout
+        li(class="nav-item")
+          a(class="nav-link" href="/logout") Logout
       if !session.passport
         li(class="nav-item")
           a(class="nav-link" href="/login") Log in
@@ -20,3 +20,4 @@ nav(class="navbar navbar-toggleable-md navbar-light bg-faded")
       form(class="form-inline my-2 my-lg-0" method="GET")
         input(class="form-control mr-sm-2" type="text" id="searchPoses" name="title" required placeholder="Search poses")
         button(class="btn btn-outline-success my-2 my-sm-0" formaction=`/sidesearch/?${title}` type="submit") Search
+
