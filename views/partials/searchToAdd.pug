@@ -8,7 +8,7 @@ sidebar
       div(class="sidebar")
         form(class="form-inline" method="GET")
           input(class="form-control" type="text" id="searchPoses" name="title" placeholder="Search poses")
-          button(class="btn btn-outline-success" formaction=`/${seq_id}/sidesearch/?${title}` type="submit") Search
+          button(class="btn btn-outline-primary" formaction=`/${seq_id}/sidesearch/?${title}` type="submit") Search
         .form-group.filter
           form(method="GET")
             label(for="cat_id") Category: 
@@ -32,7 +32,7 @@ sidebar
                 div.minicard
                   a(href=`/poses/${pose.id}` target="_blank")
                     .img-wrapper
-                      button(type='submit' formaction=`/sequence/${seq_id}/addnew/${pose.id}` class='addbutton btn btn-success') +
+                      button(type='submit' formaction=`/sequence/${seq_id}/addnew/${pose.id}` class='addbutton btn btn-sm btn-info') +
                       if pose.cover_thumbnail
                         img(class="card-img-top img-fluid" src=`http://yoga.com/${pose.cover_thumbnail}` alt="Card image cap")
                       else
