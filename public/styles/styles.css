@@ -1,30 +1,112 @@
 body {
-    background-color: orange;
+    background-color: ivory;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hidden{
+  display: none;
+}
+
+.c-wrapper{
+    width: 80%; 
+    margin: auto;
+}
+
+.carousel-inner img{
+width: 100%; 
+margin: auto;
+}
+
+.tallness {
+  min-height: 95%;
+  margin: 4px 0;
+}
+
+.filter{
+  display: inline;
+}
+
+.vid-wrapper {
+  width: 88vw;
+}
+video {
+  margin: auto;
+}
+
+.lotusBG {
+  background-image: url('../images/rainbowDotLotus.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: palevioletred;
+}
+
+.stretchDiv {
+  height: 85vh;
+}
+
+.welcome-text {
+  text-align: center;
 }
 
 .my-moves-panel {
-  max-height: 30vh;
+  max-height: 35vh;
   overflow-x: scroll;
+  overflow-y: hidden;
+  display: block;
+  white-space: nowrap;
 }
 
 .sequence-play-img {
   max-height: 90vh;
 }
 
-  .sortable { list-style-type: none; 
-    margin: 0; 
-    padding: 0; 
-    /* width: 450px;  */
-  }
-  .sortable li { 
-    margin: 3px 3px 3px 0; 
-    padding: 1px; 
-    float: left; 
-    width: 200px; 
-    height: 200px; 
-    font-size: 0.7em; 
-    text-align: center; 
-  }
+.sortable { list-style-type: none; 
+  margin: 0; 
+  padding: 0; 
+}
+
+.minicard {
+  display: inline-block;
+  margin: 3px 3px 3px 0; 
+  padding: 1px; 
+  width: 165px; 
+  height: 155px; 
+  font-size: 0.9rem; 
+  text-align: center; 
+  background-color: white;
+  white-space: normal;
+}
+
+.sortable li { 
+  margin: 3px 3px 3px 0; 
+  padding: 1px; 
+  float: left; 
+  width: 220px; 
+  height: 200px; 
+  font-size: 0.9rem; 
+  text-align: center; 
+  background-color: white;
+}
+
+.img-wrapper {
+  position: relative;
+}
+
+.xbuttons {
+  position: absolute;
+  top:0; 
+  right:0;
+}
+
+.addbutton {
+  position: absolute;
+  top:0; 
+  right:0;
+  
+}
 /* styles for the sliding side bar modified from https://codepen.io/anon/pen/OOXYpd */
 
 @import url(https://fonts.googleapis.com/css?family=Poiret+One|Varela+Round);
@@ -42,10 +124,14 @@ color: rgba(0, 0, 0, 0.61);
 -moz-transition: all 01.5s ease-out 0;
 transition: all 04.5s ease-out 0;
 position: fixed;
-top: 20px;
+top: 0px;
 right: 20px;
 z-index: 1;
 cursor: pointer;
+background-color: lightgrey;
+padding: 4px;
+border-radius: 5px;
+/* opacity: .7; */
 }
 
 .sidebar {
@@ -58,7 +144,7 @@ right: -2000px;
 transition: all 01.5s ease-out 10;
 width: 40%;
 padding: 1.5em;
-background: #19C4BC; 
+background: aquamarine; 
 overflow-y: scroll;
 }
 
@@ -68,16 +154,16 @@ margin: 0;
 padding: 0; 
 }
 
-.sidebar li a {
+/* .sidebar li a {
 color: #fff;
 font-family: 'Poiret One', cursive;
-font-size: 1.2em;
-margin: 0;
-margin-bottom: 16px;
-cursor: pointer;
+/* font-size: 1.2em; */
+/* margin: 0; */
+/* margin-bottom: 16px; */
+/* cursor: pointer;
 text-decoration: none;
 line-height: 200%;
-}
+} */
 
 .sidebar a:hover {
   color: rgba(0, 0, 0, 0.61); 
@@ -88,7 +174,7 @@ right: 0px;
  }
 
 #slide:checked + .container .toggle {
-right: 42%;
+right: 40%;
  }
 
 

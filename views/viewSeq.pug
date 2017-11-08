@@ -1,25 +1,34 @@
 extends index.pug
 
 block content
-  include partials/myMoves.pug
-    div.container-fluid
+    div
+        include partials/myMoves.pug
+        if showinMoves
+            button(class="btn" id="hideMoves") Hide moves
+        if !showinMoves
+            button(class="btn" id="showMoves") Show My Moves
+        a(href=`/sequence/play/${moves[0].sequence_id}`)
+            button(class="btn") Play Sequence
         div(class="row toBeSorted")
             ul(class="sortable" id=`${moves[0].sequence_id}`)
                 each move in moves
-                    li(class="ui-state-default sortable-item" id=`${move.seqUsPos_id}` data-seq-id=`${move.sequence_id}` data-position=`${move.position_order}`)
+                    li(class="col- ui-state-default sortable-item" id=`${move.seqUsPos_id}` data-seq-id=`${move.sequence_id}` data-position=`${move.position_order}`)
                         a(href=`/poses/${move.pose_id}` target="_blank")
-                            if move.cover_thumbnail
-                                img(class="img-fluid" src=`http://yoga.com/${move.cover_thumbnail}` alt="Card image cap")
-                            else
-                                img(class="img-fluid" src="/public/images/lotustree.png")
+                            .img-wrapper
+                                button(class="xbuttons btn btn-danger", name=`${move.seqUsPos_id}`, value=`${move.sequence_id}`, style="cursor: pointer;") X
+                                if move.cover_thumbnail
+                                    img(class="img-fluid" src=`http://yoga.com/${move.cover_thumbnail}` alt="Card image cap")
+                                else
+                                    img(class="img-fluid" src="/public/images/lotustree.png")
                             p #{move.meta_title}
-                            if move.up_special_directions
-                                p(class="card-text") #{move.up_special_directions}
-                            if move.up_breath
-                                p(class="card-text") #{move.up_breath}
+                            //- if move.up_special_directions
+                            //-     p(class="card-text") #{move.up_special_directions}
+                            //- if move.up_breath
+                            //-     p(class="card-text") #{move.up_breath}
                             if move.card_timing
-                                p(class="card-text") #{move.card_timing}
-                        button(class="xbuttons btn btn-danger", name=`${move.seqUsPos_id}`, value=`${move.sequence_id}`, style="cursor: pointer;") X
+                                p(class="card-text") #{move.card_timing} seconds
+                            else
+                                p 10 seconds
 
     include partials/searchToAdd.pug
 

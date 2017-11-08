@@ -1,11 +1,12 @@
 extends index.pug
 block content
     if moves
-        div(id="carouselExampleIndicators" pause="hover" data-interval="15000" data-wrap="false" class="carousel slide" data-ride="carousel")
+    .c-wrapper
+        div(id="carouselIndicators" pause="hover" data-interval="11000" data-wrap="false" class="carousel slide" data-ride="carousel")
             ol(class="carousel-indicators")
-                li(data-target="#carouselExampleIndicators" data-slide-to="0" class="active")
+                li(data-target="#carouselIndicators" data-slide-to="0" class="active")
                 each move in moves
-                    li(data-target="#carouselExampleIndicators" data-slide-to=`${move.position_order}`)
+                    li(data-target="#carouselIndicators" data-slide-to=`${move.position_order}`)
             div(class="carousel-inner" role="listbox")
                 div(class="carousel-item active")
                     img(class="d-block img-fluid sequence-play-img" src="/public/images/yogafrog.jpg" alt="First slide")
@@ -14,19 +15,21 @@ block content
                         p Move to your mat or space and prepare for your first pose.
                 
                 each move in moves
-                    div(class="carousel-item" data-interval="15000" data-wrap="false")
-                        if move.photo
-                            img(src=`https://yoga.com${move.photo}` alt=`${move.meta_title}`)
-                        else
-                            img(class="d-block img-fluid sequence-play-img" src="/public/images/lotustree.png" alt="pose photo missing")
+                    div(class="carousel-item" data-interval="10000" data-wrap="false")
                         div(class="carousel-caption d-none d-md-block")
                             h3= move.meta_title
                             if move.up_special_directions
                                 p= move.up_special_direction
-            a(class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev")
+                            if move.up_breath
+                                p= move.up_breath
+                        if move.photo
+                            img(class="d-block img-fluid sequence-play-img" src=`https://yoga.com${move.photo}` alt=`${move.meta_title}`)
+                        else
+                            img(class="d-block img-fluid sequence-play-img" src="/public/images/lotustree.png" alt="pose photo missing")
+            a(class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev")
                 span(class="carousel-control-prev-icon" aria-hidden="true")
                 span(class="sr-only") Previous
-            a(class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next")
+            a(class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next")
                 span(class="carousel-control-next-icon" aria-hidden="true")
                 span(class="sr-only") 
     script(src="/public/jquery/dist/jquery.min.js")

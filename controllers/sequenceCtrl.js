@@ -25,6 +25,7 @@ const getMyMoves = (req, next) => {
 
 module.exports.updateSeqOrder = (req, res, next) => {
   const { sequelize } = req.app.get('models');
+  
   let seq_id = req.params.seq_id
   let SeqUsArr =  req.body['SeqUsPosesInOrder[]']
   for (let i=0; i<SeqUsArr.length; i++) {
@@ -41,7 +42,11 @@ module.exports.updateSeqOrder = (req, res, next) => {
 
 module.exports.viewSeq = (req, res, next) => {
   if (req.user) {
-    const { sequelize } = req.app.get('models');
+    const { Pose, Category, Level, sequelize } = req.app.get("models");
+    
+    let cats = null;
+    let levs = null;
+    let moves=null;
     getMyMoves(req, next)
     .then(results => {
       req.session.myMoves = results[0];
@@ -51,15 +56,25 @@ module.exports.viewSeq = (req, res, next) => {
       SELECT * FROM "SequenceUserPoses", "User_Poses", "Poses" WHERE "SequenceUserPoses"."sequence_id"=${req.params.seq_id} AND "SequenceUserPoses".user_pose_id="User_Poses"."up_pk_id" AND "User_Poses".pose_id="Poses".id ORDER BY "SequenceUserPoses".position_order`)
     })
     .then(results => {
-      let moves = results[0]
-      console.log("moves for digging", moves);
+      moves = results[0]
+      // console.log("moves for digging", moves);
       //might need to add card timing as a number property for later manipulation rather than if-elsing it on the pugdom
-      res.render('viewSeq', {
-        moves,
-        myMoves,
-        seq_id: req.params.seq_id
-      })
+      return Level.findAll()
     })
+    .then(levels => {
+    levs = levels;
+    return Category.findAll();
+  })
+  .then((categories) =>{
+    cats=categories;
+    res.render('viewSeq', {
+      moves,
+      cats,
+      levs,
+      myMoves,
+      seq_id: req.params.seq_id
+    })
+  })
     .catch(err => {
       next(err);
     });
@@ -191,6 +206,7 @@ module.exports.sidesearchPoses = (req, res, next) => {
     })
     .then(categories => {
       cats = categories;
+      console.log("cats?", cats);
       return Pose.findAll({
         raw: true,
         where: {
@@ -198,7 +214,7 @@ module.exports.sidesearchPoses = (req, res, next) => {
             $iLike: `%${req.query.title}%`
           }
         }
-      });
+      })
     })
     .then(poses => {
       if (poses[0]) {
@@ -207,7 +223,9 @@ module.exports.sidesearchPoses = (req, res, next) => {
         res.render("viewSeq", {
           moves, 
           poses, 
-          myMoves, 
+          myMoves,
+          cats,
+          levs, 
           seq_id: req.params.seq_id });
     })
     .catch(err => {
@@ -218,6 +236,115 @@ module.exports.sidesearchPoses = (req, res, next) => {
   }
 };
 
+module.exports.sidesearchLevels = (req, res, next) => {
+  if (req.user) {
+    const { Pose, Category, Level, sequelize } = req.app.get("models");
+    let cats = null;
+    let levs = null;
+    let poses = null;
+    let moves = null;
+    getMyMoves(req, next)
+      .then(results => {
+        req.session.myMoves = results[0];
+        myMoves = req.session.myMoves;
+        return sequelize.query(`
+      SELECT * FROM "SequenceUserPoses", "User_Poses", "Poses" WHERE "SequenceUserPoses"."sequence_id"=${req
+        .params
+        .seq_id} AND "SequenceUserPoses".user_pose_id="User_Poses"."up_pk_id" AND "User_Poses".pose_id="Poses".id ORDER BY "SequenceUserPoses".position_order`);
+      })
+      .then(results => {
+        moves = results[0];
+        return Level.findAll();
+      })
+      .then(levels => {
+        levs = levels;
+        return Category.findAll();
+      })
+      .then(categories => {
+        cats = categories;
+        console.log("cats?", cats);
+        return Pose.findAll({
+          raw: true,
+          where: {
+            level_id: `${req.query.lev_id}`
+          }
+        });
+      })
+      .then(poses => {
+        if (poses[0]) {
+          poses = poses;
+        }
+        res.render("viewSeq", {
+          moves,
+          poses,
+          myMoves,
+          cats,
+          levs,
+          seq_id: req.params.seq_id
+        });
+      })
+      .catch(err => {
+        next(err);
+      });
+  } else {
+    res.redirect("/");
+  }
+};
+
+module.exports.sidesearchCategories = (req, res, next) => {
+  if (req.user) {
+    const { Pose, Category, Level, sequelize } = req.app.get("models");
+    let cats = null;
+    let levs = null;
+    let poses = null;
+    let moves = null;
+    getMyMoves(req, next)
+      .then(results => {
+        req.session.myMoves = results[0];
+        myMoves = req.session.myMoves;
+        return sequelize.query(`
+      SELECT * FROM "SequenceUserPoses", "User_Poses", "Poses" WHERE "SequenceUserPoses"."sequence_id"=${req
+        .params
+        .seq_id} AND "SequenceUserPoses".user_pose_id="User_Poses"."up_pk_id" AND "User_Poses".pose_id="Poses".id ORDER BY "SequenceUserPoses".position_order`);
+      })
+      .then(results => {
+        moves = results[0];
+        return Level.findAll();
+      })
+      .then(levels => {
+        levs = levels;
+        return Category.findAll();
+      })
+      .then(categories => {
+        cats = categories;
+        console.log("cats?", cats);
+        return Pose.findAll({
+          raw: true,
+          where: {
+            category_id: `${req.query.cat_id}`
+            }
+        });
+      })
+      .then(poses => {
+        if (poses[0]) {
+          poses = poses;
+        }
+        res.render("viewSeq", {
+          moves,
+          poses,
+          myMoves,
+          cats,
+          levs,
+          seq_id: req.params.seq_id
+        });
+      })
+      .catch(err => {
+        next(err);
+      });
+  } else {
+    res.redirect("/");
+  }
+};
 
 module.exports.playSeq = (req, res, next) => {
   const { sequelize } = req.app.get('models');
