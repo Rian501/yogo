@@ -6,23 +6,36 @@ sidebar
   div.container
     label(for="slide" class="toggle") Search More Moves ☰
       div(class="sidebar")
-        h1 SEQUENCE ID #{seq_id}
         form(class="form-inline" method="GET")
-          input(class="form-control" type="text" id="searchPoses" name="title" required placeholder="Search poses")
+          input(class="form-control" type="text" id="searchPoses" name="title" placeholder="Search poses")
           button(class="btn btn-outline-success" formaction=`/${seq_id}/sidesearch/?${title}` type="submit") Search
+        .form-group.filter
+          form(method="GET")
+            label(for="cat_id") Category: 
+              select(class="form-control" name="cat_id" id="cat_id")
+                option(value="" disabled selected) Select:
+                  for cat in cats
+                    option(value=`${cat.id}`) #{cat.name}
+            button(type="submit" class="btn" formaction=`/${seq_id}/sidecategory/${cat_id}` style="cursor: pointer;") Filter
+        .form-group.filter 
+          form(method="GET" action='/poses/level')
+            label(for="lev_id") Level: 
+              select(class="form-control" name="lev_id" id="lev_id")
+                option(value="" disabled selected) Select:
+                  for lev in levs
+                    option(value=`${lev.id}`) #{lev.name}
+            button(type="submit" class="btn" formaction=`/${seq_id}/sidelevel/${lev_id}` style="cursor: pointer;") Filter
         if poses
-          div.container-fluid
-            div.row
-              each pose in poses
-                div.col-6
-                  div.card
-                    a(href=`/poses/${pose.id}` target="_blank")
+          div.row
+            each pose in poses
+              div.col-6
+                div.minicard
+                  a(href=`/poses/${pose.id}` target="_blank")
+                    .img-wrapper
+                      button(type='submit' formaction=`/sequence/${seq_id}/addnew/${pose.id}` class='addbutton btn btn-success') +
                       if pose.cover_thumbnail
                         img(class="card-img-top img-fluid" src=`http://yoga.com/${pose.cover_thumbnail}` alt="Card image cap")
                       else
-                        img(class="card-img-top img-fluid" src="https://static.boredpanda.com/blog/wp-content/uploads/2014/05/funny-animals-doing-yoga-32.jpg" alt="card image cap")
-                      div(class="card-block")
-                        h4(class="card-title") #{pose.meta_title}
-                        p(class="card-text")
-                        form(class="form-inline" method="POST")
-                          button(type='submit' formaction=`/sequence/${seq_id}/addnew/${pose.id}` class='info-btn') +
+                        img(class="img-fluid" src="https://static.boredpanda.com/blog/wp-content/uploads/2014/05/funny-animals-doing-yoga-32.jpg" alt="card image cap")
+                    p= pose.meta_title
+                    form(class="form-inline" method="POST")

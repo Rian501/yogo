@@ -72,9 +72,9 @@ video {
   display: inline-block;
   margin: 3px 3px 3px 0; 
   padding: 1px; 
-  width: 170px; 
+  width: 165px; 
   height: 155px; 
-  font-size: 0.9em; 
+  font-size: 0.9rem; 
   text-align: center; 
   background-color: white;
   white-space: normal;
@@ -86,7 +86,7 @@ video {
   float: left; 
   width: 220px; 
   height: 200px; 
-  font-size: 0.9em; 
+  font-size: 0.9rem; 
   text-align: center; 
   background-color: white;
 }
@@ -154,16 +154,16 @@ margin: 0;
 padding: 0; 
 }
 
-.sidebar li a {
+/* .sidebar li a {
 color: #fff;
 font-family: 'Poiret One', cursive;
-font-size: 1.2em;
-margin: 0;
-margin-bottom: 16px;
-cursor: pointer;
+/* font-size: 1.2em; */
+/* margin: 0; */
+/* margin-bottom: 16px; */
+/* cursor: pointer;
 text-decoration: none;
 line-height: 200%;
-}
+} */
 
 .sidebar a:hover {
   color: rgba(0, 0, 0, 0.61); 
