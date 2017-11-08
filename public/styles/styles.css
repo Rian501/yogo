@@ -2,6 +2,11 @@ body {
     background-color: orange;
 }
 
+.lotusBG {
+  background-image: url('../images/rainbowDotLotus.png');
+  background-color: palevioletred;
+}
+
 .my-moves-panel {
   max-height: 30vh;
   overflow-x: scroll;
