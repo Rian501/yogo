@@ -25,10 +25,15 @@ To run the project locally, clone down the repo and then:
 
 ### Try it out
 
-Register a new account, and 
+Register a new account, which you use to sign in each time.
+Search for poses by title in the nav bar search field.
+Click on a pose card to see the full details including video clip (where available) and full description.
+Click on `My Sequences` where you can open the side bar to search for poses to add to a sequence.
+Once a pose is added to a sequence, it is automatically added to "My Poses" - which you can access and edit (or delete) by clicking `My Poses` in the nav.
+You can rearrange poses in a sequence, and add cards multiple times to create whatever sequence you like.
+Click on "Play Sequence" to see the slideshow of your sequence.
 
 
-
-## License
+#### License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
