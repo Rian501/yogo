@@ -2,34 +2,79 @@ body {
     background-color: orange;
 }
 
+a {
+  text-decoration: none;
+}
+
 .lotusBG {
   background-image: url('../images/rainbowDotLotus.png');
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: palevioletred;
 }
 
+.stretchDiv {
+  height: 85vh;
+}
+
+.welcome-text {
+  text-align: center;
+}
+
 .my-moves-panel {
-  max-height: 30vh;
+  max-height: 35vh;
   overflow-x: scroll;
+  /* display: inline-bloc; */
+  /* flex-wrap: nowrap; */
 }
 
 .sequence-play-img {
   max-height: 90vh;
 }
 
-  .sortable { list-style-type: none; 
-    margin: 0; 
-    padding: 0; 
-    /* width: 450px;  */
-  }
-  .sortable li { 
-    margin: 3px 3px 3px 0; 
-    padding: 1px; 
-    float: left; 
-    width: 200px; 
-    height: 200px; 
-    font-size: 0.7em; 
-    text-align: center; 
-  }
+.sortable { list-style-type: none; 
+  margin: 0; 
+  padding: 0; 
+}
+
+.minicard {
+  margin: 3px 3px 3px 0; 
+  padding: 1px; 
+  float: left; 
+  width: 220px; 
+  height: 300px; 
+  font-size: 0.9em; 
+  text-align: center; 
+  background-color: white;
+}
+
+.sortable li { 
+  margin: 3px 3px 3px 0; 
+  padding: 1px; 
+  float: left; 
+  width: 220px; 
+  height: 200px; 
+  font-size: 0.9em; 
+  text-align: center; 
+  background-color: white;
+}
+
+.img-wrapper {
+  position: relative;
+}
+
+.xbuttons {
+  position: absolute;
+  top:0; 
+  right:0;
+}
+
+.addbutton {
+  position: absolute;
+  top:0; 
+  right:0;
+  
+}
 /* styles for the sliding side bar modified from https://codepen.io/anon/pen/OOXYpd */
 
 @import url(https://fonts.googleapis.com/css?family=Poiret+One|Varela+Round);
