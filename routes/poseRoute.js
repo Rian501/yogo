@@ -11,7 +11,8 @@ const {
   posesByLev,
   myMovesMain,
   deleteUserPose,
-  displayEditUserPose
+  displayEditUserPose,
+  updateUserPose
 } = require("../controllers/poseCtrl.js");
 
 router.get('/poses', showAllPoses);
@@ -22,5 +23,6 @@ router.get('/search', searchPoses);
 router.get('/user/poses', myMovesMain);
 router.get("/user/pose/:id", displayEditUserPose);
 router.delete("/user/pose/:id", deleteUserPose, myMovesMain);
+router.put('/user/pose/:id', updateUserPose, myMovesMain);
 
 module.exports = router;

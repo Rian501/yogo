@@ -71,3 +71,21 @@ $(".xbuttons").click(function(event) {
       });
     } 
 });
+
+$('#updateUserPose').click(function(event){
+  let up_special_directions = $('#special_direx').val();
+  let up_breath = $('#breath_direx').val();
+  let UP_id = $('#updateUserPose').val();
+  console.log("directions, breath, id", up_special_directions, up_breath, UP_id);
+    $.ajax({
+      type: "PUT",
+      url: `/user/pose/${UP_id}`,
+      data: {
+        up_special_directions,
+        up_breath
+      },
+      success: function(html) {
+        location.href = "/user/poses";
+      }
+    });
+})
