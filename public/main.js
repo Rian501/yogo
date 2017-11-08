@@ -88,4 +88,12 @@ $('#updateUserPose').click(function(event){
         location.href = "/user/poses";
       }
     });
+});
+
+$('#showMoves').click(function(event) {
+  $('.my-moves-panel').removeClass('hidden');
+})
+$('#hideMoves').click(function(event) {
+  $('.my-moves-panel').addClass('hidden');
+  showinMoves=false;
 })

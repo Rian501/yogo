@@ -1,8 +1,12 @@
 extends index.pug
 
 block content
-  include partials/myMoves.pug
-    div.container
+    div
+        include partials/myMoves.pug
+        if showinMoves
+            button(class="btn" id="hideMoves") Hide moves
+        if !showinMoves
+            button(class="btn" id="showMoves") Show My Moves
         div(class="row toBeSorted")
             ul(class="sortable" id=`${moves[0].sequence_id}`)
                 each move in moves

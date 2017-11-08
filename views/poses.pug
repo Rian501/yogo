@@ -3,33 +3,33 @@ extends index.pug
 block content
   if messages.noSrchRes
   h1= messages.noSrchRes
-
-  form(method="GET" action='/poses/category')
-    label(for="cat_id") Category: 
-      select(name="cat_id" id="cat_id")
-        option(value="" disabled selected) Select:
-          for cat in cats
-            option(value=`${cat.id}`) #{cat.name}
-    button(type="submit" style="cursor: pointer;") Filter
-    
-  form(method="GET" action='/poses/level')
-    label(for="lev_id") Level: 
-      select(name="lev_id" id="lev_id")
-        option(value="" disabled selected) Select:
-          for lev in levs
-            option(value=`${lev.id}`) #{lev.name}
-    button(type="submit" style="cursor: pointer;") Filter
+  .container
+    .form-group.filter
+      form(method="GET" action='/poses/category')
+        label(for="cat_id") Category: 
+          select(class="form-control" name="cat_id" id="cat_id")
+            option(value="" disabled selected) Select:
+              for cat in cats
+                option(value=`${cat.id}`) #{cat.name}
+        button(type="submit" class="btn" style="cursor: pointer;") Filter
+    .form-group.filter 
+      form(method="GET" action='/poses/level')
+        label(for="lev_id") Level: 
+          select(class="form-control" name="lev_id" id="lev_id")
+            option(value="" disabled selected) Select:
+              for lev in levs
+                option(value=`${lev.id}`) #{lev.name}
+        button(type="submit" class="btn" style="cursor: pointer;") Filter
 
   div.container-fluid
     div.row
       each pose in poses
-        div.col-lg-2
-          div.card
+        div.col-lg-2.col-md-3.col-sm-4
+          div.card.tallness
             a(href=`/poses/${pose.id}`)
               if pose.cover_thumbnail
                 img(class="card-img-top img-fluid" src=`http://yoga.com/${pose.cover_thumbnail}` alt="Card image cap")
               else
                 img(class="card-img-top img-fluid" src="https://static.boredpanda.com/blog/wp-content/uploads/2014/05/funny-animals-doing-yoga-32.jpg" alt="card image cap")
               div(class="card-block")
-                h4(class="card-title") #{pose.meta_title}
-                p(class="card-text")
+                p(class="card-text") #{pose.meta_title}

@@ -1,24 +1,22 @@
 if myMoves
-    div(class="container")
-        div.row.my-moves-panel
-            each pose in myMoves
-                div(class="minicard" id=`${pose.up_pk_id}`)
-                    div 
-                        form(name="addPose" method="post" action=`/sequence/${seq_id}/add/${pose.up_pk_id}`)
-                            a(href=`/poses/${pose.id}`)
-                            .img-wrapper
-                                if seq_id
-                                    button(class="btn btn-primary addbutton" type="submit") +
-                                if pose.cover_thumbnail
-                                    img(src=`http://yoga.com/${pose.cover_thumbnail}` alt=`${pose.meta_title} image here` class="card-img-top img-fluid")
-                            div(class="card-block")
-                                p #{pose.meta_title}
-                                if pose.up_special_directions
-                                    p(class="card-text") #{pose.up_special_directions}
-                                if pose.up_breath
-                                    p(class="card-text") #{pose.up_breath}
-                                if pose.card_timing
-                                    p(class="card-text") #{pose.card_timing}   
+    div.my-moves-panel
+        h5 Previously added moves
+        each pose in myMoves
+            div(class="minicard" id=`${pose.up_pk_id}`)
+                form(name="addPose" method="post" action=`/sequence/${seq_id}/add/${pose.up_pk_id}`)
+                    a(href=`/poses/${pose.id}`)
+                    .img-wrapper
+                        if seq_id
+                            button(class="btn btn-primary addbutton" type="submit") +
+                        if pose.cover_thumbnail
+                            img(src=`http://yoga.com/${pose.cover_thumbnail}` alt=`${pose.meta_title} image here` class="img-fluid")
+                        p #{pose.meta_title}
+                        //- if pose.up_special_directions
+                        //-     p(class="card-text") #{pose.up_special_directions}
+                        //- if pose.up_breath
+                        //-     p(class="card-text") #{pose.up_breath}
+                        //- if pose.card_timing
+                        //-     p(class="card-text") #{pose.card_timing}   
 else    
     p NO SAVED MOVES
 
