@@ -5,7 +5,7 @@ Yogo is a searchable database of yoga poses that allows the user to view poses a
 
 ### Prerequisites
 
-PostgreSQL (http://www.postgresqltutorial.com/install-postgresql/)
+PostgreSQL (http://www.postgresqltutorial.com/install-postgresql/)  
 Sequelize (http://docs.sequelizejs.com/manual/installation/getting-started.html#installation)
 
 ## Getting Started
