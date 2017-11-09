@@ -9,11 +9,9 @@ block content
         h5= level.name
         h5= category.name
         br
-        .vid-wrapper
-          if move.video_url
-              video(controls class='img-fluid')
-                  source(src=`${move.video_url}` type="video/mp4")
-                  Your browser does not support the video tag.
+        if move.photo
+            img(src=`http://yoga.com/${move.photo}` class="img-fluid")
+        br
         if move.description
             p= move.description
         br
@@ -21,11 +19,13 @@ block content
           p Benefits:
             p= move.benefits
         br
+        .vid-wrapper
+          if move.video_url
+              video(controls class='img-fluid')
+                  source(src=`${move.video_url}` type="video/mp4")
+                  Your browser does not support the video tag.
         if move.meta_description
             p= move.meta_description
-        br
-        if move.photo
-            img(src=`http://yoga.com/${move.photo}` class="img-fluid")
         br
         if move.muscle
           p Muscle diagram:

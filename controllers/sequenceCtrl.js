@@ -19,7 +19,7 @@ module.exports.deleteCardFromSeq = (req, res, next) => {
 const getMyMoves = (req, next) => {
   const { sequelize } = req.app.get("models");
   return sequelize.query(
-    `SELECT * FROM "User_Poses", "Poses" WHERE "User_Poses".pose_id="Poses".id`
+    `SELECT * FROM "User_Poses", "Poses" WHERE "User_Poses".pose_id="Poses".id AND "User_Poses".user_id=${req.user.id}`
   );
 };
 
@@ -49,8 +49,9 @@ module.exports.viewSeq = (req, res, next) => {
     let moves=null;
     getMyMoves(req, next)
     .then(results => {
-      req.session.myMoves = results[0];
-      myMoves = req.session.myMoves;
+      // req.session.myMoves = results[0];
+      // myMoves = req.session.myMoves;
+      myMoves = results[0];
       return sequelize
       .query(`
       SELECT * FROM "SequenceUserPoses", "User_Poses", "Poses" WHERE "SequenceUserPoses"."sequence_id"=${req.params.seq_id} AND "SequenceUserPoses".user_pose_id="User_Poses"."up_pk_id" AND "User_Poses".pose_id="Poses".id ORDER BY "SequenceUserPoses".position_order`)
@@ -83,17 +84,16 @@ module.exports.viewSeq = (req, res, next) => {
 
 module.exports.userSeqs = (req, res, next) => {
   if (req.user) {
+    let myMoves=null;
     const { sequelize, Sequence } = req.app.get('models');
     getMyMoves(req, next)
     .then(results => {
-      req.session.myMoves = results[0];
-      //  console.log("myMoves inside userSeqs", myMoves);
+      myMoves = results[0];
       return Sequence.findAll({
         where: {user_id: req.user.id}
       })
     })
     .then( (seqs) => {
-      myMoves = req.session.myMoves;
       res.render('userSequences', {
         seqs,
         myMoves
@@ -110,6 +110,7 @@ module.exports.addNewMoveToSeqEnd = (req, res, next)=>{
     const { sequelize, SequenceUserPoses, User_Poses } = req.app.get('models');
     let currentSeqId=parseInt(req.params.seq_id);
     let addPosOrder = null;
+    let max = null;
     let newUserMove = null;
     User_Poses.create({
       user_id: req.user.id,
@@ -120,12 +121,16 @@ module.exports.addNewMoveToSeqEnd = (req, res, next)=>{
       return sequelize.query(`SELECT * FROM "SequenceUserPoses", "User_Poses", "Poses" WHERE "SequenceUserPoses"."sequence_id"=${req.params.seq_id} AND "SequenceUserPoses".user_pose_id="User_Poses"."up_pk_id" AND "User_Poses".pose_id="Poses".id ORDER BY "SequenceUserPoses".position_order`)
     })
     .then( (results) => {
+      if (results[0].length === 0) {
+       max = 0;
+      } else {
       let orderP = results[0].map(function(each) {
         return each.position_order;
       });
       let max = orderP.reduce(function(a, b) {
         return Math.max(a, b);
       });
+    }
       addPosOrder = max + 1;
         return SequenceUserPoses.create({
           user_pose_id: newUserMove,
@@ -195,8 +200,9 @@ module.exports.sidesearchPoses = (req, res, next) => {
     let moves = null;
     getMyMoves(req, next)
     .then(results => {
-        req.session.myMoves = results[0];
-        myMoves = req.session.myMoves;
+        // req.session.myMoves = results[0];
+        // myMoves = req.session.myMoves;
+        myMoves=results[0];
         return sequelize.query(`
       SELECT * FROM "SequenceUserPoses", "User_Poses", "Poses" WHERE "SequenceUserPoses"."sequence_id"=${req.params.seq_id} AND "SequenceUserPoses".user_pose_id="User_Poses"."up_pk_id" AND "User_Poses".pose_id="Poses".id ORDER BY "SequenceUserPoses".position_order`);
     })
@@ -249,8 +255,9 @@ module.exports.sidesearchLevels = (req, res, next) => {
     let moves = null;
     getMyMoves(req, next)
       .then(results => {
-        req.session.myMoves = results[0];
-        myMoves = req.session.myMoves;
+      // req.session.myMoves = results[0];
+      // myMoves = req.session.myMoves;
+      myMoves = results[0];
         return sequelize.query(`
       SELECT * FROM "SequenceUserPoses", "User_Poses", "Poses" WHERE "SequenceUserPoses"."sequence_id"=${req
         .params
@@ -304,8 +311,9 @@ module.exports.sidesearchCategories = (req, res, next) => {
     let moves = null;
     getMyMoves(req, next)
       .then(results => {
-        req.session.myMoves = results[0];
-        myMoves = req.session.myMoves;
+      // req.session.myMoves = results[0];
+      // myMoves = req.session.myMoves;
+      myMoves = results[0];
         return sequelize.query(`
       SELECT * FROM "SequenceUserPoses", "User_Poses", "Poses" WHERE "SequenceUserPoses"."sequence_id"=${req
         .params
@@ -391,6 +399,7 @@ module.exports.addNewSeq = (req, res, next) => {
     Sequence.destroy({ where: { id: req.params.id } })
     .then( (results)=>{
       console.log(results);
+      res.status(200);
       next();
    })
    .catch((err)=>{next(err)});

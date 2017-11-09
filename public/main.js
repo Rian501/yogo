@@ -32,16 +32,10 @@ $(".xbuttons").click(function(event) {
 });
 
 
-//   $(function() {
-  //     $("#sortable").sortable();
-  //     $("#sortable").disableSelection();
-  //   });
   
   // using from https://blogs.wayne.edu/web/2017/03/13/updating-a-database-display-order-with-drag-and-drop-in-sql//
-  $(".sortable").sortable({ items: ".sortable-item", start: function(event, ui) {
-    // Create a temporary attribute on the element with the old index
-    
-  }, update: function(event, ui) {
+  $(".sortable").sortable({ items: ".sortable-item", 
+  update: function(event, ui) {
     let seq_id = $('.sortable-item').data().seqId;
     let SeqUsPosesInOrder =  $(this).sortable("toArray");
     console.log("results to array?", SeqUsPosesInOrder);
@@ -87,13 +81,14 @@ $('#updateUserPose').click(function(event){
   });
 });
 
-$('#showMoves').click(function(event) {
-  $('.my-moves-panel').removeClass('hidden');
-})
-$('#hideMoves').click(function(event) {
-  $('.my-moves-panel').addClass('hidden');
-  showinMoves=false;
-})
+//perhaps to revisit this functionality when there is more time
+// $('#showMoves').click(function(event) {
+//   $('.my-moves-panel').removeClass('hidden');
+// })
+// $('#hideMoves').click(function(event) {
+//   $('.my-moves-panel').addClass('hidden');
+//   showinMoves=false;
+// })
 
 $('.newSeq').click(function(event) {
   console.log("the button is working");
@@ -127,7 +122,10 @@ $(".deleteSeq").click(function(event) {
   if(confirm("Are you sure you want to delete this sequence?")) {
     $.ajax({
       type: "DELETE",
-      url: `/sequence/${seq_id}`
-    });
+      url: `/sequence/${seq_id}`,
+      success: function(html) {
+        location.href='/sequence'
+      }
+    })
   }
 });

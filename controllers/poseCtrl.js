@@ -41,8 +41,8 @@ const getMyMoves = (req, next) => {
 module.exports.myMovesMain = (req, res, next) =>{
     if (req.user) {
        getMyMoves(req, next).then(results => {
-         req.session.myMoves = results[0];
-         let myMoves = req.session.myMoves;
+         
+         let myMoves = results[0];
          res.render('editMyMoves', {
              myMoves,
             })
@@ -56,18 +56,7 @@ module.exports.deleteUserPose = (req, res, next) => {
   User_Poses.destroy({where: {up_pk_id: req.params.id}})
   .then( (results) => {
       console.log("results of delete", results);
-    //   next();
-    res.status(200);
-    // return sequelize
-    // .query(
-    //     `SELECT * FROM "User_Poses", "Poses" WHERE "User_Poses".pose_id="Poses".id AND "User_Poses".user_id=${req.user.id}`
-    // )
-    // })
-    // .then((moves)=>{
-    //         myMoves = moves[0]
-    //     res.render('editMyMoves', {
-    //         myMoves
-    //     })
+      next();
     })
   .catch( (err) => {
       next(err);
