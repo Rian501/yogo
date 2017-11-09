@@ -93,7 +93,10 @@ module.exports.displayEditUserPose = (req, res, next) => {
 module.exports.posesByCatAndLev = (req, res, next) => {
     const { Pose, Category, Level } = req.app.get("models");
     let cats = null;
+    let poses = null;
     let levs = null;
+    let cat_id = req.query.cat_id;
+    let lev_id = req.query.lev_id;
     Level.findAll()
     .then(levels => {
         levs = levels;
@@ -101,9 +104,27 @@ module.exports.posesByCatAndLev = (req, res, next) => {
     })
     .then(categories => {
         cats = categories;
-        return Pose.findAll({ where: { category_id: req.query.cat_id, level_id: req.query.level_id } })
+        if (req.query.cat_id && req.query.lev_id) {
+            return Pose.findAll({ where: { category_id: req.query.cat_id, level_id: req.query.lev_id } })
+        } else if (req.query.lev_id) {
+            return Pose.findAll({
+              where: {
+                level_id: req.query.lev_id
+              }
+            });
+        } else if (req.query.cat_id) {
+            return Pose.findAll({
+              where: {
+                category_id: req.query.cat_id
+              }
+            });
+        }
     }) 
-    .then( (poses) => {
+    .then( (foundposes) => {
+        poses = foundposes;
+        res.render('poses', {
+            poses, levs, cats, cat_id, lev_id
+        })
 
     })
     
