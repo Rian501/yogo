@@ -150,15 +150,23 @@ module.exports.addMoveToSeqEndFrUserPoses = (req, res, next) => {
     console.log("adding to sequence");
     const { sequelize, SequenceUserPoses } = req.app.get('models');
     let addPosOrder = null;
+    let max = null;
     let currentSeqId=parseInt(req.params.seq_id);
     sequelize.query(`SELECT * FROM "SequenceUserPoses", "User_Poses", "Poses" WHERE "SequenceUserPoses"."sequence_id"=${req.params.seq_id} AND "SequenceUserPoses".user_pose_id="User_Poses"."up_pk_id" AND "User_Poses".pose_id="Poses".id ORDER BY "SequenceUserPoses".position_order`)
     .then(results => {
-      let orderP = results[0].map(function(each){
-        return each.position_order
-      })
-      let max = orderP.reduce(function(a, b) {
-        return Math.max(a, b);
-      });
+      console.log("results from getting all from nothing!", results[0]);
+      console.log("results from getting all from nothing!", results[0].length);
+      if (results[0].length === 0) {
+       max = 0;
+      } else {
+
+        let orderP = results[0].map(function(each){
+          return each.position_order
+        })
+        max = orderP.reduce(function(a, b) {
+          return Math.max(a, b);
+        });
+      }
       addPosOrder = max + 1;
       return SequenceUserPoses.create({
         user_pose_id: parseInt(req.params.UP_id),

@@ -40,7 +40,7 @@ module.exports.register = (req, res, next) => {
   }
 };
 
-// logging in existing users
+// logging in existing users 
 module.exports.displayLogin = (req, res, next) => {
   res.render("login");
 };
@@ -62,7 +62,7 @@ module.exports.login = (req, res, next) => {
       }
       console.log("authenticated. Rerouting to welcome!", user);
       req.flash("welcomeBackMsg", `Welcome back, `);
-      res.redirect("/welcome");
+      res.redirect("/sequence");
     });
   })(req, res, next);
 };

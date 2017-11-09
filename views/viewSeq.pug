@@ -1,12 +1,14 @@
 extends index.pug
 
 block content
-    div
-        include partials/myMoves.pug
-        if showinMoves
-            button(class="btn" id="hideMoves") Hide moves
-        if !showinMoves
-            button(class="btn" id="showMoves") Show My Moves
+    include partials/myMoves.pug
+        //- if showinMoves
+        //-     button(class="btn" id="hideMoves") Hide moves
+        //- if !showinMoves
+        //-     button(class="btn" id="showMoves") Show My Moves
+    if !moves.length
+        h1 You do not currently have any moves in this sequence!
+    if moves.length
         a(href=`/sequence/play/${moves[0].sequence_id}`)
             button(class="btn") Play Sequence
         div(class="row toBeSorted")
@@ -29,7 +31,6 @@ block content
                                 p(class="card-text") #{move.card_timing} seconds
                             else
                                 p 10 seconds
-
     include partials/searchToAdd.pug
 
     script(src="/public/jquery/dist/jquery.min.js")
