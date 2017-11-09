@@ -2,11 +2,20 @@ extends index.pug
 
 block content
   include partials/myMoves.pug
-  a(href='/sequence/new')
-    button.btn.btn-info Create a New Sequence
+  button.btn.btn-info.newSeq Create a New Sequence
+  label(for="newSeqTitle" class="newSeqTitle hidden") Title for your new sequence:
+  input(id="newSeqTitle" type="text" placeholder="my new sequence" name="seqTitle" value="" class="hidden newSeqTitle")
+  button(class="btn newSeqTitle hidden" name=`${seqs.length}` id="submitSeqTitle") Submit
+    
   ul
     each seq in seqs
       li.displaySeqCard 
         a(href=`/sequence/${seq.id}`)
           h2= seq.title
           a(href=`/sequence/play/${seq.id}` class="button btn") Play sequence
+
+    script(src="/public/jquery/dist/jquery.min.js")
+    script(src="/public/tether/dist/js/tether.min.js")
+    script(src="/public/styles/bootstrap/dist/js/bootstrap.min.js")
+    script(src="/public/jquery-ui/jquery-ui-1.12.1.custom/jquery-ui.min.js")
+    script(src="/public/main.js")

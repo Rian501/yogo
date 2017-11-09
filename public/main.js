@@ -26,50 +26,50 @@ $(".xbuttons").click(function(event) {
     type: "DELETE",
     url: `/seqCard/${seq_id}/${seqUsPose_id}`,
     success: function(data){
-        window.location.reload(true);
+      window.location.reload(true);
     }
-    }).done(data => {
-        console.log("Data?", data);
-        window.location.reload(true);
-    });
+  }).done(data => {
+    console.log("Data?", data);
+    window.location.reload(true);
+  });
 });
 
 
 //   $(function() {
-//     $("#sortable").sortable();
-//     $("#sortable").disableSelection();
-//   });
-
-// using from https://blogs.wayne.edu/web/2017/03/13/updating-a-database-display-order-with-drag-and-drop-in-sql//
+  //     $("#sortable").sortable();
+  //     $("#sortable").disableSelection();
+  //   });
+  
+  // using from https://blogs.wayne.edu/web/2017/03/13/updating-a-database-display-order-with-drag-and-drop-in-sql//
   $(".sortable").sortable({ items: ".sortable-item", start: function(event, ui) {
-      // Create a temporary attribute on the element with the old index
-
-    }, update: function(event, ui) {
-        let seq_id = $('.sortable-item').data().seqId;
-        let SeqUsPosesInOrder =  $(this).sortable("toArray");
-           console.log("results to array?", SeqUsPosesInOrder);
-        //   let current_position = $(this).attr("data-currentindex");
-        //   // Reset the current index
-        //   $(this).removeAttr("data-currentindex");
+    // Create a temporary attribute on the element with the old index
+    
+  }, update: function(event, ui) {
+    let seq_id = $('.sortable-item').data().seqId;
+    let SeqUsPosesInOrder =  $(this).sortable("toArray");
+    console.log("results to array?", SeqUsPosesInOrder);
+    //   let current_position = $(this).attr("data-currentindex");
+    //   // Reset the current index
+    //   $(this).removeAttr("data-currentindex");
     console.log("does it come throughstill?", seq_id);
     // console.log("does the other come through?", desired_position);
-      // Post to the server to handle the changes
-      $.ajax({
-        type: "PUT",
-        url: `/sequence/${seq_id}`,
-        data: {
-          SeqUsPosesInOrder
-        },
-        beforeSend: function() {
-          // Disable dragging
-          $("#sortable").sortable("disable");
-        },
-        success: function(html) {
-          // Re-enable dragging
-          $("#sortable").sortable("enable");
-        }
-      });
-    } 
+    // Post to the server to handle the changes
+    $.ajax({
+      type: "PUT",
+      url: `/sequence/${seq_id}`,
+      data: {
+        SeqUsPosesInOrder
+      },
+      beforeSend: function() {
+        // Disable dragging
+        $("#sortable").sortable("disable");
+      },
+      success: function(html) {
+        // Re-enable dragging
+        $("#sortable").sortable("enable");
+      }
+    });
+  } 
 });
 
 $('#updateUserPose').click(function(event){
@@ -77,17 +77,17 @@ $('#updateUserPose').click(function(event){
   let up_breath = $('#breath_direx').val();
   let UP_id = $('#updateUserPose').val();
   console.log("directions, breath, id", up_special_directions, up_breath, UP_id);
-    $.ajax({
-      type: "PUT",
-      url: `/user/pose/${UP_id}`,
-      data: {
-        up_special_directions,
-        up_breath
-      },
-      success: function(html) {
-        location.href = "/user/poses";
-      }
-    });
+  $.ajax({
+    type: "PUT",
+    url: `/user/pose/${UP_id}`,
+    data: {
+      up_special_directions,
+      up_breath
+    },
+    success: function(html) {
+      location.href = "/user/poses";
+    }
+  });
 });
 
 $('#showMoves').click(function(event) {
@@ -97,3 +97,26 @@ $('#hideMoves').click(function(event) {
   $('.my-moves-panel').addClass('hidden');
   showinMoves=false;
 })
+
+$('.newSeq').click(function(event) {
+  console.log("the button is working");
+  $(".newSeqTitle").removeClass('hidden');
+})
+
+$('#submitSeqTitle').click(function(event){
+  console.log("second button also working");
+  let seqTitle = $("#newSeqTitle").val();
+  let newSeq = parseInt(this.name) + 1;
+  console.log('seqtitle', seqTitle);
+  console.log('newSeq num', newSeq);
+  $.ajax({
+    type: "POST",
+    url: '/sequence/new',
+    data: {
+      seqTitle
+    },
+    success: function(html) {
+      location.href=`sequence/${newSeq}`;
+    }
+  });
+});

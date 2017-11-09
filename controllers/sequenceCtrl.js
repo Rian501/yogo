@@ -150,9 +150,6 @@ module.exports.addMoveToSeqEndFrUserPoses = (req, res, next) => {
     console.log("adding to sequence");
     const { sequelize, SequenceUserPoses } = req.app.get('models');
     let addPosOrder = null;
-    //length is not enough -- need to find the highest number and add it after that.
-    //might be ok once sortable and reassigning numbers anyway, but for now...
-    //position order of new item must be higher than the highest one
     let currentSeqId=parseInt(req.params.seq_id);
     sequelize.query(`SELECT * FROM "SequenceUserPoses", "User_Poses", "Poses" WHERE "SequenceUserPoses"."sequence_id"=${req.params.seq_id} AND "SequenceUserPoses".user_pose_id="User_Poses"."up_pk_id" AND "User_Poses".pose_id="Poses".id ORDER BY "SequenceUserPoses".position_order`)
     .then(results => {
@@ -365,7 +362,34 @@ module.exports.playSeq = (req, res, next) => {
 };
 
 module.exports.addNewSeq = (req, res, next) => {
+  const { Sequence, User_Poses, sequelize, SequenceUserPoses } = req.app.get('models');
+  console.log("hopefully userid", req.user.id);
+  console.log("hopefully sequence title", req.body.reqTitle);
+  let newUserMove = null;
   Sequence.create({
-    
+    user_id: req.user.id,
+    title: req.body.seqTitle
   })
+  .then((results) => {
+    console.log("whaaaat?", results.dataValues);
+    let seq_id = results.dataValues.id;
+    //basically at this point I want to call module.exports.addNewMoveToSeqEnd 
+    return User_Poses.create({ //might need to put in a check to make sure they don't already HAVE downward dog in their user poses already??
+      user_id: req.user.id,
+      pose_id: 1
+  })
+  .then( (results) => {
+    newUserMove = results.dataValues.up_pk_id;
+      return SequenceUserPoses.create({
+        user_pose_id: newUserMove,
+        position_order: 1,
+        sequence_id: seq_id
+      });
+    })
+    .then( (results) => {
+      console.log('results of adding a new sequence with one pose', results);
+      res.redirect(`/sequence/${seq_id}`);
+    })
+    .catch((err)=>{next(err)});
+    })
 };
