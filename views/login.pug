@@ -3,21 +3,42 @@ extends index.pug
 block content
   .container.lotusBG.stretchDiv
     .row
-      h1 Please Log In:
-      if message
-        h2= message
-
-    .row
       .col-
-      .col-
-        form(action="/login", method="post")
-          input(type="text" placeholder="username" name="username")
-          input(type="email" placeholder="email" name="email")
-          input(type="password" placeholder="password" name="password")
-          button(type="submit" class="btn") login
-
-        p Need to register? 
+        h1 Please Log In:
+        //- if message
+          //- h2= message
+        br
+        h5 Need to register? 
         a(href="/register")
           button(class="btn") Register
-
+        br
+        br
+      br
+      br
+      br
+      br
+      br
+      br
+      br
+      br
+      br
+    .row.justify-content-md-center.d-flex.align-content-center.flex-wrap.darkbg
       .col-
+        form(action="/login"  method="post")
+          .form-group.align-middle
+            label(for="username") Username:
+            input(type="text" id="username" placeholder="username" class="form-control" name="username")
+            label(for="email") Email:
+            input(type="email" id ="email" placeholder="email" class="form-control" name="email")
+            label(for="pw") Password:
+            input(type="password" id="pw" placeholder="password" class="form-control" name="password")
+            button(type="submit" class="btn") login
+
+
+    script(src="/public/jquery/dist/jquery.min.js")
+    script(src="/public/tether/dist/js/tether.min.js")
+    script(src="/public/styles/bootstrap/dist/js/bootstrap.min.js")
+    script(src="/public/jquery-ui/jquery-ui-1.12.1.custom/jquery-ui.min.js")
+    script(src="/public/main.js")
+    script
+      include ../client/client.js

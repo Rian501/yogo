@@ -35,12 +35,16 @@ margin: auto;
 video {
   margin: auto;
 }
+.darkbg {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.61);
+}
 
 .lotusBG {
   background-image: url('../images/rainbowDotLotus.png');
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: palevioletred;
+  background-color: ivory;
 }
 
 .stretchDiv {

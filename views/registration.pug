@@ -1,7 +1,10 @@
 extends index.pug
 
 block content
-  h1 New here? Register as a user to save your sequences!
-  if message
-    h2= message
-  include partials/register.pug
+  .container.lotusBG.stretchDiv
+    .row
+      .col-
+        h1 New here? Register as a user to save your sequences!
+        if message
+          h2= message
+        include partials/register.pug

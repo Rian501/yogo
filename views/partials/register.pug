@@ -1,10 +1,13 @@
-form#register(name="register" method="post" action="/register")
-  label(for="username") Username
-  input.text(name="username" type="text")
-  label(for="email") Email Address
-  input.text(name="email" type="text")
-  label(for="password") Password
-  input(name="password" type="password")
-  label(for="confirmation") Confirmation
-  input(name="confirmation" type="password")
-  input.btn(type="submit" value="Sign In")
+.row.justify-content-md-center.d-flex.align-content-center.flex-wrap.darkbg
+  .col-
+    form#register(name="register" method="post" action="/register")
+      .form-group.align-middle
+        label(for="username") Username
+        input.text(name="username" class="form-control" type="text")
+        label(for="email") Email Address
+        input.text(name="email" class="form-control" type="text")
+        label(for="password") Password
+        input(name="password" class="form-control" type="password")
+        label(for="confirmation") Confirmation
+        input(name="confirmation" class="form-control" type="password")
+        input.btn(type="submit" value="Sign In")
