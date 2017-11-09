@@ -8,17 +8,20 @@ block content
       form(method="GET" action='/poses/catlev')
         label(for="lev_id") Level: 
           select(class="form-control" name="lev_id" id="lev_id")
-            if lev_id
-              option(value=`${poses[0].level_id}` selected) 
+            if lev_name
+              option(value=`${poses[0].level_id}` selected) #{lev_name}
             else
               option(value="" disabled selected) Select:
             for lev in levs
               option(value=`${lev.id}`) #{lev.name}
         label(for="cat_id") Category: 
           select(class="form-control" name="cat_id" id="cat_id")
-            option(value=`${cat_id}` selected) Select:
-              for cat in cats
-                option(value=`${cat.id}`) #{cat.name}
+            if cat_name
+              option(value=`${cat_id}` disable selected) #{cat_name}
+            else
+              option(value=`${cat_id}` disable selected) Select:
+            for cat in cats
+              option(value=`${cat.id}`) #{cat.name}
         button(type="submit" class="btn" style="cursor: pointer;") Filter 
   div.container-fluid
     div.row

@@ -95,8 +95,8 @@ module.exports.posesByCatAndLev = (req, res, next) => {
     let cats = null;
     let poses = null;
     let levs = null;
-    let cat_id = req.query.cat_id;
-    let lev_id = req.query.lev_id;
+    let cat_name = null;
+    let lev_name = null;
     Level.findAll()
     .then(levels => {
         levs = levels;
@@ -106,28 +106,53 @@ module.exports.posesByCatAndLev = (req, res, next) => {
         cats = categories;
         if (req.query.cat_id && req.query.lev_id) {
             return Pose.findAll({ where: { category_id: req.query.cat_id, level_id: req.query.lev_id } })
+            .then( (foundposes) =>{
+                poses=foundposes;
+                return Category.findById(req.query.cat_id)
+            })
+            .then( (specCat)=>{
+                cat_name=specCat.name;
+                return Level.findById(req.query.lev_id);
+            })
+            .then( (specLev)=>{
+                lev_name=specLev.name;
+                res.render('poses', {
+                    poses, levs, cats, cat_name, lev_name
+                })
+            })
         } else if (req.query.lev_id) {
             return Pose.findAll({
               where: {
                 level_id: req.query.lev_id
               }
-            });
+            })
+            .then( (foundposes) =>{
+                poses=foundposes;
+                return Level.findById(req.query.lev_id);
+            })
+            .then( (specLev)=>{
+                lev_name=specLev.name;
+                res.render('poses', {
+                    poses, levs, cats, lev_name
+                })
+            }) 
         } else if (req.query.cat_id) {
             return Pose.findAll({
-              where: {
-                category_id: req.query.cat_id
-              }
-            });
+                where: {
+                    category_id: req.query.cat_id
+                }
+            }).then( (foundposes) => {
+                poses=foundposes;
+                return Category.findById(req.query.cat_id)
+            })
+            .then( (specCat)=>{
+                cat_name=specCat.name;
+                res.render('poses', {
+                    poses, levs, cats, cat_name
+                })
+            })
         }
     }) 
-    .then( (foundposes) => {
-        poses = foundposes;
-        res.render('poses', {
-            poses, levs, cats, cat_id, lev_id
-        })
-
-    })
-    
 };
 
 module.exports.posesByCat = (req, res, next) => {
