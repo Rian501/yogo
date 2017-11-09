@@ -2,6 +2,8 @@ extends index.pug
 
 block content
   include partials/myMoves.pug
+  a(href='/sequence/new')
+    button.btn.btn-info Create a New Sequence
   ul
     each seq in seqs
       li.displaySeqCard 

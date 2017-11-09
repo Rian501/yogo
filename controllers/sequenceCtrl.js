@@ -363,3 +363,9 @@ module.exports.playSeq = (req, res, next) => {
     next(err);
   })
 };
+
+module.exports.addNewSeq = (req, res, next) => {
+  Sequence.create({
+    
+  })
+};
