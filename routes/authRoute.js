@@ -12,7 +12,7 @@ const {
   logout
 } = require("../controllers/authCtrl.js");
 
-// new users
+// new users 
 router.get("/register", displayRegister);
 router.post("/register", register);
 

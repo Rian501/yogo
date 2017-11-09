@@ -1,3 +1,5 @@
+//perhaps to be used in future for getting descriptions for ALL poses rather than just some.
+
 // var request = require("request");
 // var cheerio = require("cheerio");
 

@@ -12,12 +12,14 @@ const {
   myMovesMain,
   deleteUserPose,
   displayEditUserPose,
-  updateUserPose
+  updateUserPose,
+  posesByCatAndLev
 } = require("../controllers/poseCtrl.js");
 
 router.get('/poses', showAllPoses);
 router.get('/poses/category', posesByCat);
 router.get('/poses/level', posesByLev);
+router.get('/poses/catlev', posesByCatAndLev);
 router.get('/poses/:id', showPoseDetail);
 router.get('/search', searchPoses);
 router.get('/user/poses', myMovesMain);
