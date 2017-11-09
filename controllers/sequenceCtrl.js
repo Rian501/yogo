@@ -159,7 +159,6 @@ module.exports.addMoveToSeqEndFrUserPoses = (req, res, next) => {
       if (results[0].length === 0) {
        max = 0;
       } else {
-
         let orderP = results[0].map(function(each){
           return each.position_order
         })
@@ -382,24 +381,9 @@ module.exports.addNewSeq = (req, res, next) => {
     console.log("whaaaat?", results.dataValues);
     let seq_id = results.dataValues.id;
     //basically at this point I want to call module.exports.addNewMoveToSeqEnd 
-    return User_Poses.create({ //might need to put in a check to make sure they don't already HAVE downward dog in their user poses already??
-      user_id: req.user.id,
-      pose_id: 1
-  })
-  .then( (results) => {
-    newUserMove = results.dataValues.up_pk_id;
-      return SequenceUserPoses.create({
-        user_pose_id: newUserMove,
-        position_order: 1,
-        sequence_id: seq_id
-      });
-    })
-    .then( (results) => {
-      console.log('results of adding a new sequence with one pose', results);
       res.redirect(`/sequence/${seq_id}`);
     })
     .catch((err)=>{next(err)});
-    })
   };
   
   module.exports.deleteSequence = (req, res, next) =>{
@@ -407,7 +391,7 @@ module.exports.addNewSeq = (req, res, next) => {
     Sequence.destroy({ where: { id: req.params.id } })
     .then( (results)=>{
       console.log(results);
-      // res.redirect('/sequence');
-    })
+      next();
+   })
    .catch((err)=>{next(err)});
 };

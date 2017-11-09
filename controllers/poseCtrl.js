@@ -33,7 +33,7 @@ const getMyMoves = (req, next) => {
     const { sequelize } = req.app.get("models");
     return sequelize
     .query(
-        `SELECT * FROM "User_Poses", "Poses" WHERE "User_Poses".pose_id="Poses".id`
+        `SELECT * FROM "User_Poses", "Poses" WHERE "User_Poses".pose_id="Poses".id AND "User_Poses".user_id=${req.user.id}`
     )
 };
 
@@ -42,7 +42,6 @@ module.exports.myMovesMain = (req, res, next) =>{
     if (req.user) {
        getMyMoves(req, next).then(results => {
          req.session.myMoves = results[0];
-         //now myMoves is an array attached to the reqSession!! HOLY SHIT!!
          let myMoves = req.session.myMoves;
          res.render('editMyMoves', {
              myMoves,
@@ -52,12 +51,24 @@ module.exports.myMovesMain = (req, res, next) =>{
 };
     
 module.exports.deleteUserPose = (req, res, next) => {
-  const { User_Poses } = req.app.get("models");
+  const { User_Poses, sequelize } = req.app.get("models");
+  let myMoves=null;
   User_Poses.destroy({where: {up_pk_id: req.params.id}})
   .then( (results) => {
       console.log("results of delete", results);
-      next();
-  })
+    //   next();
+    res.status(200);
+    // return sequelize
+    // .query(
+    //     `SELECT * FROM "User_Poses", "Poses" WHERE "User_Poses".pose_id="Poses".id AND "User_Poses".user_id=${req.user.id}`
+    // )
+    // })
+    // .then((moves)=>{
+    //         myMoves = moves[0]
+    //     res.render('editMyMoves', {
+    //         myMoves
+    //     })
+    })
   .catch( (err) => {
       next(err);
   })

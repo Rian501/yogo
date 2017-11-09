@@ -3,18 +3,14 @@
 $(".mmxbuttons").click(function(event) {
   if(confirm("Are you sure you want to delete this? It will also be removed from all of your sequences!")) {
     let userPoseId = this.value;
-    console.log(userPoseId);
+    console.log("is this really userPoseID?", userPoseId);
     $.ajax({
       type:"DELETE",
-      url: `pose/${userPoseId}`,
-      success:function(data) {
-        window.location.reload(true);
+      url: `/user/pose/${userPoseId}`,
+      success: function(html){
+        location.href='/user/poses'
       }
     })
-    .done( (data) => {
-      console.log(data);
-      window.location.reload(true);
-    });
   }
 });
 
@@ -131,14 +127,7 @@ $(".deleteSeq").click(function(event) {
   if(confirm("Are you sure you want to delete this sequence?")) {
     $.ajax({
       type: "DELETE",
-      url: `/sequence/${seq_id}`,
-      success: function(html) {
-        location.href="/sequence"
-        location.reload(true)
-      },
-      failure: function(html) {
-        location.href="/sequence"
-      }
+      url: `/sequence/${seq_id}`
     });
   }
 });

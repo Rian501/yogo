@@ -9,7 +9,6 @@ block content
                         div.card.tallness 
                             if pose.cover_thumbnail
                                 img(src=`http://yoga.com/${pose.cover_thumbnail}` alt=`${pose.meta_title} image here` class="card-img-top img-fluid")
-                            form(name="addPose" method="post" action=`/sequence/${seq_id}/add/${pose.up_pk_id}`)
                                 a(style="float: right;" href=`/user/pose/${pose.up_pk_id}`)
                                     button(class="editMyMove btn btn-info", name="edit", value=`${pose.up_pk_id}`, style="cursor: pointer;") edit
                                 button(class="mmxbuttons btn btn-danger", name="derete", value=`${pose.up_pk_id}`, style="cursor: pointer;") delete
