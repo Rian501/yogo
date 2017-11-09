@@ -2,19 +2,22 @@ extends index.pug
 
 block content
   include partials/myMoves.pug
+  
   h1 Your Saved Sequences
   button.btn.btn-info.newSeq Create a New Sequence
   label(for="newSeqTitle" class="newSeqTitle hidden") Title for your new sequence:
   input(id="newSeqTitle" type="text" placeholder="my new sequence" name="seqTitle" value="" class="hidden newSeqTitle")
   button(class="btn newSeqTitle hidden" name=`${seqs.length}` id="submitSeqTitle") Submit
     
-  ul
+  .row
     each seq in seqs
-      li.displaySeqCard 
-        a(href=`/sequence/${seq.id}`)
-          h2= seq.title
-          a(href=`/sequence/play/${seq.id}` class="button btn") Play sequence
-          button(class="button btn deleteSeq" name=`${seq.id}` value=`${seq.id}`) Delete this sequence
+      .col-lg-3.col-md-4.col-sm-6
+        .displaySeqCard.card.tallness
+          a(href=`/sequence/play/${seq.id}` class="button btn btn-outline-success") Play this sequence
+          img(src="/public/images/lotustree.png" class="img-fluid")
+          a(href=`/sequence/${seq.id}`)
+            h2= seq.title
+            button(class="button btn-block btn btn-outline-danger deleteSeq" name=`${seq.id}` value=`${seq.id}`) Delete this sequence
 
     script(src="/public/jquery/dist/jquery.min.js")
     script(src="/public/tether/dist/js/tether.min.js")

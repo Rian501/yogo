@@ -1,6 +1,7 @@
 if myMoves
     div.my-moves-panel
-        h5 Previously added moves
+        h5 Saved Moves
+        p (those previously added to sequences)
         each pose in myMoves
             div(class="minicard" id=`${pose.up_pk_id}`)
                 form(name="addPose" method="post" action=`/sequence/${seq_id}/add/${pose.up_pk_id}`)

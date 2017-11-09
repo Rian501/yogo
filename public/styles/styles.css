@@ -1,5 +1,5 @@
 body {
-    background-color: ivory;
+    background-color:#FAFBC4;
 }
 
 a {
@@ -39,7 +39,14 @@ video {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.61);
 }
-
+.tealbg{
+  background-color: #9eece9;
+}
+.dkbluebg{
+  background-color: #063782;
+}
+.pinkbg{
+  background-color: #ffbcb9;}
 .lotusBG {
   background-image: url('../images/rainbowDotLotus.png');
   background-repeat: no-repeat;
