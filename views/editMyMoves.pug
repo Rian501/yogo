@@ -5,12 +5,12 @@ block content
         div.container-fluid
             div.row
                 each pose in myMoves
-                    div(class="col-lg-2 col-md-3 col-sm-4 col-12")
+                    div(class="col-lg-3 col-md-4 col-sm-6 col-12")
                         div.card.tallness 
                             if pose.cover_thumbnail
                                 img(src=`http://yoga.com/${pose.cover_thumbnail}` alt=`${pose.meta_title} image here` class="card-img-top img-fluid")
-                                a(style="float: right;" href=`/user/pose/${pose.up_pk_id}`)
-                                    button(class="editMyMove btn btn-info", name="edit", value=`${pose.up_pk_id}`, style="cursor: pointer;") edit
+                                a(href=`/user/pose/${pose.up_pk_id}`)
+                                    button(class="editMyMove btn-block btn btn-info", name="edit", value=`${pose.up_pk_id}`, style="cursor: pointer;") edit details
                                 button(class="mmxbuttons btn btn-danger", name="derete", value=`${pose.up_pk_id}`, style="cursor: pointer;") delete
                                 a(href=`/poses/${pose.id}`)
                                     div(class="card-block")

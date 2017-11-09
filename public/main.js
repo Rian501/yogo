@@ -108,7 +108,7 @@ $('#submitSeqTitle').click(function(event){
       seqTitle
     },
     success: function(html) {
-      location.href=`sequence/${newSeq}`
+      location.href='sequence/'
     }
   });
 });

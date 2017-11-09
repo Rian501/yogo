@@ -380,7 +380,6 @@ module.exports.addNewSeq = (req, res, next) => {
   const { Sequence, User_Poses, sequelize, SequenceUserPoses } = req.app.get('models');
   console.log("hopefully userid", req.user.id);
   console.log("hopefully sequence title", req.body.reqTitle);
-  let newUserMove = null;
   Sequence.create({
     user_id: req.user.id,
     title: req.body.seqTitle
