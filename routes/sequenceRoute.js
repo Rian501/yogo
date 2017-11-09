@@ -14,7 +14,8 @@ const {
   updateSeqOrder,
   sidesearchCategories,
   sidesearchLevels,
-  addNewSeq
+  addNewSeq,
+  deleteSequence
 } = require("../controllers/sequenceCtrl.js");
 
 
@@ -32,5 +33,6 @@ router.get("/:seq_id/sidecategory/:cat_id", sidesearchCategories);
 router.get("/:seq_id/sidelevel/:lev_id", sidesearchLevels);
 router.get("/sequence/play/:seq_id", playSeq);
 router.put('/sequence/:seq_id', updateSeqOrder)
+router.delete('/sequence/:id', deleteSequence);
 
 module.exports = router;

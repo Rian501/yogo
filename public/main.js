@@ -86,7 +86,7 @@ $('#updateUserPose').click(function(event){
       up_breath
     },
     success: function(html) {
-      location.href = "/user/poses";
+      location.href = "/user/poses"
     }
   });
 });
@@ -117,7 +117,28 @@ $('#submitSeqTitle').click(function(event){
       seqTitle
     },
     success: function(html) {
-      location.href=`sequence/${newSeq}`;
+      location.href=`sequence/${newSeq}`
     }
   });
+});
+
+
+$(".deleteSeq").click(function(event) {
+  let seq_id = this.value;
+  let seq_id2 = this.name;
+  console.log("sequence to delete", seq_id);
+  console.log("sequence to delete", seq_id2);
+  if(confirm("Are you sure you want to delete this sequence?")) {
+    $.ajax({
+      type: "DELETE",
+      url: `/sequence/${seq_id}`,
+      success: function(html) {
+        location.href="/sequence"
+        location.reload(true)
+      },
+      failure: function(html) {
+        location.href="/sequence"
+      }
+    });
+  }
 });

@@ -13,6 +13,7 @@ block content
         a(href=`/sequence/${seq.id}`)
           h2= seq.title
           a(href=`/sequence/play/${seq.id}` class="button btn") Play sequence
+          button(class="button btn deleteSeq" name=`${seq.id}` value=`${seq.id}`) Delete this sequence
 
     script(src="/public/jquery/dist/jquery.min.js")
     script(src="/public/tether/dist/js/tether.min.js")

@@ -400,4 +400,14 @@ module.exports.addNewSeq = (req, res, next) => {
     })
     .catch((err)=>{next(err)});
     })
+  };
+  
+  module.exports.deleteSequence = (req, res, next) =>{
+    const {Sequence} = req.app.get('models');
+    Sequence.destroy({ where: { id: req.params.id } })
+    .then( (results)=>{
+      console.log(results);
+      // res.redirect('/sequence');
+    })
+   .catch((err)=>{next(err)});
 };

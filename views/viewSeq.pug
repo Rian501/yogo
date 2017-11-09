@@ -31,6 +31,8 @@ block content
                                 p(class="card-text") #{move.card_timing} seconds
                             else
                                 p 10 seconds
+        button(class="button btn deleteSeq" value=`${moves[0].sequence_id}`) Delete this sequence
+
     include partials/searchToAdd.pug
 
     script(src="/public/jquery/dist/jquery.min.js")
