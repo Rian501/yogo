@@ -1,5 +1,11 @@
 body {
     background-color:#FAFBC4;
+    font-family: 'Pathway Gothic One', sans-serif;
+}
+.title-texts{
+  font-family: 'Amatic SC', cursive;
+}
+.bodytext{
 }
 
 a {

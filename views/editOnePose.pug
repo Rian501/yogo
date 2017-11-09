@@ -1,7 +1,7 @@
 extends index.pug
 block content
 
-    h1 Edit details for #{poseBasics.meta_title}
+    h1.title-texts Edit details for #{poseBasics.meta_title}
     h2= poseBasics.sanskrit_name
     if poseBasics.photo
         img(src=`http://yoga.com/${poseBasics.photo}` style="max-width: 200px;")
