@@ -90,11 +90,30 @@ module.exports.displayEditUserPose = (req, res, next) => {
 };
 
 // TODO: combine filters for both level AND type to allow for two pronged filtering
+module.exports.posesByCatAndLev = (req, res, next) => {
+    const { Pose, Category, Level } = req.app.get("models");
+    let cats = null;
+    let levs = null;
+    Level.findAll()
+    .then(levels => {
+        levs = levels;
+        return Category.findAll();
+    })
+    .then(categories => {
+        cats = categories;
+        return Pose.findAll({ where: { category_id: req.query.cat_id, level_id: req.query.level_id } })
+    }) 
+    .then( (poses) => {
+
+    })
+    
+};
+
 module.exports.posesByCat = (req, res, next) => {
-const { Pose, Category, Level } = req.app.get("models");
-let cats = null;
-let levs = null;
-Level.findAll()
+    const { Pose, Category, Level } = req.app.get("models");
+    let cats = null;
+    let levs = null;
+    Level.findAll()
   .then(levels => {
     levs = levels;
     return Category.findAll();
@@ -156,7 +175,6 @@ module.exports.showPoseDetail = (req, res, next) => {
     });
 };
 
-
 module.exports.searchPoses = (req, res, next) => {
     const { Pose, Category, Level } = req.app.get("models");
     let cats = null;
@@ -193,7 +211,6 @@ module.exports.searchPoses = (req, res, next) => {
         next(err)
     })
 };
-
 
 module.exports.updateUserPose = (req,res,next) => {
   const { sequelize } = req.app.get('models');
