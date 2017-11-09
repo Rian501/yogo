@@ -6,23 +6,39 @@ Yogo is a searchable database of yoga poses that allows the user to view poses a
 
 ### Prerequisites
 
-PostgreSQL (http://www.postgresqltutorial.com/install-postgresql/)  
-Sequelize (http://docs.sequelizejs.com/manual/installation/getting-started.html#installation)
+- [Node.js](https://nodejs.org/en/)
+- [npm](https://www.npmjs.com/)
+- [PostgreSQL for mac](https://www.postgresql.org/)
+- [PostgreSQL for Windows](http://www.postgresqltutorial.com/install-postgresql/)  
+
 
 ## Getting Started
 
 To run the project locally, clone down the repo and then:
-1. run npm install to get the necessary node modules.
+
+## <p style="color: green;">How to Install?</p>
+
+1. Clone the project to the desired folder in your directory,
+```git clone https://github.com/Rian501/yogo```
+1. run ```npm install``` at the root folder to get the necessary node modules.
 1. you will need to move a few of these modules into the `public` directory in order for some files to access them correctly. The necessary directories to move are:
-- jquery
-- jquery-ui
-- bootstrap (into the `public/styles` dir)
-- tether
-3. make sure you install sequelize if you do not have it globally installed on your machine
-4. create a database with postgres, called "yogo_db" (you may also need to change the config file to fit your postgres username/pw or lack thereof)
+- `jquery`
+- `jquery-ui`
+- `bootstrap` (into the `public/styles` dir)
+- `tether`
+3. create a database with postgres, called "yogo_db" 
+- Once you have postgreSQL setup, type ```psql``` in your terminal
+- Then, create a new database ```CREATE DATABASE yogo_db;```
+- And, connect to the Database ```\c yogo_db```
+
+4. Once you are inside the project folder:
+- Install all dependencies. Run ```npm install` at the root folder.
+- Next, make the config file: run `sequelize init` in your terminal at the root.
+- Change the config file to fit your postgres username/pw or lack thereof, and change the database name in the config file to 'yogo_db"
 5. run the migrations and seeding with sequelize in your terminal
-6. `npm start` from the root in your terminal
-7. navigate to your localhost:8080 or localhost of choice
+- Create the tables and seed them with some starter data using ```sequelize db:migrate``` and then ```sequelize db:seed:all```
+5. `npm start` from the root in your terminal
+6. navigate to your localhost:8080 or localhost of choice
 
 ### Try it out
 
@@ -35,14 +51,14 @@ You can rearrange poses in a sequence, and add cards multiple times to create wh
 Click on "Play Sequence" to see the slideshow of your sequence.
 
 ## Built With
-- NodeJS
-- Express
-- Pug
-- Sequelize
-- PostgreSQL
-- jQuery
-- jQuery-ui
-- Bootstrap 4
+
+- [Express](https://expressjs.com)
+- [jQuery](https://jquery.com/)
+- [Sequelize-ORM](http://docs.sequelizejs.com/)
+- [Bootstrap 4](http://blog.getbootstrap.com/2017/08/10/bootstrap-4-alpha/)
+- [Passport js](http://www.passportjs.org/)
+- [Pug](https://pugjs.org/api/getting-started.html)
+- [jQuery-ui](https://jqueryui.com/)
 
 #### License
 
