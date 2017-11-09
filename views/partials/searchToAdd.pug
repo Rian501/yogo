@@ -30,12 +30,12 @@ sidebar
             each pose in poses
               div.col-6
                 div.minicard
-                  a(href=`/poses/${pose.id}` target="_blank")
-                    .img-wrapper
-                      button(type='submit' formaction=`/sequence/${seq_id}/addnew/${pose.id}` class='addbutton btn btn-sm btn-info') +
-                      if pose.cover_thumbnail
-                        img(class="card-img-top img-fluid" src=`http://yoga.com/${pose.cover_thumbnail}` alt="Card image cap")
-                      else
-                        img(class="img-fluid" src="https://static.boredpanda.com/blog/wp-content/uploads/2014/05/funny-animals-doing-yoga-32.jpg" alt="card image cap")
-                    p= pose.meta_title
+                  .img-wrapper
                     form(class="form-inline" method="POST")
+                      button(type='submit' formaction=`/sequence/${seq_id}/addnew/${pose.id}` class='addbutton btn btn-sm btn-info') +
+                    if pose.cover_thumbnail
+                      img(class="card-img-top img-fluid" src=`http://yoga.com/${pose.cover_thumbnail}` alt="Card image cap")
+                    else
+                      img(class="img-fluid" src="https://static.boredpanda.com/blog/wp-content/uploads/2014/05/funny-animals-doing-yoga-32.jpg" alt="card image cap")
+                  a(href=`/poses/${pose.id}` target="_blank")
+                    p= pose.meta_title

@@ -15,13 +15,13 @@ block content
             ul(class="sortable" id=`${moves[0].sequence_id}`)
                 each move in moves
                     li(class="col- ui-state-default sortable-item" id=`${move.seqUsPos_id}` data-seq-id=`${move.sequence_id}` data-position=`${move.position_order}`)
+                        .img-wrapper
+                            button(class="xbuttons btn btn-danger", name=`${move.seqUsPos_id}`, value=`${move.sequence_id}`, style="cursor: pointer;") X
+                            if move.cover_thumbnail
+                                img(class="img-fluid" src=`http://yoga.com/${move.cover_thumbnail}` alt="Card image cap")
+                            else
+                                img(class="img-fluid" src="/public/images/lotustree.png")
                         a(href=`/poses/${move.pose_id}` target="_blank")
-                            .img-wrapper
-                                button(class="xbuttons btn btn-danger", name=`${move.seqUsPos_id}`, value=`${move.sequence_id}`, style="cursor: pointer;") X
-                                if move.cover_thumbnail
-                                    img(class="img-fluid" src=`http://yoga.com/${move.cover_thumbnail}` alt="Card image cap")
-                                else
-                                    img(class="img-fluid" src="/public/images/lotustree.png")
                             p #{move.meta_title}
                             //- if move.up_special_directions
                             //-     p(class="card-text") #{move.up_special_directions}

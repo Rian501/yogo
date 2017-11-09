@@ -20,6 +20,7 @@ $(".mmxbuttons").click(function(event) {
 
 
 $(".xbuttons").click(function(event) {
+  event.preventDefault();
   let seqUsPose_id = this.name;
   let seq_id = this.value;
   $.ajax({
