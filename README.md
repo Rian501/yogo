@@ -1,6 +1,7 @@
 # Yogo
 
-One Paragraph of project description goes here
+This is my back-end capstone project for Nashville Software School, and is intended to demonstrate a grasp of full-stack skills learning in a 6 month bootcamp learning environment.
+  
 Yogo is a searchable database of yoga poses that allows the user to view poses and their details regardless of login, and allows authenticated users to save personalize instructions for poses as well as sequences which they can build and re-arrange using drag and drop functionality.
 
 ### Prerequisites
@@ -33,6 +34,15 @@ Once a pose is added to a sequence, it is automatically added to "My Poses" - wh
 You can rearrange poses in a sequence, and add cards multiple times to create whatever sequence you like.
 Click on "Play Sequence" to see the slideshow of your sequence.
 
+## Built With
+NodeJS
+Express
+Pug
+Sequelize
+PostgreSQL
+jQuery
+jQuery-ui
+Bootstrap 4
 
 #### License
 
