@@ -35,14 +35,14 @@ You can rearrange poses in a sequence, and add cards multiple times to create wh
 Click on "Play Sequence" to see the slideshow of your sequence.
 
 ## Built With
-NodeJS
-Express
-Pug
-Sequelize
-PostgreSQL
-jQuery
-jQuery-ui
-Bootstrap 4
+- NodeJS
+- Express
+- Pug
+- Sequelize
+- PostgreSQL
+- jQuery
+- jQuery-ui
+- Bootstrap 4
 
 #### License
 
