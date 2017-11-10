@@ -3,7 +3,7 @@ extends index.pug
 block content
   include partials/myMoves.pug
   
-  h1 Your Sequences
+  h1.title-texts Your Sequences
   button.btn.btn-info.newSeq Create a New Sequence
   label(for="newSeqTitle" class="newSeqTitle hidden") Title for your new sequence:
   input(id="newSeqTitle" type="text" placeholder="my new sequence" name="seqTitle" value="" class="hidden newSeqTitle")
@@ -14,8 +14,8 @@ block content
       .col-lg-3.col-md-4.col-sm-6
         .displaySeqCard.card.tallness
           a(href=`/sequence/play/${seq.id}` class="button btn btn-outline-success") Play this sequence
-          img(src="/public/images/lotustree.png" class="img-fluid")
           a(href=`/sequence/${seq.id}`)
+            img(src="/public/images/lotustree.png" class="img-fluid")
             h2= seq.title
             button(class="button btn-block btn btn-outline-danger deleteSeq" name=`${seq.id}` value=`${seq.id}`) Delete this sequence
 

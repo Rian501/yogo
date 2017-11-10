@@ -125,7 +125,7 @@ module.exports.addNewMoveToSeqEnd = (req, res, next)=>{
        max = 0;
       } else {
       let orderP = results[0].map(function(each) {
-        return each.position_order;
+        return parseInt(each.position_order);
       });
       let max = orderP.reduce(function(a, b) {
         return Math.max(a, b);
@@ -165,7 +165,7 @@ module.exports.addMoveToSeqEndFrUserPoses = (req, res, next) => {
        max = 0;
       } else {
         let orderP = results[0].map(function(each){
-          return each.position_order
+          return parseInt(each.position_order);
         })
         max = orderP.reduce(function(a, b) {
           return Math.max(a, b);

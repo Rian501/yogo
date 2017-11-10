@@ -1,7 +1,6 @@
 if myMoves
     div.my-moves-panel
-        h3.title-texts Saved Moves
-        p (those previously added to sequences)
+        h3.title-texts Saved Moves 
         each pose in myMoves
             div(class="minicard" id=`${pose.up_pk_id}`)
                 form(name="addPose" method="post" action=`/sequence/${seq_id}/add/${pose.up_pk_id}`)

@@ -90,10 +90,10 @@ video {
 
 .minicard {
   display: inline-block;
-  margin: 3px 3px 3px 0; 
+  margin: -15px 4px 6px 0; 
   padding: 1px; 
   width: 165px; 
-  height: 155px; 
+  height: 140px; 
   font-size: 0.9rem; 
   text-align: center; 
   background-color: white;
