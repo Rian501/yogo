@@ -32,7 +32,7 @@ To run the project locally, clone down the repo and then:
 - And, connect to the Database ```\c yogo_db```
 
 4. Once you are inside the project folder:
-- Install all dependencies. Run ```npm install` at the root folder.
+- Install all dependencies. Run `npm install` at the root folder.
 - Next, make the config file: run `sequelize init` in your terminal at the root.
 - Change the config file to fit your postgres username/pw or lack thereof, and change the database name in the config file to 'yogo_db"
 5. run the migrations and seeding with sequelize in your terminal
@@ -58,7 +58,7 @@ Click on "Play Sequence" to see the slideshow of your sequence.
 - [Bootstrap 4](http://blog.getbootstrap.com/2017/08/10/bootstrap-4-alpha/)
 - [Passport js](http://www.passportjs.org/)
 - [Pug](https://pugjs.org/api/getting-started.html)
-- [jQuery-ui](https://jqueryui.com/)
+- [jQuery-ui](https://jqueryui.com/) (sortable)
 
 #### License
 
